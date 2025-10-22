@@ -1,0 +1,6 @@
+{
+  "name": "@tensorflow/tfjs-node",
+  "version": "0.0.0-stub",
+  "type": "commonjs",
+  "main": "index.js"
+}
