@@ -34,6 +34,30 @@ if (!nodePathEntries.includes(stubNodeModules)) {
   }
 }
 
+const stubTfjsNodeEntry = path.join(stubNodeModules, '@tensorflow', 'tfjs-node', 'index.js');
+const stubTfjsNodePkg = path.join(stubNodeModules, '@tensorflow', 'tfjs-node', 'package.json');
+const ModuleCtor = module.Module || module;
+if (!ModuleCtor.__eyesonPatchedTfjsNode) {
+  const originalResolveFilename = ModuleCtor._resolveFilename;
+  const patched = function eyesonResolve(request, parent, isMain, options) {
+    if (request === '@tensorflow/tfjs-node') {
+      return stubTfjsNodeEntry;
+    }
+    if (request.startsWith('@tensorflow/tfjs-node/')) {
+      if (request.endsWith('/package.json')) {
+        return stubTfjsNodePkg;
+      }
+      return stubTfjsNodeEntry;
+    }
+    return originalResolveFilename.call(this, request, parent, isMain, options);
+  };
+  ModuleCtor._resolveFilename = patched;
+  if (module._resolveFilename !== patched) {
+    module._resolveFilename = patched;
+  }
+  ModuleCtor.__eyesonPatchedTfjsNode = true;
+}
+
 const humanModule = await import('@vladmandic/human');
 const Human = humanModule.Human || humanModule.default?.Human || humanModule.default;
 
