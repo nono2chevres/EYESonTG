@@ -8,7 +8,39 @@ import { fileURLToPath } from 'url';
 import sharp from 'sharp';
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
-import { createCanvas, loadImage } from '@napi-rs/canvas';
+import { createCanvas, loadImage, Canvas, Image, ImageData } from '@napi-rs/canvas';
+
+// Human attend des objets globaux type DOM en environnement Node.
+if (typeof globalThis.Image === 'undefined') {
+  globalThis.Image = Image;
+  globalThis.HTMLImageElement = Image;
+}
+if (typeof globalThis.Canvas === 'undefined') {
+  globalThis.Canvas = Canvas;
+  globalThis.HTMLCanvasElement = Canvas;
+}
+if (typeof globalThis.ImageData === 'undefined') {
+  globalThis.ImageData = ImageData;
+}
+const canvasProto = typeof Canvas === 'function'
+  ? (Canvas.prototype && typeof Canvas.prototype.getContext === 'function'
+      ? Canvas.prototype
+      : Object.getPrototypeOf(new Canvas(1, 1)))
+  : null;
+if (canvasProto && typeof canvasProto.getContext === 'function' && !canvasProto.__eyesonPatchedGetContext) {
+  const originalGetContext = canvasProto.getContext;
+  canvasProto.getContext = function patchedGetContext(type, ...args) {
+    if (type === 'webgl' || type === 'webgl2' || type === 'experimental-webgl') {
+      try {
+        return originalGetContext.call(this, type, ...args);
+      } catch (err) {
+        return null;
+      }
+    }
+    return originalGetContext.call(this, type, ...args);
+  };
+  canvasProto.__eyesonPatchedGetContext = true;
+}
 
 import * as tf from '@tensorflow/tfjs';
 import '@tensorflow/tfjs-backend-cpu'; // backend pur JS
@@ -79,6 +111,7 @@ const human = new Human({
   backend: 'cpu',          // pas de tfjs-node, pas de wasm
   modelBasePath: 'https://vladmandic.github.io/human/models', // CDN gratuit
   cacheSensitivity: 0,
+  filter: { enabled: false },
   face: {
     enabled: true,
     detector: { rotation: true, return: true },
