@@ -140,6 +140,19 @@ function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
+function hexToRgb(hex) {
+  if (!hex) return { r: 0, g: 0, b: 0 };
+  const normalized = hex.startsWith('#') ? hex.slice(1) : hex;
+  if (normalized.length !== 6) return { r: 0, g: 0, b: 0 };
+  const r = parseInt(normalized.slice(0, 2), 16);
+  const g = parseInt(normalized.slice(2, 4), 16);
+  const b = parseInt(normalized.slice(4, 6), 16);
+  if ([r, g, b].some((v) => Number.isNaN(v))) {
+    return { r: 0, g: 0, b: 0 };
+  }
+  return { r, g, b };
+}
+
 function averagePoint(points) {
   if (!points.length) return [0, 0];
   const [sumX, sumY] = points.reduce(
@@ -260,6 +273,261 @@ async function createEyesMask(width, height, eyes) {
   return sharp(rawMask).blur(2).toBuffer();
 }
 
+function createCropFromEyes(leftEye, rightEye, imageWidth, imageHeight) {
+  if (!leftEye || !rightEye) return null;
+  const minImageSide = Math.max(1, Math.min(imageWidth, imageHeight));
+  const marginX = 2.4;
+  const marginYTop = 2.8;
+  const marginYBottom = 2.2;
+
+  const rawLeft = Math.min(
+    leftEye.center[0] - leftEye.radiusX * marginX,
+    rightEye.center[0] - rightEye.radiusX * marginX,
+  );
+  const rawRight = Math.max(
+    leftEye.center[0] + leftEye.radiusX * marginX,
+    rightEye.center[0] + rightEye.radiusX * marginX,
+  );
+  const rawTop = Math.min(
+    leftEye.center[1] - leftEye.radiusY * marginYTop,
+    rightEye.center[1] - rightEye.radiusY * marginYTop,
+  );
+  const rawBottom = Math.max(
+    leftEye.center[1] + leftEye.radiusY * marginYBottom,
+    rightEye.center[1] + rightEye.radiusY * marginYBottom,
+  );
+
+  const spanX = rawRight - rawLeft;
+  const spanY = rawBottom - rawTop;
+  const baseSide = Math.max(spanX, spanY);
+  const minSide = minImageSide * 0.32;
+  const targetSide = clamp(baseSide * 1.1, minSide, minImageSide * 1.05);
+  const side = Math.max(1, Math.min(Math.round(targetSide), minImageSide));
+
+  const centerX = clamp((rawLeft + rawRight) / 2, side / 2, imageWidth - side / 2);
+  const centerY = clamp((rawTop + rawBottom) / 2, side / 2, imageHeight - side / 2);
+
+  const left = clamp(Math.round(centerX - side / 2), 0, Math.max(imageWidth - side, 0));
+  const top = clamp(Math.round(centerY - side / 2), 0, Math.max(imageHeight - side, 0));
+  const finalSide = Math.min(side, imageWidth - left, imageHeight - top);
+
+  return {
+    left,
+    top,
+    width: Math.max(1, Math.round(finalSide)),
+    height: Math.max(1, Math.round(finalSide)),
+  };
+}
+
+async function detectAnimeEyesHeuristics(img) {
+  if (!img?.width || !img?.height) return null;
+
+  const originalWidth = img.width;
+  const originalHeight = img.height;
+  const maxSide = 720;
+  const scale = Math.min(1, maxSide / Math.max(originalWidth, originalHeight));
+  const scaledWidth = Math.max(1, Math.round(originalWidth * scale));
+  const scaledHeight = Math.max(1, Math.round(originalHeight * scale));
+  const scaleInv = scale ? 1 / scale : 1;
+
+  const canvas = createCanvas(scaledWidth, scaledHeight);
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0, scaledWidth, scaledHeight);
+  const { data } = ctx.getImageData(0, 0, scaledWidth, scaledHeight);
+
+  const topLimit = Math.max(1, Math.round(scaledHeight * 0.68));
+  const xScores = new Float32Array(scaledWidth);
+  const scoreMap = new Float32Array(scaledWidth * topLimit);
+
+  for (let y = 0; y < topLimit; y += 1) {
+    for (let x = 0; x < scaledWidth; x += 1) {
+      const idx = (y * scaledWidth + x) * 4;
+      const r = data[idx];
+      const g = data[idx + 1];
+      const b = data[idx + 2];
+      const a = data[idx + 3];
+      if (a < 48) continue;
+      const maxChannel = Math.max(r, g, b);
+      const minChannel = Math.min(r, g, b);
+      const brightness = (r + g + b) / 3;
+      if (maxChannel < 60 || brightness < 50) continue;
+      const saturation = maxChannel === 0 ? 0 : (maxChannel - minChannel) / maxChannel;
+      const whiteness = 1 - saturation;
+      const colorBoost = saturation > 0.45 ? saturation * 0.25 : 0;
+      const weight = Math.max(0, whiteness * (brightness / 255) + colorBoost - 0.12);
+      if (weight <= 0) continue;
+      const mapIndex = y * scaledWidth + x;
+      scoreMap[mapIndex] = weight;
+      xScores[x] += weight;
+    }
+  }
+
+  if (!xScores.some((v) => v > 0)) return null;
+
+  const deriveEye = (start, end) => {
+    let bestIndex = -1;
+    let bestScore = 0;
+    for (let x = start; x < end; x += 1) {
+      const score = xScores[x];
+      if (score > bestScore) {
+        bestScore = score;
+        bestIndex = x;
+      }
+    }
+    if (bestIndex === -1 || bestScore < 2) return null;
+
+    const windowX = Math.max(6, Math.round(scaledWidth * 0.08));
+    const minX = Math.max(start, bestIndex - windowX);
+    const maxX = Math.min(end - 1, bestIndex + windowX);
+    const windowY = Math.max(8, Math.round(scaledHeight * 0.18));
+
+    let sumW = 0;
+    let sumX = 0;
+    let sumY = 0;
+    let sumDX2 = 0;
+    let sumDY2 = 0;
+
+    for (let y = 0; y < topLimit; y += 1) {
+      for (let x = minX; x <= maxX; x += 1) {
+        const mapIndex = y * scaledWidth + x;
+        const w = scoreMap[mapIndex];
+        if (w <= 0) continue;
+        sumW += w;
+        sumX += w * x;
+        sumY += w * y;
+      }
+    }
+
+    if (sumW <= 0) return null;
+    const cx = sumX / sumW;
+    const cy = sumY / sumW;
+
+    const startY = Math.max(0, Math.round(cy - windowY));
+    const endY = Math.min(topLimit - 1, Math.round(cy + windowY));
+    for (let y = startY; y <= endY; y += 1) {
+      for (let x = minX; x <= maxX; x += 1) {
+        const mapIndex = y * scaledWidth + x;
+        const w = scoreMap[mapIndex];
+        if (w <= 0) continue;
+        const dx = x - cx;
+        const dy = y - cy;
+        sumDX2 += w * dx * dx;
+        sumDY2 += w * dy * dy;
+      }
+    }
+
+    const radiusX = Math.sqrt(Math.max(sumDX2 / sumW, 1)) * 1.65;
+    const radiusY = Math.sqrt(Math.max(sumDY2 / sumW, 1)) * 2.1;
+
+    return {
+      center: [cx * scaleInv, cy * scaleInv],
+      radiusX: Math.max(radiusX * scaleInv, Math.max(originalWidth, originalHeight) * 0.025),
+      radiusY: Math.max(radiusY * scaleInv, Math.max(originalWidth, originalHeight) * 0.02),
+      weight: sumW,
+    };
+  };
+
+  const mid = Math.floor(scaledWidth / 2);
+  const leftEye = deriveEye(0, Math.max(mid, 1));
+  const rightEye = deriveEye(Math.max(mid, 1), scaledWidth);
+
+  if (!leftEye || !rightEye) return null;
+  if (Math.abs(leftEye.center[0] - rightEye.center[0]) < originalWidth * 0.08) return null;
+
+  const crop = createCropFromEyes(leftEye, rightEye, originalWidth, originalHeight);
+  if (!crop) return null;
+
+  const absoluteEyes = [leftEye, rightEye];
+  const eyes = absoluteEyes
+    .map((eye) => convertEyeToCrop(eye, crop))
+    .sort((a, b) => a.cx - b.cx);
+
+  return { crop, eyes, absoluteEyes, source: 'anime-heuristic' };
+}
+
+function quantizeChannel(value, levels = 5) {
+  if (levels <= 1) return value;
+  const step = 255 / (levels - 1);
+  return clamp(Math.round(value / step) * step, 0, 255);
+}
+
+async function cartoonizeEyes(buffer) {
+  const img = await loadImage(buffer);
+  const { width, height } = img;
+  const canvas = createCanvas(width, height);
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, width, height);
+  ctx.drawImage(img, 0, 0, width, height);
+  const imageData = ctx.getImageData(0, 0, width, height);
+  const { data } = imageData;
+
+  const gray = new Float32Array(width * height);
+
+  for (let i = 0; i < data.length; i += 4) {
+    const alpha = data[i + 3];
+    if (alpha < 16) {
+      data[i] = 0;
+      data[i + 1] = 0;
+      data[i + 2] = 0;
+      gray[i / 4] = 0;
+      continue;
+    }
+    const r = data[i];
+    const g = data[i + 1];
+    const b = data[i + 2];
+    const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
+    gray[i / 4] = luminance;
+
+    const qR = quantizeChannel(r, 5);
+    const qG = quantizeChannel(g, 5);
+    const qB = quantizeChannel(b, 5);
+
+    data[i] = clamp(Math.round(qR * 1.05), 0, 255);
+    data[i + 1] = clamp(Math.round(qG * 1.05), 0, 255);
+    data[i + 2] = clamp(Math.round(qB * 1.05), 0, 255);
+  }
+
+  const sobelX = [-1, 0, 1, -2, 0, 2, -1, 0, 1];
+  const sobelY = [-1, -2, -1, 0, 0, 0, 1, 2, 1];
+  const edges = new Float32Array(width * height);
+
+  for (let y = 1; y < height - 1; y += 1) {
+    for (let x = 1; x < width - 1; x += 1) {
+      let gx = 0;
+      let gy = 0;
+      for (let ky = -1; ky <= 1; ky += 1) {
+        for (let kx = -1; kx <= 1; kx += 1) {
+          const sampleX = x + kx;
+          const sampleY = y + ky;
+          const idx = sampleY * width + sampleX;
+          const kernelIdx = (ky + 1) * 3 + (kx + 1);
+          const value = gray[idx];
+          gx += value * sobelX[kernelIdx];
+          gy += value * sobelY[kernelIdx];
+        }
+      }
+      const magnitude = Math.sqrt(gx * gx + gy * gy);
+      edges[y * width + x] = magnitude;
+    }
+  }
+
+  const edgeThreshold = 110;
+  for (let y = 0; y < height; y += 1) {
+    for (let x = 0; x < width; x += 1) {
+      const idx = (y * width + x) * 4;
+      const alpha = data[idx + 3];
+      if (alpha < 16) continue;
+      const edgeStrength = edges[y * width + x];
+      if (edgeStrength > edgeThreshold) {
+        data[idx] = data[idx + 1] = data[idx + 2] = 25;
+      }
+    }
+  }
+
+  ctx.putImageData(imageData, 0, 0);
+  return canvas.encode('png');
+}
+
 /** calcule une bounding box (x,y,w,h) à partir d'une liste de points [x,y] */
 function bboxFromPoints(pts, margin = 20) {
   const xs = pts.map(p => p[0]);
@@ -305,11 +573,21 @@ async function detectEyesCrop(imagePath) {
     const left = Math.round(clamp((width - w) / 2, 0, Math.max(width - w, 0)));
     const top = Math.round(clamp(height * 0.15, 0, Math.max(height - w, 0)));
     const crop = { left, top, width: w, height: w };
-    return { crop, eyes: defaultEyesForCrop(crop) };
+    return { crop, eyes: defaultEyesForCrop(crop), source: 'fallback-default' };
   };
 
   const result = await human.detect(img);
   const face = result?.face?.[0];
+
+  let animeEyesCache = null;
+  let animeEyesComputed = false;
+  const getAnimeEyes = async () => {
+    if (!animeEyesComputed) {
+      animeEyesCache = await detectAnimeEyesHeuristics(img);
+      animeEyesComputed = true;
+    }
+    return animeEyesCache;
+  };
 
   const fallbackFromFaceBox = () => {
     if (!face?.box) return null;
@@ -326,10 +604,12 @@ async function detectEyesCrop(imagePath) {
       width: finalSide,
       height: finalSide,
     };
-    return { crop, eyes: defaultEyesForCrop(crop) };
+    return { crop, eyes: defaultEyesForCrop(crop), source: 'fallback-facebox' };
   };
 
   if (!face) {
+    const animeEyes = await getAnimeEyes();
+    if (animeEyes) return animeEyes;
     return baseFallback();
   }
 
@@ -370,13 +650,23 @@ async function detectEyesCrop(imagePath) {
         .filter(Boolean)
         .map((eye) => convertEyeToCrop(eye, crop));
       if (eyes.length !== 2) {
-        eyes = defaultEyesForCrop(crop);
+        const animeEyes = await getAnimeEyes();
+        if (animeEyes?.absoluteEyes?.length === 2) {
+          eyes = animeEyes.absoluteEyes
+            .map((eye) => convertEyeToCrop(eye, crop))
+            .sort((a, b) => a.cx - b.cx);
+        } else {
+          eyes = defaultEyesForCrop(crop);
+        }
       } else {
         eyes = eyes.sort((a, b) => a.cx - b.cx);
       }
-      return { crop, eyes };
+      return { crop, eyes, source: 'mesh' };
     }
   }
+
+  const animeEyes = await getAnimeEyes();
+  if (animeEyes) return animeEyes;
 
   const fallbackBox = fallbackFromFaceBox();
   if (fallbackBox) return fallbackBox;
@@ -390,7 +680,7 @@ async function detectEyesCrop(imagePath) {
 async function generateEyesOn(imagePath, name, settings = {}) {
   // 1) Détection & crop
   const detection = await detectEyesCrop(imagePath);
-  const { crop, eyes } = detection;
+  const { crop, eyes, source: detectionSource } = detection;
 
   // 2) Couleur Pantone
   let pantone;
@@ -411,13 +701,37 @@ async function generateEyesOn(imagePath, name, settings = {}) {
 
   let eyesBuf = await pipeline.toBuffer();
 
+  let maskedEyesBuf;
   if (eyes?.length) {
     const maskBuffer = await createEyesMask(crop.width, crop.height, eyes);
-    eyesBuf = await sharp(eyesBuf)
+    maskedEyesBuf = await sharp(eyesBuf)
       .ensureAlpha()
       .composite([{ input: maskBuffer, blend: 'dest-in' }])
       .toBuffer();
+  } else {
+    maskedEyesBuf = await sharp(eyesBuf).ensureAlpha().toBuffer();
   }
+
+  if (detectionSource === 'mesh' || detectionSource === 'anime-heuristic') {
+    maskedEyesBuf = await cartoonizeEyes(maskedEyesBuf);
+  }
+
+  const { r: pantoneR, g: pantoneG, b: pantoneB } = hexToRgb(pantone.hex);
+
+  const baseBackground = await sharp({
+    create: {
+      width: crop.width,
+      height: crop.height,
+      channels: 4,
+      background: { r: pantoneR, g: pantoneG, b: pantoneB, alpha: 1 },
+    },
+  })
+    .png()
+    .toBuffer();
+
+  eyesBuf = await sharp(baseBackground)
+    .composite([{ input: maskedEyesBuf, blend: 'over' }])
+    .toBuffer();
 
   eyesBuf = await sharp(eyesBuf).resize(1200, 1200).toBuffer();
 
