@@ -54,6 +54,9 @@ dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const USERS_DB_PATH = path.join(__dirname, 'users.json');
+const INPUT_DIR = path.join(__dirname, 'input');
+const OUTPUT_DIR = path.join(__dirname, 'output');
 
 // Ajoute notre shim local (./stubs) dans la résolution des modules Node.
 const stubNodeModules = path.join(__dirname, 'stubs');
@@ -93,7 +96,7 @@ if (!ModuleCtor.__eyesonPatchedTfjsNode) {
 const humanModule = await import('@vladmandic/human');
 const Human = humanModule.Human || humanModule.default?.Human || humanModule.default;
 
-const db = new Low(new JSONFile('./users.json'), { users: {} });
+const db = new Low(new JSONFile(USERS_DB_PATH), { users: {} });
 await db.read();
 if (!db.data.users) db.data.users = {};
 const saveDB = () => db.write();
@@ -101,8 +104,8 @@ const saveDB = () => db.write();
 // ───────────────────────────────────────────────────────────────────────────────
 // Dossiers requis
 // ───────────────────────────────────────────────────────────────────────────────
-['input', 'output'].forEach((d) => {
-  if (!fs.existsSync(d)) fs.mkdirSync(d);
+[INPUT_DIR, OUTPUT_DIR].forEach((d) => {
+  if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
 });
 
 // ───────────────────────────────────────────────────────────────────────────────
@@ -760,7 +763,7 @@ async function generateEyesOn(imagePath, name, settings = {}) {
   ctx.font = '50px sans-serif';
   ctx.fillText(name, 70, 1360);
 
-  const outPath = path.join('output', `EYESON_${Date.now()}.png`);
+  const outPath = path.join(OUTPUT_DIR, `EYESON_${Date.now()}.png`);
   fs.writeFileSync(outPath, await canvas.encode('png'));
   return { outPath, pantone };
 }
@@ -903,7 +906,7 @@ bot.action('create', async (ctx) => {
 bot.on('photo', async (ctx) => {
   const fileId = ctx.message.photo.pop().file_id;
   const fileLink = await ctx.telegram.getFileLink(fileId);
-  const imgPath = `input/${ctx.from.id}.jpg`;
+  const imgPath = path.join(INPUT_DIR, `${ctx.from.id}.jpg`);
 
   const res = await fetch(fileLink.href);
   const buf = Buffer.from(await res.arrayBuffer());
