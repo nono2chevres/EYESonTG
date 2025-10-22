@@ -3,12 +3,13 @@ import { Telegraf, Markup } from 'telegraf';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
+import module from 'module';
+import { fileURLToPath } from 'url';
 import sharp from 'sharp';
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
 import { createCanvas, loadImage } from '@napi-rs/canvas';
 
-import Human from '@vladmandic/human';
 import * as tf from '@tensorflow/tfjs';
 import '@tensorflow/tfjs-backend-cpu'; // backend pur JS
 
@@ -18,6 +19,23 @@ import { getPantoneColor } from './pantone-utils.js';
 // .env & DB
 // ───────────────────────────────────────────────────────────────────────────────
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Ajoute notre shim local (./stubs) dans la résolution des modules Node.
+const stubNodeModules = path.join(__dirname, 'stubs');
+const nodePathEntries = process.env.NODE_PATH ? process.env.NODE_PATH.split(path.delimiter).filter(Boolean) : [];
+if (!nodePathEntries.includes(stubNodeModules)) {
+  nodePathEntries.push(stubNodeModules);
+  process.env.NODE_PATH = nodePathEntries.join(path.delimiter);
+  if (typeof module._initPaths === 'function') {
+    module._initPaths();
+  }
+}
+
+const humanModule = await import('@vladmandic/human');
+const Human = humanModule.Human || humanModule.default?.Human || humanModule.default;
 
 const db = new Low(new JSONFile('./users.json'), { users: {} });
 await db.read();
@@ -203,7 +221,12 @@ async function generateEyesOn(imagePath, name, settings = {}) {
 // ───────────────────────────────────────────────────────────────────────────────
 // Bot TG (UI + flux)
 // ───────────────────────────────────────────────────────────────────────────────
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const { BOT_TOKEN = '' } = process.env;
+if (!BOT_TOKEN) {
+  throw new Error('Missing BOT_TOKEN environment variable.');
+}
+
+const bot = new Telegraf(BOT_TOKEN);
 const userSettings = {}; // { [userId]: { imgPath, brightness, blur, name, fixedPantone, lastPantoneCandidates } }
 
 const LANGUAGES = {
@@ -425,5 +448,9 @@ bot.action(/choose_pantone::(.+?)::(#?[0-9A-Fa-f]{6})/, async (ctx) => {
 });
 
 // ───────────────────────────────────────────────────────────────────────────────
-bot.launch();
-console.log('🤖 Bot EyesOn + Human (CPU) lancé !');
+if (process.env.DISABLE_BOT === '1') {
+  console.log('🚫 Lancement du bot Telegram désactivé (DISABLE_BOT=1).');
+} else {
+  bot.launch();
+  console.log('🤖 Bot EyesOn + Human (CPU) lancé !');
+}
