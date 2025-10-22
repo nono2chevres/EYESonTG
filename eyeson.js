@@ -163,6 +163,32 @@ function mergeBoxes(a, b, extra = 30) {
   };
 }
 
+function normalizeBoxToCrop(box, crop) {
+  if (!box || !crop || !crop.width || !crop.height) return null;
+
+  const left = (box.left - crop.left) / crop.width;
+  const top = (box.top - crop.top) / crop.height;
+  const right = (box.left + box.width - crop.left) / crop.width;
+  const bottom = (box.top + box.height - crop.top) / crop.height;
+
+  const clampedLeft = Math.max(0, Math.min(1, left));
+  const clampedTop = Math.max(0, Math.min(1, top));
+  const clampedRight = Math.max(0, Math.min(1, right));
+  const clampedBottom = Math.max(0, Math.min(1, bottom));
+
+  const width = Math.max(0, clampedRight - clampedLeft);
+  const height = Math.max(0, clampedBottom - clampedTop);
+
+  if (width <= 0 || height <= 0) return null;
+
+  return {
+    left: clampedLeft,
+    top: clampedTop,
+    width,
+    height
+  };
+}
+
 /**
  * Détecte les yeux: renvoie un crop carré autour des deux yeux.
  * Fallback: si pas de mesh, prend le tiers supérieur de la box visage.
@@ -179,7 +205,7 @@ async function detectEyesCrop(imagePath) {
     const w = Math.floor(Math.min(width, height) * 0.7);
     const x = Math.floor((width - w) / 2);
     const y = Math.floor(height * 0.15);
-    return { left: x, top: y, width: w, height: w };
+    return { crop: { left: x, top: y, width: w, height: w }, eyes: null };
   }
 
   if (face.mesh?.length) {
@@ -197,9 +223,18 @@ async function detectEyesCrop(imagePath) {
     const cy = eyes.top + eyes.height / 2;
     const left = Math.max(0, Math.floor(cx - side / 2));
     const top = Math.max(0, Math.floor(cy - side / 2));
-    const safeSide = Math.min(side, width - left, height - top);
+    const boundedSide = Math.min(side, width - left, height - top);
+    const safeSide = Math.max(1, Math.floor(boundedSide));
 
-    return { left, top, width: safeSide, height: safeSide };
+    const crop = { left, top, width: safeSide, height: safeSide };
+    const normalizedLeft = normalizeBoxToCrop(leftBox, crop);
+    const normalizedRight = normalizeBoxToCrop(rightBox, crop);
+
+    const eyesMeta = (normalizedLeft || normalizedRight)
+      ? { leftBox: normalizedLeft, rightBox: normalizedRight }
+      : null;
+
+    return { crop, eyes: eyesMeta };
   }
 
   // fallback via box visage si pas de mesh
@@ -209,14 +244,66 @@ async function detectEyesCrop(imagePath) {
     const h = w;
     const left = Math.floor(x + (bw - w) / 2);
     const top = Math.floor(y + bh * 0.2);
-    return { left: Math.max(0, left), top: Math.max(0, top), width: w, height: h };
+    const crop = { left: Math.max(0, left), top: Math.max(0, top), width: w, height: h };
+    return { crop, eyes: null };
   }
 
   // fallback global
   const w = Math.floor(Math.min(width, height) * 0.7);
   const x = Math.floor((width - w) / 2);
   const y = Math.floor(height * 0.15);
-  return { left: x, top: y, width: w, height: w };
+  return { crop: { left: x, top: y, width: w, height: w }, eyes: null };
+}
+
+function applyEyeMask(ctx, eyes, options = {}) {
+  const { leftBox, rightBox } = eyes || {};
+  if (!leftBox && !rightBox) return;
+
+  const width = ctx.canvas.width;
+  const height = ctx.canvas.height;
+
+  const expandX = options.expandX ?? 1.6;
+  const expandY = options.expandY ?? 1.9;
+  const downShift = options.downShift ?? 0.12;
+  const bridgeStrength = options.bridgeStrength ?? 0.28;
+
+  const ellipses = [];
+  [leftBox, rightBox].forEach((box) => {
+    if (!box) return;
+    const radiusX = (box.width / 2) * width * expandX;
+    const radiusY = (box.height / 2) * height * expandY;
+    const baseCenterX = (box.left + box.width / 2) * width;
+    const baseCenterY = (box.top + box.height / 2) * height;
+    const centerY = baseCenterY + radiusY * downShift;
+    ellipses.push({
+      centerX: baseCenterX,
+      centerY,
+      radiusX,
+      radiusY
+    });
+  });
+
+  if (!ellipses.length) return;
+
+  ctx.save();
+  ctx.globalCompositeOperation = 'destination-in';
+  ctx.beginPath();
+  ellipses.forEach(({ centerX, centerY, radiusX, radiusY }) => {
+    ctx.ellipse(centerX, centerY, Math.max(1, radiusX), Math.max(1, radiusY), 0, 0, Math.PI * 2);
+  });
+
+  if (ellipses.length === 2 && bridgeStrength > 0) {
+    const [left, right] = ellipses[0].centerX <= ellipses[1].centerX ? ellipses : [ellipses[1], ellipses[0]];
+    const midX = (left.centerX + right.centerX) / 2;
+    const midY = (left.centerY + right.centerY) / 2;
+    const halfWidth = Math.abs(right.centerX - left.centerX) / 2 + Math.max(left.radiusX, right.radiusX) * 0.05;
+    const radiusY = Math.max(left.radiusY, right.radiusY) * bridgeStrength;
+    ctx.ellipse(midX, midY, Math.max(1, halfWidth), Math.max(1, radiusY), 0, 0, Math.PI * 2);
+  }
+
+  ctx.fillStyle = '#fff';
+  ctx.fill();
+  ctx.restore();
 }
 
 // ───────────────────────────────────────────────────────────────────────────────
@@ -224,7 +311,7 @@ async function detectEyesCrop(imagePath) {
 // ───────────────────────────────────────────────────────────────────────────────
 async function generateEyesOn(imagePath, name, settings = {}) {
   // 1) Détection & crop
-  const crop = await detectEyesCrop(imagePath);
+  const { crop, eyes } = await detectEyesCrop(imagePath);
 
   // 2) Couleur Pantone
   let pantone;
@@ -255,7 +342,13 @@ async function generateEyesOn(imagePath, name, settings = {}) {
 
   // image yeux
   const eyesImg = await loadImage(eyesBuf);
-  ctx.drawImage(eyesImg, 100, 100, 1000, 1000);
+  const maskedEyesCanvas = createCanvas(1000, 1000);
+  const maskedEyesCtx = maskedEyesCanvas.getContext('2d');
+  maskedEyesCtx.drawImage(eyesImg, 0, 0, 1000, 1000);
+  if (eyes) {
+    applyEyeMask(maskedEyesCtx, eyes, settings.eyeMask);
+  }
+  ctx.drawImage(maskedEyesCanvas, 100, 100);
 
   // textes
   ctx.fillStyle = '#000';
