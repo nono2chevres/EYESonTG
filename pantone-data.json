@@ -1,0 +1,7046 @@
+[
+  {
+    "name": "PANTONE Black 0961 C",
+    "hex": "#9E978E"
+  },
+  {
+    "name": "PANTONE Black C",
+    "hex": "#2D2926"
+  },
+  {
+    "name": "PANTONE Blue 072 C",
+    "hex": "#10069F"
+  },
+  {
+    "name": "PANTONE Blue 0821 C",
+    "hex": "#74D1EA"
+  },
+  {
+    "name": "PANTONE Bright Green C",
+    "hex": "#00B08B"
+  },
+  {
+    "name": "PANTONE Bright Orange C",
+    "hex": "#FF5E00"
+  },
+  {
+    "name": "PANTONE Bright Red C",
+    "hex": "#F93822"
+  },
+  {
+    "name": "PANTONE Dark Blue C",
+    "hex": "#00239C"
+  },
+  {
+    "name": "PANTONE Green 0921 C",
+    "hex": "#9DE7D7"
+  },
+  {
+    "name": "PANTONE Green C",
+    "hex": "#00AB84"
+  },
+  {
+    "name": "PANTONE Magenta 0521 C",
+    "hex": "#F1B2DC"
+  },
+  {
+    "name": "PANTONE Medium Blue C",
+    "hex": "#0084CA"
+  },
+  {
+    "name": "PANTONE Medium Purple C",
+    "hex": "#4E008E"
+  },
+  {
+    "name": "PANTONE Medium Yellow C",
+    "hex": "#FFD900"
+  },
+  {
+    "name": "PANTONE Neutral Black C",
+    "hex": "#222223"
+  },
+  {
+    "name": "PANTONE Orange 021 C",
+    "hex": "#FE5000"
+  },
+  {
+    "name": "PANTONE Pink C",
+    "hex": "#D62598"
+  },
+  {
+    "name": "PANTONE Process Blue C",
+    "hex": "#0085CA"
+  },
+  {
+    "name": "PANTONE Purple C",
+    "hex": "#BB29BB"
+  },
+  {
+    "name": "PANTONE Red 032 C",
+    "hex": "#EF3340"
+  },
+  {
+    "name": "PANTONE Red 0331 C",
+    "hex": "#FCAEBB"
+  },
+  {
+    "name": "PANTONE Reflex Blue C",
+    "hex": "#001489"
+  },
+  {
+    "name": "PANTONE Rhodamine Red C",
+    "hex": "#E10098"
+  },
+  {
+    "name": "PANTONE Rubine Red C",
+    "hex": "#CE0058"
+  },
+  {
+    "name": "PANTONE Strong Red C",
+    "hex": "#CE0056"
+  },
+  {
+    "name": "PANTONE Violet 0631 C",
+    "hex": "#BF9BDE"
+  },
+  {
+    "name": "PANTONE Violet C",
+    "hex": "#440099"
+  },
+  {
+    "name": "PANTONE Warm Red C",
+    "hex": "#F9423A"
+  },
+  {
+    "name": "PANTONE Yellow 012 C",
+    "hex": "#FFD700"
+  },
+  {
+    "name": "PANTONE Yellow 0131 C",
+    "hex": "#F2F0A1"
+  },
+  {
+    "name": "PANTONE Yellow C",
+    "hex": "#FEDD00"
+  },
+  {
+    "name": "PANTONE 100 C",
+    "hex": "#F6EB61"
+  },
+  {
+    "name": "PANTONE 101 C",
+    "hex": "#F7EA48"
+  },
+  {
+    "name": "PANTONE 102 C",
+    "hex": "#FCE300"
+  },
+  {
+    "name": "PANTONE 103 C",
+    "hex": "#C5A900"
+  },
+  {
+    "name": "PANTONE 104 C",
+    "hex": "#AF9800"
+  },
+  {
+    "name": "PANTONE 105 C",
+    "hex": "#897A27"
+  },
+  {
+    "name": "PANTONE 106 C",
+    "hex": "#F9E547"
+  },
+  {
+    "name": "PANTONE 107 C",
+    "hex": "#FBE122"
+  },
+  {
+    "name": "PANTONE 108 C",
+    "hex": "#FEDB00"
+  },
+  {
+    "name": "PANTONE 109 C",
+    "hex": "#FFD100"
+  },
+  {
+    "name": "PANTONE 110 C",
+    "hex": "#DAAA00"
+  },
+  {
+    "name": "PANTONE 111 C",
+    "hex": "#AA8A00"
+  },
+  {
+    "name": "PANTONE 112 C",
+    "hex": "#9C8412"
+  },
+  {
+    "name": "PANTONE 113 C",
+    "hex": "#FAE053"
+  },
+  {
+    "name": "PANTONE 114 C",
+    "hex": "#FBDD40"
+  },
+  {
+    "name": "PANTONE 115 C",
+    "hex": "#FDDA24"
+  },
+  {
+    "name": "PANTONE 116 C",
+    "hex": "#FFCD00"
+  },
+  {
+    "name": "PANTONE 117 C",
+    "hex": "#C99700"
+  },
+  {
+    "name": "PANTONE 118 C",
+    "hex": "#AC8400"
+  },
+  {
+    "name": "PANTONE 119 C",
+    "hex": "#897322"
+  },
+  {
+    "name": "PANTONE 120 C",
+    "hex": "#FBDB65"
+  },
+  {
+    "name": "PANTONE 121 C",
+    "hex": "#FDD757"
+  },
+  {
+    "name": "PANTONE 122 C",
+    "hex": "#FED141"
+  },
+  {
+    "name": "PANTONE 123 C",
+    "hex": "#FFC72C"
+  },
+  {
+    "name": "PANTONE 124 C",
+    "hex": "#EAAA00"
+  },
+  {
+    "name": "PANTONE 125 C",
+    "hex": "#B58500"
+  },
+  {
+    "name": "PANTONE 126 C",
+    "hex": "#9A7611"
+  },
+  {
+    "name": "PANTONE 127 C",
+    "hex": "#F3DD6D"
+  },
+  {
+    "name": "PANTONE 128 C",
+    "hex": "#F3D54E"
+  },
+  {
+    "name": "PANTONE 129 C",
+    "hex": "#F3D03E"
+  },
+  {
+    "name": "PANTONE 130 C",
+    "hex": "#F2A900"
+  },
+  {
+    "name": "PANTONE 131 C",
+    "hex": "#CC8A00"
+  },
+  {
+    "name": "PANTONE 132 C",
+    "hex": "#A07400"
+  },
+  {
+    "name": "PANTONE 133 C",
+    "hex": "#6C571B"
+  },
+  {
+    "name": "PANTONE 134 C",
+    "hex": "#FDD26E"
+  },
+  {
+    "name": "PANTONE 135 C",
+    "hex": "#FFC658"
+  },
+  {
+    "name": "PANTONE 136 C",
+    "hex": "#FFBF3F"
+  },
+  {
+    "name": "PANTONE 137 C",
+    "hex": "#FFA300"
+  },
+  {
+    "name": "PANTONE 138 C",
+    "hex": "#DE7C00"
+  },
+  {
+    "name": "PANTONE 139 C",
+    "hex": "#AF6D04"
+  },
+  {
+    "name": "PANTONE 140 C",
+    "hex": "#74531C"
+  },
+  {
+    "name": "PANTONE 141 C",
+    "hex": "#F2C75C"
+  },
+  {
+    "name": "PANTONE 142 C",
+    "hex": "#F1BE48"
+  },
+  {
+    "name": "PANTONE 143 C",
+    "hex": "#F1B434"
+  },
+  {
+    "name": "PANTONE 144 C",
+    "hex": "#ED8B00"
+  },
+  {
+    "name": "PANTONE 145 C",
+    "hex": "#CF7F00"
+  },
+  {
+    "name": "PANTONE 146 C",
+    "hex": "#A76D11"
+  },
+  {
+    "name": "PANTONE 147 C",
+    "hex": "#715C2A"
+  },
+  {
+    "name": "PANTONE 148 C",
+    "hex": "#FECB8B"
+  },
+  {
+    "name": "PANTONE 149 C",
+    "hex": "#FFC27B"
+  },
+  {
+    "name": "PANTONE 150 C",
+    "hex": "#FFB25B"
+  },
+  {
+    "name": "PANTONE 151 C",
+    "hex": "#FF8200"
+  },
+  {
+    "name": "PANTONE 152 C",
+    "hex": "#E57200"
+  },
+  {
+    "name": "PANTONE 153 C",
+    "hex": "#BE6A14"
+  },
+  {
+    "name": "PANTONE 154 C",
+    "hex": "#9B5A1A"
+  },
+  {
+    "name": "PANTONE 155 C",
+    "hex": "#EFD19F"
+  },
+  {
+    "name": "PANTONE 156 C",
+    "hex": "#EFBE7D"
+  },
+  {
+    "name": "PANTONE 157 C",
+    "hex": "#ECA154"
+  },
+  {
+    "name": "PANTONE 158 C",
+    "hex": "#E87722"
+  },
+  {
+    "name": "PANTONE 159 C",
+    "hex": "#CB6015"
+  },
+  {
+    "name": "PANTONE 160 C",
+    "hex": "#A1561C"
+  },
+  {
+    "name": "PANTONE 161 C",
+    "hex": "#603D20"
+  },
+  {
+    "name": "PANTONE 162 C",
+    "hex": "#FFBE9F"
+  },
+  {
+    "name": "PANTONE 163 C",
+    "hex": "#FF9D6E"
+  },
+  {
+    "name": "PANTONE 164 C",
+    "hex": "#FF7F41"
+  },
+  {
+    "name": "PANTONE 165 C",
+    "hex": "#FF671F"
+  },
+  {
+    "name": "PANTONE 166 C",
+    "hex": "#E35205"
+  },
+  {
+    "name": "PANTONE 167 C",
+    "hex": "#BE531C"
+  },
+  {
+    "name": "PANTONE 168 C",
+    "hex": "#73381D"
+  },
+  {
+    "name": "PANTONE 169 C",
+    "hex": "#FFB3AB"
+  },
+  {
+    "name": "PANTONE 170 C",
+    "hex": "#FF8674"
+  },
+  {
+    "name": "PANTONE 171 C",
+    "hex": "#FF5C39"
+  },
+  {
+    "name": "PANTONE 172 C",
+    "hex": "#FA4616"
+  },
+  {
+    "name": "PANTONE 173 C",
+    "hex": "#CF4520"
+  },
+  {
+    "name": "PANTONE 174 C",
+    "hex": "#963821"
+  },
+  {
+    "name": "PANTONE 175 C",
+    "hex": "#6B3529"
+  },
+  {
+    "name": "PANTONE 176 C",
+    "hex": "#FFB1BB"
+  },
+  {
+    "name": "PANTONE 177 C",
+    "hex": "#FF808B"
+  },
+  {
+    "name": "PANTONE 178 C",
+    "hex": "#FF585D"
+  },
+  {
+    "name": "PANTONE 179 C",
+    "hex": "#E03C31"
+  },
+  {
+    "name": "PANTONE 180 C",
+    "hex": "#BE3A34"
+  },
+  {
+    "name": "PANTONE 181 C",
+    "hex": "#81312F"
+  },
+  {
+    "name": "PANTONE 182 C",
+    "hex": "#FABBCB"
+  },
+  {
+    "name": "PANTONE 183 C",
+    "hex": "#FC9BB3"
+  },
+  {
+    "name": "PANTONE 184 C",
+    "hex": "#F65275"
+  },
+  {
+    "name": "PANTONE 185 C",
+    "hex": "#E4002B"
+  },
+  {
+    "name": "PANTONE 186 C",
+    "hex": "#C8102E"
+  },
+  {
+    "name": "PANTONE 187 C",
+    "hex": "#A6192E"
+  },
+  {
+    "name": "PANTONE 188 C",
+    "hex": "#76232F"
+  },
+  {
+    "name": "PANTONE 189 C",
+    "hex": "#F8A3BC"
+  },
+  {
+    "name": "PANTONE 190 C",
+    "hex": "#F67599"
+  },
+  {
+    "name": "PANTONE 191 C",
+    "hex": "#EF426F"
+  },
+  {
+    "name": "PANTONE 192 C",
+    "hex": "#E40046"
+  },
+  {
+    "name": "PANTONE 193 C",
+    "hex": "#BF0D3E"
+  },
+  {
+    "name": "PANTONE 194 C",
+    "hex": "#9B2743"
+  },
+  {
+    "name": "PANTONE 195 C",
+    "hex": "#782F40"
+  },
+  {
+    "name": "PANTONE 196 C",
+    "hex": "#ECC7CD"
+  },
+  {
+    "name": "PANTONE 197 C",
+    "hex": "#E89CAE"
+  },
+  {
+    "name": "PANTONE 198 C",
+    "hex": "#DF4661"
+  },
+  {
+    "name": "PANTONE 199 C",
+    "hex": "#D50032"
+  },
+  {
+    "name": "PANTONE 200 C",
+    "hex": "#BA0C2F"
+  },
+  {
+    "name": "PANTONE 201 C",
+    "hex": "#9D2235"
+  },
+  {
+    "name": "PANTONE 202 C",
+    "hex": "#862633"
+  },
+  {
+    "name": "PANTONE 203 C",
+    "hex": "#ECB3CB"
+  },
+  {
+    "name": "PANTONE 204 C",
+    "hex": "#E782A9"
+  },
+  {
+    "name": "PANTONE 205 C",
+    "hex": "#E0457B"
+  },
+  {
+    "name": "PANTONE 206 C",
+    "hex": "#CE0037"
+  },
+  {
+    "name": "PANTONE 207 C",
+    "hex": "#A50034"
+  },
+  {
+    "name": "PANTONE 208 C",
+    "hex": "#861F41"
+  },
+  {
+    "name": "PANTONE 209 C",
+    "hex": "#6F263D"
+  },
+  {
+    "name": "PANTONE 210 C",
+    "hex": "#F99FC9"
+  },
+  {
+    "name": "PANTONE 211 C",
+    "hex": "#F57EB6"
+  },
+  {
+    "name": "PANTONE 212 C",
+    "hex": "#F04E98"
+  },
+  {
+    "name": "PANTONE 213 C",
+    "hex": "#E31C79"
+  },
+  {
+    "name": "PANTONE 214 C",
+    "hex": "#CE0F69"
+  },
+  {
+    "name": "PANTONE 215 C",
+    "hex": "#AC145A"
+  },
+  {
+    "name": "PANTONE 216 C",
+    "hex": "#7D2248"
+  },
+  {
+    "name": "PANTONE 217 C",
+    "hex": "#EABEDB"
+  },
+  {
+    "name": "PANTONE 218 C",
+    "hex": "#E56DB1"
+  },
+  {
+    "name": "PANTONE 219 C",
+    "hex": "#DA1884"
+  },
+  {
+    "name": "PANTONE 220 C",
+    "hex": "#A50050"
+  },
+  {
+    "name": "PANTONE 221 C",
+    "hex": "#910048"
+  },
+  {
+    "name": "PANTONE 222 C",
+    "hex": "#6C1D45"
+  },
+  {
+    "name": "PANTONE 223 C",
+    "hex": "#EF95CF"
+  },
+  {
+    "name": "PANTONE 224 C",
+    "hex": "#EB6FBD"
+  },
+  {
+    "name": "PANTONE 225 C",
+    "hex": "#DF1995"
+  },
+  {
+    "name": "PANTONE 226 C",
+    "hex": "#D0006F"
+  },
+  {
+    "name": "PANTONE 227 C",
+    "hex": "#AA0061"
+  },
+  {
+    "name": "PANTONE 228 C",
+    "hex": "#890C58"
+  },
+  {
+    "name": "PANTONE 229 C",
+    "hex": "#672146"
+  },
+  {
+    "name": "PANTONE 230 C",
+    "hex": "#F4A6D7"
+  },
+  {
+    "name": "PANTONE 231 C",
+    "hex": "#F277C6"
+  },
+  {
+    "name": "PANTONE 232 C",
+    "hex": "#E93CAC"
+  },
+  {
+    "name": "PANTONE 233 C",
+    "hex": "#C6007E"
+  },
+  {
+    "name": "PANTONE 234 C",
+    "hex": "#A20067"
+  },
+  {
+    "name": "PANTONE 235 C",
+    "hex": "#840B55"
+  },
+  {
+    "name": "PANTONE 236 C",
+    "hex": "#F1A7DC"
+  },
+  {
+    "name": "PANTONE 237 C",
+    "hex": "#EC86D0"
+  },
+  {
+    "name": "PANTONE 238 C",
+    "hex": "#E45DBF"
+  },
+  {
+    "name": "PANTONE 239 C",
+    "hex": "#DB3EB1"
+  },
+  {
+    "name": "PANTONE 240 C",
+    "hex": "#C5299B"
+  },
+  {
+    "name": "PANTONE 241 C",
+    "hex": "#AF1685"
+  },
+  {
+    "name": "PANTONE 242 C",
+    "hex": "#80225F"
+  },
+  {
+    "name": "PANTONE 243 C",
+    "hex": "#EAB8E4"
+  },
+  {
+    "name": "PANTONE 244 C",
+    "hex": "#E59BDC"
+  },
+  {
+    "name": "PANTONE 245 C",
+    "hex": "#DD7FD3"
+  },
+  {
+    "name": "PANTONE 246 C",
+    "hex": "#C724B1"
+  },
+  {
+    "name": "PANTONE 247 C",
+    "hex": "#BB16A3"
+  },
+  {
+    "name": "PANTONE 248 C",
+    "hex": "#A51890"
+  },
+  {
+    "name": "PANTONE 249 C",
+    "hex": "#80276C"
+  },
+  {
+    "name": "PANTONE 250 C",
+    "hex": "#E7BAE4"
+  },
+  {
+    "name": "PANTONE 251 C",
+    "hex": "#DD9CDF"
+  },
+  {
+    "name": "PANTONE 252 C",
+    "hex": "#C964CF"
+  },
+  {
+    "name": "PANTONE 253 C",
+    "hex": "#AD1AAC"
+  },
+  {
+    "name": "PANTONE 254 C",
+    "hex": "#981D97"
+  },
+  {
+    "name": "PANTONE 255 C",
+    "hex": "#72246C"
+  },
+  {
+    "name": "PANTONE 256 C",
+    "hex": "#D6BFDD"
+  },
+  {
+    "name": "PANTONE 257 C",
+    "hex": "#C6A1CF"
+  },
+  {
+    "name": "PANTONE 258 C",
+    "hex": "#8C4799"
+  },
+  {
+    "name": "PANTONE 259 C",
+    "hex": "#6D2077"
+  },
+  {
+    "name": "PANTONE 260 C",
+    "hex": "#642667"
+  },
+  {
+    "name": "PANTONE 261 C",
+    "hex": "#5D285F"
+  },
+  {
+    "name": "PANTONE 262 C",
+    "hex": "#51284F"
+  },
+  {
+    "name": "PANTONE 263 C",
+    "hex": "#D7C6E6"
+  },
+  {
+    "name": "PANTONE 264 C",
+    "hex": "#C1A7E2"
+  },
+  {
+    "name": "PANTONE 265 C",
+    "hex": "#9063CD"
+  },
+  {
+    "name": "PANTONE 266 C",
+    "hex": "#753BBD"
+  },
+  {
+    "name": "PANTONE 267 C",
+    "hex": "#5F259F"
+  },
+  {
+    "name": "PANTONE 268 C",
+    "hex": "#582C83"
+  },
+  {
+    "name": "PANTONE 269 C",
+    "hex": "#512D6D"
+  },
+  {
+    "name": "PANTONE 270 C",
+    "hex": "#B4B5DF"
+  },
+  {
+    "name": "PANTONE 271 C",
+    "hex": "#9595D2"
+  },
+  {
+    "name": "PANTONE 272 C",
+    "hex": "#7474C1"
+  },
+  {
+    "name": "PANTONE 273 C",
+    "hex": "#24135F"
+  },
+  {
+    "name": "PANTONE 274 C",
+    "hex": "#211551"
+  },
+  {
+    "name": "PANTONE 275 C",
+    "hex": "#201747"
+  },
+  {
+    "name": "PANTONE 276 C",
+    "hex": "#221C35"
+  },
+  {
+    "name": "PANTONE 277 C",
+    "hex": "#ABCAE9"
+  },
+  {
+    "name": "PANTONE 278 C",
+    "hex": "#8BB8E8"
+  },
+  {
+    "name": "PANTONE 279 C",
+    "hex": "#418FDE"
+  },
+  {
+    "name": "PANTONE 280 C",
+    "hex": "#012169"
+  },
+  {
+    "name": "PANTONE 281 C",
+    "hex": "#00205B"
+  },
+  {
+    "name": "PANTONE 282 C",
+    "hex": "#041E42"
+  },
+  {
+    "name": "PANTONE 283 C",
+    "hex": "#92C1E9"
+  },
+  {
+    "name": "PANTONE 284 C",
+    "hex": "#6CACE4"
+  },
+  {
+    "name": "PANTONE 285 C",
+    "hex": "#0072CE"
+  },
+  {
+    "name": "PANTONE 286 C",
+    "hex": "#0033A0"
+  },
+  {
+    "name": "PANTONE 287 C",
+    "hex": "#003087"
+  },
+  {
+    "name": "PANTONE 288 C",
+    "hex": "#002D72"
+  },
+  {
+    "name": "PANTONE 289 C",
+    "hex": "#0C2340"
+  },
+  {
+    "name": "PANTONE 290 C",
+    "hex": "#B9D9EB"
+  },
+  {
+    "name": "PANTONE 291 C",
+    "hex": "#9BCBEB"
+  },
+  {
+    "name": "PANTONE 292 C",
+    "hex": "#69B3E7"
+  },
+  {
+    "name": "PANTONE 293 C",
+    "hex": "#003DA5"
+  },
+  {
+    "name": "PANTONE 294 C",
+    "hex": "#002F6C"
+  },
+  {
+    "name": "PANTONE 295 C",
+    "hex": "#002855"
+  },
+  {
+    "name": "PANTONE 296 C",
+    "hex": "#041C2C"
+  },
+  {
+    "name": "PANTONE 297 C",
+    "hex": "#71C5E8"
+  },
+  {
+    "name": "PANTONE 298 C",
+    "hex": "#41B6E6"
+  },
+  {
+    "name": "PANTONE 299 C",
+    "hex": "#00A3E0"
+  },
+  {
+    "name": "PANTONE 300 C",
+    "hex": "#005EB8"
+  },
+  {
+    "name": "PANTONE 301 C",
+    "hex": "#004B87"
+  },
+  {
+    "name": "PANTONE 302 C",
+    "hex": "#003B5C"
+  },
+  {
+    "name": "PANTONE 303 C",
+    "hex": "#002A3A"
+  },
+  {
+    "name": "PANTONE 304 C",
+    "hex": "#9ADBE8"
+  },
+  {
+    "name": "PANTONE 305 C",
+    "hex": "#59CBE8"
+  },
+  {
+    "name": "PANTONE 306 C",
+    "hex": "#00B5E2"
+  },
+  {
+    "name": "PANTONE 307 C",
+    "hex": "#006BA6"
+  },
+  {
+    "name": "PANTONE 308 C",
+    "hex": "#00587C"
+  },
+  {
+    "name": "PANTONE 309 C",
+    "hex": "#003B49"
+  },
+  {
+    "name": "PANTONE 310 C",
+    "hex": "#6AD1E3"
+  },
+  {
+    "name": "PANTONE 311 C",
+    "hex": "#05C3DE"
+  },
+  {
+    "name": "PANTONE 312 C",
+    "hex": "#00A9CE"
+  },
+  {
+    "name": "PANTONE 313 C",
+    "hex": "#0092BC"
+  },
+  {
+    "name": "PANTONE 314 C",
+    "hex": "#007FA3"
+  },
+  {
+    "name": "PANTONE 315 C",
+    "hex": "#00677F"
+  },
+  {
+    "name": "PANTONE 316 C",
+    "hex": "#004851"
+  },
+  {
+    "name": "PANTONE 317 C",
+    "hex": "#B1E4E3"
+  },
+  {
+    "name": "PANTONE 318 C",
+    "hex": "#88DBDF"
+  },
+  {
+    "name": "PANTONE 319 C",
+    "hex": "#2DCCD3"
+  },
+  {
+    "name": "PANTONE 320 C",
+    "hex": "#009CA6"
+  },
+  {
+    "name": "PANTONE 321 C",
+    "hex": "#008C95"
+  },
+  {
+    "name": "PANTONE 322 C",
+    "hex": "#007377"
+  },
+  {
+    "name": "PANTONE 323 C",
+    "hex": "#005F61"
+  },
+  {
+    "name": "PANTONE 324 C",
+    "hex": "#9CDBD9"
+  },
+  {
+    "name": "PANTONE 325 C",
+    "hex": "#64CCC9"
+  },
+  {
+    "name": "PANTONE 326 C",
+    "hex": "#00B2A9"
+  },
+  {
+    "name": "PANTONE 327 C",
+    "hex": "#008675"
+  },
+  {
+    "name": "PANTONE 328 C",
+    "hex": "#007367"
+  },
+  {
+    "name": "PANTONE 329 C",
+    "hex": "#00685E"
+  },
+  {
+    "name": "PANTONE 330 C",
+    "hex": "#00534C"
+  },
+  {
+    "name": "PANTONE 331 C",
+    "hex": "#A7E6D7"
+  },
+  {
+    "name": "PANTONE 332 C",
+    "hex": "#8CE2D0"
+  },
+  {
+    "name": "PANTONE 333 C",
+    "hex": "#3CDBC0"
+  },
+  {
+    "name": "PANTONE 334 C",
+    "hex": "#009775"
+  },
+  {
+    "name": "PANTONE 335 C",
+    "hex": "#007B5F"
+  },
+  {
+    "name": "PANTONE 336 C",
+    "hex": "#00664F"
+  },
+  {
+    "name": "PANTONE 337 C",
+    "hex": "#8FD6BD"
+  },
+  {
+    "name": "PANTONE 338 C",
+    "hex": "#6ECEB2"
+  },
+  {
+    "name": "PANTONE 339 C",
+    "hex": "#00B388"
+  },
+  {
+    "name": "PANTONE 340 C",
+    "hex": "#00965E"
+  },
+  {
+    "name": "PANTONE 341 C",
+    "hex": "#007A53"
+  },
+  {
+    "name": "PANTONE 342 C",
+    "hex": "#006747"
+  },
+  {
+    "name": "PANTONE 343 C",
+    "hex": "#115740"
+  },
+  {
+    "name": "PANTONE 344 C",
+    "hex": "#A0DAB3"
+  },
+  {
+    "name": "PANTONE 345 C",
+    "hex": "#91D6AC"
+  },
+  {
+    "name": "PANTONE 346 C",
+    "hex": "#71CC98"
+  },
+  {
+    "name": "PANTONE 347 C",
+    "hex": "#009A44"
+  },
+  {
+    "name": "PANTONE 348 C",
+    "hex": "#00843D"
+  },
+  {
+    "name": "PANTONE 349 C",
+    "hex": "#046A38"
+  },
+  {
+    "name": "PANTONE 350 C",
+    "hex": "#2C5234"
+  },
+  {
+    "name": "PANTONE 351 C",
+    "hex": "#A2E4B8"
+  },
+  {
+    "name": "PANTONE 352 C",
+    "hex": "#8FE2B0"
+  },
+  {
+    "name": "PANTONE 353 C",
+    "hex": "#80E0A7"
+  },
+  {
+    "name": "PANTONE 354 C",
+    "hex": "#00B140"
+  },
+  {
+    "name": "PANTONE 355 C",
+    "hex": "#009639"
+  },
+  {
+    "name": "PANTONE 356 C",
+    "hex": "#007A33"
+  },
+  {
+    "name": "PANTONE 357 C",
+    "hex": "#215732"
+  },
+  {
+    "name": "PANTONE 358 C",
+    "hex": "#ADDC91"
+  },
+  {
+    "name": "PANTONE 359 C",
+    "hex": "#A1D884"
+  },
+  {
+    "name": "PANTONE 360 C",
+    "hex": "#6CC24A"
+  },
+  {
+    "name": "PANTONE 361 C",
+    "hex": "#43B02A"
+  },
+  {
+    "name": "PANTONE 362 C",
+    "hex": "#509E2F"
+  },
+  {
+    "name": "PANTONE 363 C",
+    "hex": "#4C8C2B"
+  },
+  {
+    "name": "PANTONE 364 C",
+    "hex": "#4A7729"
+  },
+  {
+    "name": "PANTONE 365 C",
+    "hex": "#C2E189"
+  },
+  {
+    "name": "PANTONE 366 C",
+    "hex": "#B7DD79"
+  },
+  {
+    "name": "PANTONE 367 C",
+    "hex": "#A4D65E"
+  },
+  {
+    "name": "PANTONE 368 C",
+    "hex": "#78BE20"
+  },
+  {
+    "name": "PANTONE 369 C",
+    "hex": "#64A70B"
+  },
+  {
+    "name": "PANTONE 370 C",
+    "hex": "#658D1B"
+  },
+  {
+    "name": "PANTONE 371 C",
+    "hex": "#546223"
+  },
+  {
+    "name": "PANTONE 372 C",
+    "hex": "#D4EB8E"
+  },
+  {
+    "name": "PANTONE 373 C",
+    "hex": "#CDEA80"
+  },
+  {
+    "name": "PANTONE 374 C",
+    "hex": "#C5E86C"
+  },
+  {
+    "name": "PANTONE 375 C",
+    "hex": "#97D700"
+  },
+  {
+    "name": "PANTONE 376 C",
+    "hex": "#84BD00"
+  },
+  {
+    "name": "PANTONE 377 C",
+    "hex": "#7A9A01"
+  },
+  {
+    "name": "PANTONE 378 C",
+    "hex": "#59621D"
+  },
+  {
+    "name": "PANTONE 379 C",
+    "hex": "#E2E868"
+  },
+  {
+    "name": "PANTONE 380 C",
+    "hex": "#DBE442"
+  },
+  {
+    "name": "PANTONE 381 C",
+    "hex": "#CEDC00"
+  },
+  {
+    "name": "PANTONE 382 C",
+    "hex": "#C4D600"
+  },
+  {
+    "name": "PANTONE 383 C",
+    "hex": "#A8AD00"
+  },
+  {
+    "name": "PANTONE 384 C",
+    "hex": "#949300"
+  },
+  {
+    "name": "PANTONE 385 C",
+    "hex": "#787121"
+  },
+  {
+    "name": "PANTONE 386 C",
+    "hex": "#E9EC6B"
+  },
+  {
+    "name": "PANTONE 387 C",
+    "hex": "#E3E935"
+  },
+  {
+    "name": "PANTONE 388 C",
+    "hex": "#E0E721"
+  },
+  {
+    "name": "PANTONE 389 C",
+    "hex": "#D0DF00"
+  },
+  {
+    "name": "PANTONE 390 C",
+    "hex": "#B5BD00"
+  },
+  {
+    "name": "PANTONE 391 C",
+    "hex": "#9A9500"
+  },
+  {
+    "name": "PANTONE 392 C",
+    "hex": "#827A04"
+  },
+  {
+    "name": "PANTONE 393 C",
+    "hex": "#F0EC74"
+  },
+  {
+    "name": "PANTONE 394 C",
+    "hex": "#EDE939"
+  },
+  {
+    "name": "PANTONE 395 C",
+    "hex": "#ECE81A"
+  },
+  {
+    "name": "PANTONE 396 C",
+    "hex": "#E1E000"
+  },
+  {
+    "name": "PANTONE 397 C",
+    "hex": "#BFB800"
+  },
+  {
+    "name": "PANTONE 398 C",
+    "hex": "#ADA400"
+  },
+  {
+    "name": "PANTONE 399 C",
+    "hex": "#A09200"
+  },
+  {
+    "name": "PANTONE 400 C",
+    "hex": "#C4BFB6"
+  },
+  {
+    "name": "PANTONE 401 C",
+    "hex": "#AFA9A0"
+  },
+  {
+    "name": "PANTONE 402 C",
+    "hex": "#9D968D"
+  },
+  {
+    "name": "PANTONE 403 C",
+    "hex": "#8C857B"
+  },
+  {
+    "name": "PANTONE 404 C",
+    "hex": "#776E64"
+  },
+  {
+    "name": "PANTONE 405 C",
+    "hex": "#696158"
+  },
+  {
+    "name": "PANTONE 406 C",
+    "hex": "#C4BCB7"
+  },
+  {
+    "name": "PANTONE 407 C",
+    "hex": "#B2A8A2"
+  },
+  {
+    "name": "PANTONE 408 C",
+    "hex": "#978C87"
+  },
+  {
+    "name": "PANTONE 409 C",
+    "hex": "#857874"
+  },
+  {
+    "name": "PANTONE 410 C",
+    "hex": "#746661"
+  },
+  {
+    "name": "PANTONE 411 C",
+    "hex": "#5E514D"
+  },
+  {
+    "name": "PANTONE 412 C",
+    "hex": "#382F2D"
+  },
+  {
+    "name": "PANTONE 413 C",
+    "hex": "#BABBB1"
+  },
+  {
+    "name": "PANTONE 414 C",
+    "hex": "#A8A99E"
+  },
+  {
+    "name": "PANTONE 415 C",
+    "hex": "#919388"
+  },
+  {
+    "name": "PANTONE 416 C",
+    "hex": "#7E7F74"
+  },
+  {
+    "name": "PANTONE 417 C",
+    "hex": "#65665C"
+  },
+  {
+    "name": "PANTONE 418 C",
+    "hex": "#51534A"
+  },
+  {
+    "name": "PANTONE 419 C",
+    "hex": "#212322"
+  },
+  {
+    "name": "PANTONE 420 C",
+    "hex": "#C7C9C7"
+  },
+  {
+    "name": "PANTONE 421 C",
+    "hex": "#B2B4B2"
+  },
+  {
+    "name": "PANTONE 422 C",
+    "hex": "#9EA2A2"
+  },
+  {
+    "name": "PANTONE 423 C",
+    "hex": "#898D8D"
+  },
+  {
+    "name": "PANTONE 424 C",
+    "hex": "#707372"
+  },
+  {
+    "name": "PANTONE 425 C",
+    "hex": "#54585A"
+  },
+  {
+    "name": "PANTONE 426 C",
+    "hex": "#25282A"
+  },
+  {
+    "name": "PANTONE 427 C",
+    "hex": "#D0D3D4"
+  },
+  {
+    "name": "PANTONE 428 C",
+    "hex": "#C1C6C8"
+  },
+  {
+    "name": "PANTONE 429 C",
+    "hex": "#A2AAAD"
+  },
+  {
+    "name": "PANTONE 430 C",
+    "hex": "#7C878E"
+  },
+  {
+    "name": "PANTONE 431 C",
+    "hex": "#5B6770"
+  },
+  {
+    "name": "PANTONE 432 C",
+    "hex": "#333F48"
+  },
+  {
+    "name": "PANTONE 433 C",
+    "hex": "#1D252D"
+  },
+  {
+    "name": "PANTONE 434 C",
+    "hex": "#D0C4C5"
+  },
+  {
+    "name": "PANTONE 435 C",
+    "hex": "#C1B2B6"
+  },
+  {
+    "name": "PANTONE 436 C",
+    "hex": "#AB989D"
+  },
+  {
+    "name": "PANTONE 437 C",
+    "hex": "#7B6469"
+  },
+  {
+    "name": "PANTONE 438 C",
+    "hex": "#584446"
+  },
+  {
+    "name": "PANTONE 439 C",
+    "hex": "#453536"
+  },
+  {
+    "name": "PANTONE 440 C",
+    "hex": "#382E2C"
+  },
+  {
+    "name": "PANTONE 441 C",
+    "hex": "#BEC6C4"
+  },
+  {
+    "name": "PANTONE 442 C",
+    "hex": "#A2ACAB"
+  },
+  {
+    "name": "PANTONE 443 C",
+    "hex": "#919D9D"
+  },
+  {
+    "name": "PANTONE 444 C",
+    "hex": "#717C7D"
+  },
+  {
+    "name": "PANTONE 445 C",
+    "hex": "#505759"
+  },
+  {
+    "name": "PANTONE 446 C",
+    "hex": "#3F4444"
+  },
+  {
+    "name": "PANTONE 447 C",
+    "hex": "#373A36"
+  },
+  {
+    "name": "PANTONE 448 C",
+    "hex": "#4A412A"
+  },
+  {
+    "name": "PANTONE 449 C",
+    "hex": "#524727"
+  },
+  {
+    "name": "PANTONE 450 C",
+    "hex": "#594A25"
+  },
+  {
+    "name": "PANTONE 451 C",
+    "hex": "#9B945F"
+  },
+  {
+    "name": "PANTONE 452 C",
+    "hex": "#B0AA7E"
+  },
+  {
+    "name": "PANTONE 453 C",
+    "hex": "#BFBB98"
+  },
+  {
+    "name": "PANTONE 454 C",
+    "hex": "#CAC7A7"
+  },
+  {
+    "name": "PANTONE 455 C",
+    "hex": "#695B24"
+  },
+  {
+    "name": "PANTONE 456 C",
+    "hex": "#A28E2A"
+  },
+  {
+    "name": "PANTONE 457 C",
+    "hex": "#B89D18"
+  },
+  {
+    "name": "PANTONE 458 C",
+    "hex": "#D9C756"
+  },
+  {
+    "name": "PANTONE 459 C",
+    "hex": "#DECD63"
+  },
+  {
+    "name": "PANTONE 460 C",
+    "hex": "#E4D77E"
+  },
+  {
+    "name": "PANTONE 461 C",
+    "hex": "#E9DF97"
+  },
+  {
+    "name": "PANTONE 462 C",
+    "hex": "#5C462B"
+  },
+  {
+    "name": "PANTONE 463 C",
+    "hex": "#744F28"
+  },
+  {
+    "name": "PANTONE 464 C",
+    "hex": "#8B5B29"
+  },
+  {
+    "name": "PANTONE 465 C",
+    "hex": "#B9975B"
+  },
+  {
+    "name": "PANTONE 466 C",
+    "hex": "#C6AA76"
+  },
+  {
+    "name": "PANTONE 467 C",
+    "hex": "#D3BC8D"
+  },
+  {
+    "name": "PANTONE 468 C",
+    "hex": "#DDCBA4"
+  },
+  {
+    "name": "PANTONE 469 C",
+    "hex": "#693F23"
+  },
+  {
+    "name": "PANTONE 470 C",
+    "hex": "#A45A2A"
+  },
+  {
+    "name": "PANTONE 471 C",
+    "hex": "#B86125"
+  },
+  {
+    "name": "PANTONE 472 C",
+    "hex": "#E59E6D"
+  },
+  {
+    "name": "PANTONE 473 C",
+    "hex": "#F0BF9B"
+  },
+  {
+    "name": "PANTONE 474 C",
+    "hex": "#F1C6A7"
+  },
+  {
+    "name": "PANTONE 475 C",
+    "hex": "#F3CFB3"
+  },
+  {
+    "name": "PANTONE 476 C",
+    "hex": "#4E3629"
+  },
+  {
+    "name": "PANTONE 477 C",
+    "hex": "#623B2A"
+  },
+  {
+    "name": "PANTONE 478 C",
+    "hex": "#703F2A"
+  },
+  {
+    "name": "PANTONE 479 C",
+    "hex": "#AA8066"
+  },
+  {
+    "name": "PANTONE 480 C",
+    "hex": "#C6A992"
+  },
+  {
+    "name": "PANTONE 481 C",
+    "hex": "#D3BBA8"
+  },
+  {
+    "name": "PANTONE 482 C",
+    "hex": "#DBC8B6"
+  },
+  {
+    "name": "PANTONE 483 C",
+    "hex": "#653024"
+  },
+  {
+    "name": "PANTONE 484 C",
+    "hex": "#9A3324"
+  },
+  {
+    "name": "PANTONE 485 C",
+    "hex": "#DA291C"
+  },
+  {
+    "name": "PANTONE 486 C",
+    "hex": "#E8927C"
+  },
+  {
+    "name": "PANTONE 487 C",
+    "hex": "#EAA794"
+  },
+  {
+    "name": "PANTONE 488 C",
+    "hex": "#ECBAA8"
+  },
+  {
+    "name": "PANTONE 489 C",
+    "hex": "#ECC3B2"
+  },
+  {
+    "name": "PANTONE 490 C",
+    "hex": "#5D2A2C"
+  },
+  {
+    "name": "PANTONE 491 C",
+    "hex": "#7F3035"
+  },
+  {
+    "name": "PANTONE 492 C",
+    "hex": "#8F3237"
+  },
+  {
+    "name": "PANTONE 493 C",
+    "hex": "#DC8699"
+  },
+  {
+    "name": "PANTONE 494 C",
+    "hex": "#E9A2B2"
+  },
+  {
+    "name": "PANTONE 495 C",
+    "hex": "#F1BDC8"
+  },
+  {
+    "name": "PANTONE 496 C",
+    "hex": "#F2C6CF"
+  },
+  {
+    "name": "PANTONE 497 C",
+    "hex": "#512F2E"
+  },
+  {
+    "name": "PANTONE 498 C",
+    "hex": "#6A3735"
+  },
+  {
+    "name": "PANTONE 499 C",
+    "hex": "#7A3E3A"
+  },
+  {
+    "name": "PANTONE 500 C",
+    "hex": "#C6858F"
+  },
+  {
+    "name": "PANTONE 501 C",
+    "hex": "#DAA5AD"
+  },
+  {
+    "name": "PANTONE 502 C",
+    "hex": "#E5BAC1"
+  },
+  {
+    "name": "PANTONE 503 C",
+    "hex": "#E9C4C7"
+  },
+  {
+    "name": "PANTONE 504 C",
+    "hex": "#572932"
+  },
+  {
+    "name": "PANTONE 505 C",
+    "hex": "#6F2C3F"
+  },
+  {
+    "name": "PANTONE 506 C",
+    "hex": "#84344E"
+  },
+  {
+    "name": "PANTONE 507 C",
+    "hex": "#D592AA"
+  },
+  {
+    "name": "PANTONE 508 C",
+    "hex": "#E4A9BB"
+  },
+  {
+    "name": "PANTONE 509 C",
+    "hex": "#E8B3C3"
+  },
+  {
+    "name": "PANTONE 510 C",
+    "hex": "#EBBECB"
+  },
+  {
+    "name": "PANTONE 511 C",
+    "hex": "#612C51"
+  },
+  {
+    "name": "PANTONE 512 C",
+    "hex": "#833177"
+  },
+  {
+    "name": "PANTONE 513 C",
+    "hex": "#93328E"
+  },
+  {
+    "name": "PANTONE 514 C",
+    "hex": "#D48BC8"
+  },
+  {
+    "name": "PANTONE 515 C",
+    "hex": "#E2ACD7"
+  },
+  {
+    "name": "PANTONE 516 C",
+    "hex": "#E6BEDD"
+  },
+  {
+    "name": "PANTONE 517 C",
+    "hex": "#EBC6DF"
+  },
+  {
+    "name": "PANTONE 518 C",
+    "hex": "#4B3048"
+  },
+  {
+    "name": "PANTONE 519 C",
+    "hex": "#59315F"
+  },
+  {
+    "name": "PANTONE 520 C",
+    "hex": "#642F6C"
+  },
+  {
+    "name": "PANTONE 521 C",
+    "hex": "#A57FB2"
+  },
+  {
+    "name": "PANTONE 522 C",
+    "hex": "#BA9CC5"
+  },
+  {
+    "name": "PANTONE 523 C",
+    "hex": "#C9B1D0"
+  },
+  {
+    "name": "PANTONE 524 C",
+    "hex": "#D5C2D8"
+  },
+  {
+    "name": "PANTONE 525 C",
+    "hex": "#572C5F"
+  },
+  {
+    "name": "PANTONE 526 C",
+    "hex": "#702F8A"
+  },
+  {
+    "name": "PANTONE 527 C",
+    "hex": "#8031A7"
+  },
+  {
+    "name": "PANTONE 528 C",
+    "hex": "#B580D1"
+  },
+  {
+    "name": "PANTONE 529 C",
+    "hex": "#CAA2DD"
+  },
+  {
+    "name": "PANTONE 530 C",
+    "hex": "#D7B9E4"
+  },
+  {
+    "name": "PANTONE 531 C",
+    "hex": "#DFC8E7"
+  },
+  {
+    "name": "PANTONE 532 C",
+    "hex": "#1C1F2A"
+  },
+  {
+    "name": "PANTONE 533 C",
+    "hex": "#1F2A44"
+  },
+  {
+    "name": "PANTONE 534 C",
+    "hex": "#1B365D"
+  },
+  {
+    "name": "PANTONE 535 C",
+    "hex": "#8E9FBC"
+  },
+  {
+    "name": "PANTONE 536 C",
+    "hex": "#A2B2C8"
+  },
+  {
+    "name": "PANTONE 537 C",
+    "hex": "#BBC7D6"
+  },
+  {
+    "name": "PANTONE 538 C",
+    "hex": "#C5CFDA"
+  },
+  {
+    "name": "PANTONE 539 C",
+    "hex": "#00263A"
+  },
+  {
+    "name": "PANTONE 540 C",
+    "hex": "#003057"
+  },
+  {
+    "name": "PANTONE 541 C",
+    "hex": "#003C71"
+  },
+  {
+    "name": "PANTONE 542 C",
+    "hex": "#7BAFD4"
+  },
+  {
+    "name": "PANTONE 543 C",
+    "hex": "#A4C8E1"
+  },
+  {
+    "name": "PANTONE 544 C",
+    "hex": "#BDD6E6"
+  },
+  {
+    "name": "PANTONE 545 C",
+    "hex": "#C6DAE7"
+  },
+  {
+    "name": "PANTONE 546 C",
+    "hex": "#072B31"
+  },
+  {
+    "name": "PANTONE 547 C",
+    "hex": "#00313C"
+  },
+  {
+    "name": "PANTONE 548 C",
+    "hex": "#003D4C"
+  },
+  {
+    "name": "PANTONE 549 C",
+    "hex": "#6BA4B8"
+  },
+  {
+    "name": "PANTONE 550 C",
+    "hex": "#8DB9CA"
+  },
+  {
+    "name": "PANTONE 551 C",
+    "hex": "#A3C7D2"
+  },
+  {
+    "name": "PANTONE 552 C",
+    "hex": "#B9D3DC"
+  },
+  {
+    "name": "PANTONE 553 C",
+    "hex": "#284734"
+  },
+  {
+    "name": "PANTONE 554 C",
+    "hex": "#205C40"
+  },
+  {
+    "name": "PANTONE 555 C",
+    "hex": "#28724F"
+  },
+  {
+    "name": "PANTONE 556 C",
+    "hex": "#6FA287"
+  },
+  {
+    "name": "PANTONE 557 C",
+    "hex": "#85B09A"
+  },
+  {
+    "name": "PANTONE 558 C",
+    "hex": "#9ABEAA"
+  },
+  {
+    "name": "PANTONE 559 C",
+    "hex": "#ADCAB8"
+  },
+  {
+    "name": "PANTONE 560 C",
+    "hex": "#1D3C34"
+  },
+  {
+    "name": "PANTONE 561 C",
+    "hex": "#00594C"
+  },
+  {
+    "name": "PANTONE 562 C",
+    "hex": "#006F62"
+  },
+  {
+    "name": "PANTONE 563 C",
+    "hex": "#6BBBAE"
+  },
+  {
+    "name": "PANTONE 564 C",
+    "hex": "#86C8BC"
+  },
+  {
+    "name": "PANTONE 565 C",
+    "hex": "#A1D6CA"
+  },
+  {
+    "name": "PANTONE 566 C",
+    "hex": "#B9DCD2"
+  },
+  {
+    "name": "PANTONE 567 C",
+    "hex": "#173F35"
+  },
+  {
+    "name": "PANTONE 568 C",
+    "hex": "#006C5B"
+  },
+  {
+    "name": "PANTONE 569 C",
+    "hex": "#00816D"
+  },
+  {
+    "name": "PANTONE 570 C",
+    "hex": "#6BCABA"
+  },
+  {
+    "name": "PANTONE 571 C",
+    "hex": "#98DBCE"
+  },
+  {
+    "name": "PANTONE 572 C",
+    "hex": "#A5DFD3"
+  },
+  {
+    "name": "PANTONE 573 C",
+    "hex": "#B5E3D8"
+  },
+  {
+    "name": "PANTONE 574 C",
+    "hex": "#4E5B31"
+  },
+  {
+    "name": "PANTONE 575 C",
+    "hex": "#67823A"
+  },
+  {
+    "name": "PANTONE 576 C",
+    "hex": "#789D4A"
+  },
+  {
+    "name": "PANTONE 577 C",
+    "hex": "#A9C47F"
+  },
+  {
+    "name": "PANTONE 578 C",
+    "hex": "#B7CE95"
+  },
+  {
+    "name": "PANTONE 579 C",
+    "hex": "#BCD19B"
+  },
+  {
+    "name": "PANTONE 580 C",
+    "hex": "#C4D6A4"
+  },
+  {
+    "name": "PANTONE 581 C",
+    "hex": "#625D20"
+  },
+  {
+    "name": "PANTONE 582 C",
+    "hex": "#8E8C13"
+  },
+  {
+    "name": "PANTONE 583 C",
+    "hex": "#B7BF10"
+  },
+  {
+    "name": "PANTONE 584 C",
+    "hex": "#D2D755"
+  },
+  {
+    "name": "PANTONE 585 C",
+    "hex": "#DBDE70"
+  },
+  {
+    "name": "PANTONE 586 C",
+    "hex": "#E0E27C"
+  },
+  {
+    "name": "PANTONE 587 C",
+    "hex": "#E3E48D"
+  },
+  {
+    "name": "PANTONE 600 C",
+    "hex": "#F1EB9C"
+  },
+  {
+    "name": "PANTONE 601 C",
+    "hex": "#F0E991"
+  },
+  {
+    "name": "PANTONE 602 C",
+    "hex": "#F0E87B"
+  },
+  {
+    "name": "PANTONE 603 C",
+    "hex": "#EDE04B"
+  },
+  {
+    "name": "PANTONE 604 C",
+    "hex": "#EADA24"
+  },
+  {
+    "name": "PANTONE 605 C",
+    "hex": "#E1CD00"
+  },
+  {
+    "name": "PANTONE 606 C",
+    "hex": "#CFB500"
+  },
+  {
+    "name": "PANTONE 607 C",
+    "hex": "#EBE49A"
+  },
+  {
+    "name": "PANTONE 608 C",
+    "hex": "#E9E186"
+  },
+  {
+    "name": "PANTONE 609 C",
+    "hex": "#E6DE77"
+  },
+  {
+    "name": "PANTONE 610 C",
+    "hex": "#E1D555"
+  },
+  {
+    "name": "PANTONE 611 C",
+    "hex": "#D7C826"
+  },
+  {
+    "name": "PANTONE 612 C",
+    "hex": "#C4B000"
+  },
+  {
+    "name": "PANTONE 613 C",
+    "hex": "#B39B00"
+  },
+  {
+    "name": "PANTONE 614 C",
+    "hex": "#DCD59A"
+  },
+  {
+    "name": "PANTONE 615 C",
+    "hex": "#D6CF8D"
+  },
+  {
+    "name": "PANTONE 616 C",
+    "hex": "#D0C883"
+  },
+  {
+    "name": "PANTONE 617 C",
+    "hex": "#C0B561"
+  },
+  {
+    "name": "PANTONE 618 C",
+    "hex": "#AC9F3C"
+  },
+  {
+    "name": "PANTONE 619 C",
+    "hex": "#9F912A"
+  },
+  {
+    "name": "PANTONE 620 C",
+    "hex": "#8A7B19"
+  },
+  {
+    "name": "PANTONE 621 C",
+    "hex": "#D1E0D7"
+  },
+  {
+    "name": "PANTONE 622 C",
+    "hex": "#B7CDC2"
+  },
+  {
+    "name": "PANTONE 623 C",
+    "hex": "#9AB9AD"
+  },
+  {
+    "name": "PANTONE 624 C",
+    "hex": "#789F90"
+  },
+  {
+    "name": "PANTONE 625 C",
+    "hex": "#507F70"
+  },
+  {
+    "name": "PANTONE 626 C",
+    "hex": "#285C4D"
+  },
+  {
+    "name": "PANTONE 627 C",
+    "hex": "#13322B"
+  },
+  {
+    "name": "PANTONE 628 C",
+    "hex": "#B8DDE1"
+  },
+  {
+    "name": "PANTONE 629 C",
+    "hex": "#9BD3DD"
+  },
+  {
+    "name": "PANTONE 630 C",
+    "hex": "#77C5D5"
+  },
+  {
+    "name": "PANTONE 631 C",
+    "hex": "#3EB1C8"
+  },
+  {
+    "name": "PANTONE 632 C",
+    "hex": "#0093B2"
+  },
+  {
+    "name": "PANTONE 633 C",
+    "hex": "#007396"
+  },
+  {
+    "name": "PANTONE 634 C",
+    "hex": "#005F83"
+  },
+  {
+    "name": "PANTONE 635 C",
+    "hex": "#A4DBE8"
+  },
+  {
+    "name": "PANTONE 636 C",
+    "hex": "#8BD3E6"
+  },
+  {
+    "name": "PANTONE 637 C",
+    "hex": "#4EC3E0"
+  },
+  {
+    "name": "PANTONE 638 C",
+    "hex": "#00AFD7"
+  },
+  {
+    "name": "PANTONE 639 C",
+    "hex": "#0095C8"
+  },
+  {
+    "name": "PANTONE 640 C",
+    "hex": "#0082BA"
+  },
+  {
+    "name": "PANTONE 641 C",
+    "hex": "#0067A0"
+  },
+  {
+    "name": "PANTONE 642 C",
+    "hex": "#D1DDE6"
+  },
+  {
+    "name": "PANTONE 643 C",
+    "hex": "#C6D6E3"
+  },
+  {
+    "name": "PANTONE 644 C",
+    "hex": "#9BB8D3"
+  },
+  {
+    "name": "PANTONE 645 C",
+    "hex": "#7DA1C4"
+  },
+  {
+    "name": "PANTONE 646 C",
+    "hex": "#5E8AB4"
+  },
+  {
+    "name": "PANTONE 647 C",
+    "hex": "#236192"
+  },
+  {
+    "name": "PANTONE 648 C",
+    "hex": "#002E5D"
+  },
+  {
+    "name": "PANTONE 649 C",
+    "hex": "#DBE2E9"
+  },
+  {
+    "name": "PANTONE 650 C",
+    "hex": "#CED9E5"
+  },
+  {
+    "name": "PANTONE 651 C",
+    "hex": "#A7BCD6"
+  },
+  {
+    "name": "PANTONE 652 C",
+    "hex": "#7D9BC1"
+  },
+  {
+    "name": "PANTONE 653 C",
+    "hex": "#326295"
+  },
+  {
+    "name": "PANTONE 654 C",
+    "hex": "#003A70"
+  },
+  {
+    "name": "PANTONE 655 C",
+    "hex": "#002554"
+  },
+  {
+    "name": "PANTONE 656 C",
+    "hex": "#DDE5ED"
+  },
+  {
+    "name": "PANTONE 657 C",
+    "hex": "#C8D8EB"
+  },
+  {
+    "name": "PANTONE 658 C",
+    "hex": "#B1C9E8"
+  },
+  {
+    "name": "PANTONE 659 C",
+    "hex": "#7BA4DB"
+  },
+  {
+    "name": "PANTONE 660 C",
+    "hex": "#407EC9"
+  },
+  {
+    "name": "PANTONE 661 C",
+    "hex": "#003594"
+  },
+  {
+    "name": "PANTONE 662 C",
+    "hex": "#001A70"
+  },
+  {
+    "name": "PANTONE 663 C",
+    "hex": "#E5E1E6"
+  },
+  {
+    "name": "PANTONE 664 C",
+    "hex": "#E0DBE3"
+  },
+  {
+    "name": "PANTONE 665 C",
+    "hex": "#C6BCD0"
+  },
+  {
+    "name": "PANTONE 666 C",
+    "hex": "#A192B2"
+  },
+  {
+    "name": "PANTONE 667 C",
+    "hex": "#7C6992"
+  },
+  {
+    "name": "PANTONE 668 C",
+    "hex": "#614B79"
+  },
+  {
+    "name": "PANTONE 669 C",
+    "hex": "#3F2A56"
+  },
+  {
+    "name": "PANTONE 670 C",
+    "hex": "#EAD3E2"
+  },
+  {
+    "name": "PANTONE 671 C",
+    "hex": "#E6BCD8"
+  },
+  {
+    "name": "PANTONE 672 C",
+    "hex": "#DFA0C9"
+  },
+  {
+    "name": "PANTONE 673 C",
+    "hex": "#D986BA"
+  },
+  {
+    "name": "PANTONE 674 C",
+    "hex": "#C6579A"
+  },
+  {
+    "name": "PANTONE 675 C",
+    "hex": "#AE2573"
+  },
+  {
+    "name": "PANTONE 676 C",
+    "hex": "#960051"
+  },
+  {
+    "name": "PANTONE 677 C",
+    "hex": "#E5CEDB"
+  },
+  {
+    "name": "PANTONE 678 C",
+    "hex": "#E3C8D8"
+  },
+  {
+    "name": "PANTONE 679 C",
+    "hex": "#DEBED2"
+  },
+  {
+    "name": "PANTONE 680 C",
+    "hex": "#C996B6"
+  },
+  {
+    "name": "PANTONE 681 C",
+    "hex": "#B06C96"
+  },
+  {
+    "name": "PANTONE 682 C",
+    "hex": "#994878"
+  },
+  {
+    "name": "PANTONE 683 C",
+    "hex": "#7C2855"
+  },
+  {
+    "name": "PANTONE 684 C",
+    "hex": "#E4C6D4"
+  },
+  {
+    "name": "PANTONE 685 C",
+    "hex": "#DCB6C9"
+  },
+  {
+    "name": "PANTONE 686 C",
+    "hex": "#D0A1BA"
+  },
+  {
+    "name": "PANTONE 687 C",
+    "hex": "#BE84A3"
+  },
+  {
+    "name": "PANTONE 688 C",
+    "hex": "#A76389"
+  },
+  {
+    "name": "PANTONE 689 C",
+    "hex": "#893B67"
+  },
+  {
+    "name": "PANTONE 690 C",
+    "hex": "#612141"
+  },
+  {
+    "name": "PANTONE 691 C",
+    "hex": "#E9CDD0"
+  },
+  {
+    "name": "PANTONE 692 C",
+    "hex": "#E4BEC3"
+  },
+  {
+    "name": "PANTONE 693 C",
+    "hex": "#D7A3AB"
+  },
+  {
+    "name": "PANTONE 694 C",
+    "hex": "#C48490"
+  },
+  {
+    "name": "PANTONE 695 C",
+    "hex": "#B46B7A"
+  },
+  {
+    "name": "PANTONE 696 C",
+    "hex": "#984856"
+  },
+  {
+    "name": "PANTONE 697 C",
+    "hex": "#893C47"
+  },
+  {
+    "name": "PANTONE 698 C",
+    "hex": "#F2D4D7"
+  },
+  {
+    "name": "PANTONE 699 C",
+    "hex": "#F4C3CC"
+  },
+  {
+    "name": "PANTONE 700 C",
+    "hex": "#F2ACB9"
+  },
+  {
+    "name": "PANTONE 701 C",
+    "hex": "#E68699"
+  },
+  {
+    "name": "PANTONE 702 C",
+    "hex": "#D25B73"
+  },
+  {
+    "name": "PANTONE 703 C",
+    "hex": "#B83A4B"
+  },
+  {
+    "name": "PANTONE 704 C",
+    "hex": "#9E2A2F"
+  },
+  {
+    "name": "PANTONE 705 C",
+    "hex": "#F5DADF"
+  },
+  {
+    "name": "PANTONE 706 C",
+    "hex": "#F7CED7"
+  },
+  {
+    "name": "PANTONE 707 C",
+    "hex": "#F9B5C4"
+  },
+  {
+    "name": "PANTONE 708 C",
+    "hex": "#F890A5"
+  },
+  {
+    "name": "PANTONE 709 C",
+    "hex": "#EF6079"
+  },
+  {
+    "name": "PANTONE 710 C",
+    "hex": "#E03E52"
+  },
+  {
+    "name": "PANTONE 711 C",
+    "hex": "#CB2C30"
+  },
+  {
+    "name": "PANTONE 712 C",
+    "hex": "#FCC89B"
+  },
+  {
+    "name": "PANTONE 713 C",
+    "hex": "#FDBE87"
+  },
+  {
+    "name": "PANTONE 714 C",
+    "hex": "#FDAA63"
+  },
+  {
+    "name": "PANTONE 715 C",
+    "hex": "#F68D2E"
+  },
+  {
+    "name": "PANTONE 716 C",
+    "hex": "#EA7600"
+  },
+  {
+    "name": "PANTONE 717 C",
+    "hex": "#D45D00"
+  },
+  {
+    "name": "PANTONE 718 C",
+    "hex": "#BE4D00"
+  },
+  {
+    "name": "PANTONE 719 C",
+    "hex": "#EDC8A3"
+  },
+  {
+    "name": "PANTONE 720 C",
+    "hex": "#E7B78A"
+  },
+  {
+    "name": "PANTONE 721 C",
+    "hex": "#DDA46F"
+  },
+  {
+    "name": "PANTONE 722 C",
+    "hex": "#C88242"
+  },
+  {
+    "name": "PANTONE 723 C",
+    "hex": "#B36924"
+  },
+  {
+    "name": "PANTONE 724 C",
+    "hex": "#934D11"
+  },
+  {
+    "name": "PANTONE 725 C",
+    "hex": "#7D3F16"
+  },
+  {
+    "name": "PANTONE 726 C",
+    "hex": "#E0C09F"
+  },
+  {
+    "name": "PANTONE 727 C",
+    "hex": "#D9B48F"
+  },
+  {
+    "name": "PANTONE 728 C",
+    "hex": "#CDA077"
+  },
+  {
+    "name": "PANTONE 729 C",
+    "hex": "#B58150"
+  },
+  {
+    "name": "PANTONE 730 C",
+    "hex": "#9E652E"
+  },
+  {
+    "name": "PANTONE 731 C",
+    "hex": "#774212"
+  },
+  {
+    "name": "PANTONE 732 C",
+    "hex": "#623412"
+  },
+  {
+    "name": "PANTONE 801 C",
+    "hex": "#009ACE"
+  },
+  {
+    "name": "PANTONE 802 C",
+    "hex": "#44D62C"
+  },
+  {
+    "name": "PANTONE 803 C",
+    "hex": "#FFE900"
+  },
+  {
+    "name": "PANTONE 804 C",
+    "hex": "#FFAA4D"
+  },
+  {
+    "name": "PANTONE 805 C",
+    "hex": "#FF7276"
+  },
+  {
+    "name": "PANTONE 806 C",
+    "hex": "#FF3EB5"
+  },
+  {
+    "name": "PANTONE 807 C",
+    "hex": "#EA27C2"
+  },
+  {
+    "name": "PANTONE 871 C",
+    "hex": "#84754E"
+  },
+  {
+    "name": "PANTONE 872 C",
+    "hex": "#85714D"
+  },
+  {
+    "name": "PANTONE 873 C",
+    "hex": "#866D4B"
+  },
+  {
+    "name": "PANTONE 874 C",
+    "hex": "#8B6F4E"
+  },
+  {
+    "name": "PANTONE 875 C",
+    "hex": "#87674F"
+  },
+  {
+    "name": "PANTONE 876 C",
+    "hex": "#8B634B"
+  },
+  {
+    "name": "PANTONE 877 C",
+    "hex": "#8A8D8F"
+  },
+  {
+    "name": "PANTONE 1205 C",
+    "hex": "#F8E08E"
+  },
+  {
+    "name": "PANTONE 1215 C",
+    "hex": "#FBD872"
+  },
+  {
+    "name": "PANTONE 1225 C",
+    "hex": "#FFC845"
+  },
+  {
+    "name": "PANTONE 1235 C",
+    "hex": "#FFB81C"
+  },
+  {
+    "name": "PANTONE 1245 C",
+    "hex": "#C69214"
+  },
+  {
+    "name": "PANTONE 1255 C",
+    "hex": "#AD841F"
+  },
+  {
+    "name": "PANTONE 1265 C",
+    "hex": "#886B25"
+  },
+  {
+    "name": "PANTONE 1345 C",
+    "hex": "#FDD086"
+  },
+  {
+    "name": "PANTONE 1355 C",
+    "hex": "#FFC56E"
+  },
+  {
+    "name": "PANTONE 1365 C",
+    "hex": "#FFB549"
+  },
+  {
+    "name": "PANTONE 1375 C",
+    "hex": "#FF9E1B"
+  },
+  {
+    "name": "PANTONE 1385 C",
+    "hex": "#D57800"
+  },
+  {
+    "name": "PANTONE 1395 C",
+    "hex": "#996017"
+  },
+  {
+    "name": "PANTONE 1405 C",
+    "hex": "#6E4C1E"
+  },
+  {
+    "name": "PANTONE 1485 C",
+    "hex": "#FFAE62"
+  },
+  {
+    "name": "PANTONE 1495 C",
+    "hex": "#FF8F1C"
+  },
+  {
+    "name": "PANTONE 1505 C",
+    "hex": "#FF6900"
+  },
+  {
+    "name": "PANTONE 1525 C",
+    "hex": "#B94700"
+  },
+  {
+    "name": "PANTONE 1535 C",
+    "hex": "#94450B"
+  },
+  {
+    "name": "PANTONE 1545 C",
+    "hex": "#653819"
+  },
+  {
+    "name": "PANTONE 1555 C",
+    "hex": "#FFB990"
+  },
+  {
+    "name": "PANTONE 1565 C",
+    "hex": "#FFA06A"
+  },
+  {
+    "name": "PANTONE 1575 C",
+    "hex": "#FF7F32"
+  },
+  {
+    "name": "PANTONE 1585 C",
+    "hex": "#FF6A13"
+  },
+  {
+    "name": "PANTONE 1595 C",
+    "hex": "#D86018"
+  },
+  {
+    "name": "PANTONE 1605 C",
+    "hex": "#A65523"
+  },
+  {
+    "name": "PANTONE 1615 C",
+    "hex": "#8B4720"
+  },
+  {
+    "name": "PANTONE 1625 C",
+    "hex": "#FFA38B"
+  },
+  {
+    "name": "PANTONE 1635 C",
+    "hex": "#FF8D6D"
+  },
+  {
+    "name": "PANTONE 1645 C",
+    "hex": "#FF6A39"
+  },
+  {
+    "name": "PANTONE 1655 C",
+    "hex": "#FC4C02"
+  },
+  {
+    "name": "PANTONE 1665 C",
+    "hex": "#DC4405"
+  },
+  {
+    "name": "PANTONE 1675 C",
+    "hex": "#A9431E"
+  },
+  {
+    "name": "PANTONE 1685 C",
+    "hex": "#833921"
+  },
+  {
+    "name": "PANTONE 1765 C",
+    "hex": "#FFA3B5"
+  },
+  {
+    "name": "PANTONE 1767 C",
+    "hex": "#FCAFC0"
+  },
+  {
+    "name": "PANTONE 1775 C",
+    "hex": "#FF8DA1"
+  },
+  {
+    "name": "PANTONE 1777 C",
+    "hex": "#FB637E"
+  },
+  {
+    "name": "PANTONE 1785 C",
+    "hex": "#F8485E"
+  },
+  {
+    "name": "PANTONE 1787 C",
+    "hex": "#F4364C"
+  },
+  {
+    "name": "PANTONE 1788 C",
+    "hex": "#EE2737"
+  },
+  {
+    "name": "PANTONE 1795 C",
+    "hex": "#D22630"
+  },
+  {
+    "name": "PANTONE 1797 C",
+    "hex": "#CB333B"
+  },
+  {
+    "name": "PANTONE 1805 C",
+    "hex": "#AF272F"
+  },
+  {
+    "name": "PANTONE 1807 C",
+    "hex": "#A4343A"
+  },
+  {
+    "name": "PANTONE 1815 C",
+    "hex": "#7C2529"
+  },
+  {
+    "name": "PANTONE 1817 C",
+    "hex": "#643335"
+  },
+  {
+    "name": "PANTONE 1895 C",
+    "hex": "#F5B6CD"
+  },
+  {
+    "name": "PANTONE 1905 C",
+    "hex": "#F59BBB"
+  },
+  {
+    "name": "PANTONE 1915 C",
+    "hex": "#EF4A81"
+  },
+  {
+    "name": "PANTONE 1925 C",
+    "hex": "#E0004D"
+  },
+  {
+    "name": "PANTONE 1935 C",
+    "hex": "#C5003E"
+  },
+  {
+    "name": "PANTONE 1945 C",
+    "hex": "#A6093D"
+  },
+  {
+    "name": "PANTONE 1955 C",
+    "hex": "#8A1538"
+  },
+  {
+    "name": "PANTONE 2001 C",
+    "hex": "#F8E59A"
+  },
+  {
+    "name": "PANTONE 2002 C",
+    "hex": "#F9E17D"
+  },
+  {
+    "name": "PANTONE 2003 C",
+    "hex": "#F9E267"
+  },
+  {
+    "name": "PANTONE 2004 C",
+    "hex": "#FBDD7A"
+  },
+  {
+    "name": "PANTONE 2005 C",
+    "hex": "#FED880"
+  },
+  {
+    "name": "PANTONE 2006 C",
+    "hex": "#EBBC4E"
+  },
+  {
+    "name": "PANTONE 2007 C",
+    "hex": "#E0A526"
+  },
+  {
+    "name": "PANTONE 2008 C",
+    "hex": "#EFC06E"
+  },
+  {
+    "name": "PANTONE 2009 C",
+    "hex": "#EFB661"
+  },
+  {
+    "name": "PANTONE 2010 C",
+    "hex": "#FFAD00"
+  },
+  {
+    "name": "PANTONE 2011 C",
+    "hex": "#ED9B33"
+  },
+  {
+    "name": "PANTONE 2012 C",
+    "hex": "#EF9600"
+  },
+  {
+    "name": "PANTONE 2013 C",
+    "hex": "#FF9800"
+  },
+  {
+    "name": "PANTONE 2014 C",
+    "hex": "#B97000"
+  },
+  {
+    "name": "PANTONE 2015 C",
+    "hex": "#F8CFA9"
+  },
+  {
+    "name": "PANTONE 2016 C",
+    "hex": "#FFB673"
+  },
+  {
+    "name": "PANTONE 2017 C",
+    "hex": "#F8AD6D"
+  },
+  {
+    "name": "PANTONE 2018 C",
+    "hex": "#FF7500"
+  },
+  {
+    "name": "PANTONE 2019 C",
+    "hex": "#D76B00"
+  },
+  {
+    "name": "PANTONE 2020 C",
+    "hex": "#BE5400"
+  },
+  {
+    "name": "PANTONE 2021 C",
+    "hex": "#9D4815"
+  },
+  {
+    "name": "PANTONE 2022 C",
+    "hex": "#FAAA8D"
+  },
+  {
+    "name": "PANTONE 2023 C",
+    "hex": "#FA9370"
+  },
+  {
+    "name": "PANTONE 2024 C",
+    "hex": "#F87C56"
+  },
+  {
+    "name": "PANTONE 2025 C",
+    "hex": "#FF8A3D"
+  },
+  {
+    "name": "PANTONE 2026 C",
+    "hex": "#F4633A"
+  },
+  {
+    "name": "PANTONE 2027 C",
+    "hex": "#EE5340"
+  },
+  {
+    "name": "PANTONE 2028 C",
+    "hex": "#EB3300"
+  },
+  {
+    "name": "PANTONE 2029 C",
+    "hex": "#F2827F"
+  },
+  {
+    "name": "PANTONE 2030 C",
+    "hex": "#DD7975"
+  },
+  {
+    "name": "PANTONE 2031 C",
+    "hex": "#D66965"
+  },
+  {
+    "name": "PANTONE 2032 C",
+    "hex": "#D05A57"
+  },
+  {
+    "name": "PANTONE 2033 C",
+    "hex": "#C54644"
+  },
+  {
+    "name": "PANTONE 2034 C",
+    "hex": "#E73C3E"
+  },
+  {
+    "name": "PANTONE 2035 C",
+    "hex": "#D6001C"
+  },
+  {
+    "name": "PANTONE 2036 C",
+    "hex": "#F8BED6"
+  },
+  {
+    "name": "PANTONE 2037 C",
+    "hex": "#F395C7"
+  },
+  {
+    "name": "PANTONE 2038 C",
+    "hex": "#EF60A3"
+  },
+  {
+    "name": "PANTONE 2039 C",
+    "hex": "#E63888"
+  },
+  {
+    "name": "PANTONE 2040 C",
+    "hex": "#DB0A5B"
+  },
+  {
+    "name": "PANTONE 2041 C",
+    "hex": "#A1224E"
+  },
+  {
+    "name": "PANTONE 2042 C",
+    "hex": "#70273D"
+  },
+  {
+    "name": "PANTONE 2043 C",
+    "hex": "#EAC4D2"
+  },
+  {
+    "name": "PANTONE 2044 C",
+    "hex": "#E793B7"
+  },
+  {
+    "name": "PANTONE 2045 C",
+    "hex": "#DD74A1"
+  },
+  {
+    "name": "PANTONE 2046 C",
+    "hex": "#CF578A"
+  },
+  {
+    "name": "PANTONE 2047 C",
+    "hex": "#A54570"
+  },
+  {
+    "name": "PANTONE 2048 C",
+    "hex": "#973961"
+  },
+  {
+    "name": "PANTONE 2049 C",
+    "hex": "#852C4D"
+  },
+  {
+    "name": "PANTONE 2050 C",
+    "hex": "#EFD7E5"
+  },
+  {
+    "name": "PANTONE 2051 C",
+    "hex": "#DDC2CF"
+  },
+  {
+    "name": "PANTONE 2052 C",
+    "hex": "#C89FB6"
+  },
+  {
+    "name": "PANTONE 2053 C",
+    "hex": "#B3809D"
+  },
+  {
+    "name": "PANTONE 2054 C",
+    "hex": "#9E708B"
+  },
+  {
+    "name": "PANTONE 2055 C",
+    "hex": "#905F7B"
+  },
+  {
+    "name": "PANTONE 2056 C",
+    "hex": "#7E4966"
+  },
+  {
+    "name": "PANTONE 2057 C",
+    "hex": "#CF92B7"
+  },
+  {
+    "name": "PANTONE 2058 C",
+    "hex": "#BB85AB"
+  },
+  {
+    "name": "PANTONE 2059 C",
+    "hex": "#B87BA1"
+  },
+  {
+    "name": "PANTONE 2060 C",
+    "hex": "#C86BA8"
+  },
+  {
+    "name": "PANTONE 2061 C",
+    "hex": "#AD5389"
+  },
+  {
+    "name": "PANTONE 2062 C",
+    "hex": "#B4458D"
+  },
+  {
+    "name": "PANTONE 2063 C",
+    "hex": "#A5307C"
+  },
+  {
+    "name": "PANTONE 2064 C",
+    "hex": "#E0A2D4"
+  },
+  {
+    "name": "PANTONE 2065 C",
+    "hex": "#DEA8DD"
+  },
+  {
+    "name": "PANTONE 2066 C",
+    "hex": "#D28DD3"
+  },
+  {
+    "name": "PANTONE 2067 C",
+    "hex": "#C069C2"
+  },
+  {
+    "name": "PANTONE 2068 C",
+    "hex": "#B14EB5"
+  },
+  {
+    "name": "PANTONE 2069 C",
+    "hex": "#A438A8"
+  },
+  {
+    "name": "PANTONE 2070 C",
+    "hex": "#8F1A95"
+  },
+  {
+    "name": "PANTONE 2071 C",
+    "hex": "#C7B2DE"
+  },
+  {
+    "name": "PANTONE 2072 C",
+    "hex": "#B896D4"
+  },
+  {
+    "name": "PANTONE 2073 C",
+    "hex": "#AF95D3"
+  },
+  {
+    "name": "PANTONE 2074 C",
+    "hex": "#9569BE"
+  },
+  {
+    "name": "PANTONE 2075 C",
+    "hex": "#8866BC"
+  },
+  {
+    "name": "PANTONE 2076 C",
+    "hex": "#8659B5"
+  },
+  {
+    "name": "PANTONE 2077 C",
+    "hex": "#6E3FA3"
+  },
+  {
+    "name": "PANTONE 2078 C",
+    "hex": "#B59DBB"
+  },
+  {
+    "name": "PANTONE 2079 C",
+    "hex": "#9B7EA4"
+  },
+  {
+    "name": "PANTONE 2080 C",
+    "hex": "#9873AC"
+  },
+  {
+    "name": "PANTONE 2081 C",
+    "hex": "#865E9C"
+  },
+  {
+    "name": "PANTONE 2082 C",
+    "hex": "#784E90"
+  },
+  {
+    "name": "PANTONE 2083 C",
+    "hex": "#965EC8"
+  },
+  {
+    "name": "PANTONE 2084 C",
+    "hex": "#7F35B2"
+  },
+  {
+    "name": "PANTONE 2085 C",
+    "hex": "#DECDE7"
+  },
+  {
+    "name": "PANTONE 2086 C",
+    "hex": "#A08BCB"
+  },
+  {
+    "name": "PANTONE 2087 C",
+    "hex": "#9B7DD4"
+  },
+  {
+    "name": "PANTONE 2088 C",
+    "hex": "#825DC7"
+  },
+  {
+    "name": "PANTONE 2089 C",
+    "hex": "#7248BD"
+  },
+  {
+    "name": "PANTONE 2090 C",
+    "hex": "#6638B6"
+  },
+  {
+    "name": "PANTONE 2091 C",
+    "hex": "#4C12A1"
+  },
+  {
+    "name": "PANTONE 2092 C",
+    "hex": "#B8ACD6"
+  },
+  {
+    "name": "PANTONE 2093 C",
+    "hex": "#A699C1"
+  },
+  {
+    "name": "PANTONE 2094 C",
+    "hex": "#8E7FAE"
+  },
+  {
+    "name": "PANTONE 2095 C",
+    "hex": "#7965B2"
+  },
+  {
+    "name": "PANTONE 2096 C",
+    "hex": "#654EA3"
+  },
+  {
+    "name": "PANTONE 2097 C",
+    "hex": "#6244BB"
+  },
+  {
+    "name": "PANTONE 2098 C",
+    "hex": "#4A25AA"
+  },
+  {
+    "name": "PANTONE 2099 C",
+    "hex": "#B1A2CA"
+  },
+  {
+    "name": "PANTONE 2100 C",
+    "hex": "#9F8FCA"
+  },
+  {
+    "name": "PANTONE 2101 C",
+    "hex": "#8A75D1"
+  },
+  {
+    "name": "PANTONE 2102 C",
+    "hex": "#6558B1"
+  },
+  {
+    "name": "PANTONE 2103 C",
+    "hex": "#5949A7"
+  },
+  {
+    "name": "PANTONE 2104 C",
+    "hex": "#483698"
+  },
+  {
+    "name": "PANTONE 2105 C",
+    "hex": "#39207C"
+  },
+  {
+    "name": "PANTONE 2106 C",
+    "hex": "#B1B5CE"
+  },
+  {
+    "name": "PANTONE 2107 C",
+    "hex": "#9099BA"
+  },
+  {
+    "name": "PANTONE 2108 C",
+    "hex": "#777FA8"
+  },
+  {
+    "name": "PANTONE 2109 C",
+    "hex": "#676D99"
+  },
+  {
+    "name": "PANTONE 2110 C",
+    "hex": "#5B618F"
+  },
+  {
+    "name": "PANTONE 2111 C",
+    "hex": "#464E7E"
+  },
+  {
+    "name": "PANTONE 2112 C",
+    "hex": "#351F65"
+  },
+  {
+    "name": "PANTONE 2113 C",
+    "hex": "#A5B0E3"
+  },
+  {
+    "name": "PANTONE 2114 C",
+    "hex": "#838DC8"
+  },
+  {
+    "name": "PANTONE 2115 C",
+    "hex": "#6F79BD"
+  },
+  {
+    "name": "PANTONE 2116 C",
+    "hex": "#6068B2"
+  },
+  {
+    "name": "PANTONE 2117 C",
+    "hex": "#44499C"
+  },
+  {
+    "name": "PANTONE 2118 C",
+    "hex": "#343579"
+  },
+  {
+    "name": "PANTONE 2119 C",
+    "hex": "#2C2D65"
+  },
+  {
+    "name": "PANTONE 2120 C",
+    "hex": "#BECAEA"
+  },
+  {
+    "name": "PANTONE 2121 C",
+    "hex": "#8FACD9"
+  },
+  {
+    "name": "PANTONE 2122 C",
+    "hex": "#9BAEE4"
+  },
+  {
+    "name": "PANTONE 2123 C",
+    "hex": "#7A93DC"
+  },
+  {
+    "name": "PANTONE 2124 C",
+    "hex": "#6F7BD4"
+  },
+  {
+    "name": "PANTONE 2125 C",
+    "hex": "#5461C8"
+  },
+  {
+    "name": "PANTONE 2126 C",
+    "hex": "#303AB2"
+  },
+  {
+    "name": "PANTONE 2127 C",
+    "hex": "#B8C9E1"
+  },
+  {
+    "name": "PANTONE 2128 C",
+    "hex": "#98B6E4"
+  },
+  {
+    "name": "PANTONE 2129 C",
+    "hex": "#5F8DDA"
+  },
+  {
+    "name": "PANTONE 2130 C",
+    "hex": "#5576D1"
+  },
+  {
+    "name": "PANTONE 2131 C",
+    "hex": "#365ABD"
+  },
+  {
+    "name": "PANTONE 2132 C",
+    "hex": "#0957C3"
+  },
+  {
+    "name": "PANTONE 2133 C",
+    "hex": "#1C57A5"
+  },
+  {
+    "name": "PANTONE 2134 C",
+    "hex": "#93A5CF"
+  },
+  {
+    "name": "PANTONE 2135 C",
+    "hex": "#758CC0"
+  },
+  {
+    "name": "PANTONE 2136 C",
+    "hex": "#8394B8"
+  },
+  {
+    "name": "PANTONE 2137 C",
+    "hex": "#6E80A9"
+  },
+  {
+    "name": "PANTONE 2138 C",
+    "hex": "#647692"
+  },
+  {
+    "name": "PANTONE 2139 C",
+    "hex": "#4D6995"
+  },
+  {
+    "name": "PANTONE 2140 C",
+    "hex": "#3A5382"
+  },
+  {
+    "name": "PANTONE 2141 C",
+    "hex": "#8BBEE8"
+  },
+  {
+    "name": "PANTONE 2142 C",
+    "hex": "#7FADE3"
+  },
+  {
+    "name": "PANTONE 2143 C",
+    "hex": "#3E87CB"
+  },
+  {
+    "name": "PANTONE 2144 C",
+    "hex": "#0067B9"
+  },
+  {
+    "name": "PANTONE 2145 C",
+    "hex": "#004EA8"
+  },
+  {
+    "name": "PANTONE 2146 C",
+    "hex": "#00358E"
+  },
+  {
+    "name": "PANTONE 2147 C",
+    "hex": "#002677"
+  },
+  {
+    "name": "PANTONE 2148 C",
+    "hex": "#6191B4"
+  },
+  {
+    "name": "PANTONE 2149 C",
+    "hex": "#4B82A8"
+  },
+  {
+    "name": "PANTONE 2150 C",
+    "hex": "#36749D"
+  },
+  {
+    "name": "PANTONE 2151 C",
+    "hex": "#256BA2"
+  },
+  {
+    "name": "PANTONE 2152 C",
+    "hex": "#1A658F"
+  },
+  {
+    "name": "PANTONE 2153 C",
+    "hex": "#00567E"
+  },
+  {
+    "name": "PANTONE 2154 C",
+    "hex": "#004680"
+  },
+  {
+    "name": "PANTONE 2155 C",
+    "hex": "#9EB5CB"
+  },
+  {
+    "name": "PANTONE 2156 C",
+    "hex": "#8BA6C1"
+  },
+  {
+    "name": "PANTONE 2157 C",
+    "hex": "#7594B3"
+  },
+  {
+    "name": "PANTONE 2158 C",
+    "hex": "#5C82A5"
+  },
+  {
+    "name": "PANTONE 2159 C",
+    "hex": "#4E769C"
+  },
+  {
+    "name": "PANTONE 2160 C",
+    "hex": "#3E6991"
+  },
+  {
+    "name": "PANTONE 2161 C",
+    "hex": "#285780"
+  },
+  {
+    "name": "PANTONE 2162 C",
+    "hex": "#9EA6B4"
+  },
+  {
+    "name": "PANTONE 2163 C",
+    "hex": "#869CAE"
+  },
+  {
+    "name": "PANTONE 2164 C",
+    "hex": "#7E93A7"
+  },
+  {
+    "name": "PANTONE 2165 C",
+    "hex": "#688197"
+  },
+  {
+    "name": "PANTONE 2166 C",
+    "hex": "#57728B"
+  },
+  {
+    "name": "PANTONE 2167 C",
+    "hex": "#506D85"
+  },
+  {
+    "name": "PANTONE 2168 C",
+    "hex": "#254A5D"
+  },
+  {
+    "name": "PANTONE 2169 C",
+    "hex": "#81B0D2"
+  },
+  {
+    "name": "PANTONE 2170 C",
+    "hex": "#5F9BC6"
+  },
+  {
+    "name": "PANTONE 2171 C",
+    "hex": "#489FDF"
+  },
+  {
+    "name": "PANTONE 2172 C",
+    "hex": "#147BD1"
+  },
+  {
+    "name": "PANTONE 2173 C",
+    "hex": "#0084D5"
+  },
+  {
+    "name": "PANTONE 2174 C",
+    "hex": "#0076CE"
+  },
+  {
+    "name": "PANTONE 2175 C",
+    "hex": "#006AC6"
+  },
+  {
+    "name": "PANTONE 2176 C",
+    "hex": "#A6B8C1"
+  },
+  {
+    "name": "PANTONE 2177 C",
+    "hex": "#7FA0AC"
+  },
+  {
+    "name": "PANTONE 2178 C",
+    "hex": "#6B8F9C"
+  },
+  {
+    "name": "PANTONE 2179 C",
+    "hex": "#527A8A"
+  },
+  {
+    "name": "PANTONE 2180 C",
+    "hex": "#3F6C7D"
+  },
+  {
+    "name": "PANTONE 2181 C",
+    "hex": "#2A5B6C"
+  },
+  {
+    "name": "PANTONE 2182 C",
+    "hex": "#174A5B"
+  },
+  {
+    "name": "PANTONE 2183 C",
+    "hex": "#0092BD"
+  },
+  {
+    "name": "PANTONE 2184 C",
+    "hex": "#0084D4"
+  },
+  {
+    "name": "PANTONE 2185 C",
+    "hex": "#0076A5"
+  },
+  {
+    "name": "PANTONE 2186 C",
+    "hex": "#004986"
+  },
+  {
+    "name": "PANTONE 2187 C",
+    "hex": "#004677"
+  },
+  {
+    "name": "PANTONE 2188 C",
+    "hex": "#00426A"
+  },
+  {
+    "name": "PANTONE 2189 C",
+    "hex": "#003349"
+  },
+  {
+    "name": "PANTONE 2190 C",
+    "hex": "#56B7E6"
+  },
+  {
+    "name": "PANTONE 2191 C",
+    "hex": "#00A3E1"
+  },
+  {
+    "name": "PANTONE 2192 C",
+    "hex": "#0091DA"
+  },
+  {
+    "name": "PANTONE 2193 C",
+    "hex": "#0090DA"
+  },
+  {
+    "name": "PANTONE 2194 C",
+    "hex": "#0086D6"
+  },
+  {
+    "name": "PANTONE 2195 C",
+    "hex": "#0076CF"
+  },
+  {
+    "name": "PANTONE 2196 C",
+    "hex": "#0069B1"
+  },
+  {
+    "name": "PANTONE 2197 C",
+    "hex": "#74D2E7"
+  },
+  {
+    "name": "PANTONE 2198 C",
+    "hex": "#4AC9E3"
+  },
+  {
+    "name": "PANTONE 2199 C",
+    "hex": "#00BBDC"
+  },
+  {
+    "name": "PANTONE 2200 C",
+    "hex": "#04A9C7"
+  },
+  {
+    "name": "PANTONE 2201 C",
+    "hex": "#00AED6"
+  },
+  {
+    "name": "PANTONE 2202 C",
+    "hex": "#00A5DF"
+  },
+  {
+    "name": "PANTONE 2203 C",
+    "hex": "#0087AE"
+  },
+  {
+    "name": "PANTONE 2204 C",
+    "hex": "#AFCDD7"
+  },
+  {
+    "name": "PANTONE 2205 C",
+    "hex": "#89B2C4"
+  },
+  {
+    "name": "PANTONE 2206 C",
+    "hex": "#779FB5"
+  },
+  {
+    "name": "PANTONE 2207 C",
+    "hex": "#659AB1"
+  },
+  {
+    "name": "PANTONE 2208 C",
+    "hex": "#5489A3"
+  },
+  {
+    "name": "PANTONE 2209 C",
+    "hex": "#4986A0"
+  },
+  {
+    "name": "PANTONE 2210 C",
+    "hex": "#074F71"
+  },
+  {
+    "name": "PANTONE 2211 C",
+    "hex": "#6F9BA4"
+  },
+  {
+    "name": "PANTONE 2212 C",
+    "hex": "#508590"
+  },
+  {
+    "name": "PANTONE 2213 C",
+    "hex": "#337079"
+  },
+  {
+    "name": "PANTONE 2214 C",
+    "hex": "#2F6F7A"
+  },
+  {
+    "name": "PANTONE 2215 C",
+    "hex": "#2E5665"
+  },
+  {
+    "name": "PANTONE 2216 C",
+    "hex": "#2E4D58"
+  },
+  {
+    "name": "PANTONE 2217 C",
+    "hex": "#003A40"
+  },
+  {
+    "name": "PANTONE 2218 C",
+    "hex": "#72B0BD"
+  },
+  {
+    "name": "PANTONE 2219 C",
+    "hex": "#5CA3B3"
+  },
+  {
+    "name": "PANTONE 2220 C",
+    "hex": "#4797A8"
+  },
+  {
+    "name": "PANTONE 2221 C",
+    "hex": "#2D8C9E"
+  },
+  {
+    "name": "PANTONE 2222 C",
+    "hex": "#1D8296"
+  },
+  {
+    "name": "PANTONE 2223 C",
+    "hex": "#00788D"
+  },
+  {
+    "name": "PANTONE 2224 C",
+    "hex": "#006980"
+  },
+  {
+    "name": "PANTONE 2225 C",
+    "hex": "#78D5E1"
+  },
+  {
+    "name": "PANTONE 2226 C",
+    "hex": "#3CCBDA"
+  },
+  {
+    "name": "PANTONE 2227 C",
+    "hex": "#59BEC9"
+  },
+  {
+    "name": "PANTONE 2228 C",
+    "hex": "#00A5BD"
+  },
+  {
+    "name": "PANTONE 2229 C",
+    "hex": "#009CB6"
+  },
+  {
+    "name": "PANTONE 2230 C",
+    "hex": "#008CA0"
+  },
+  {
+    "name": "PANTONE 2231 C",
+    "hex": "#007C91"
+  },
+  {
+    "name": "PANTONE 2232 C",
+    "hex": "#71B0B4"
+  },
+  {
+    "name": "PANTONE 2233 C",
+    "hex": "#58A7AF"
+  },
+  {
+    "name": "PANTONE 2234 C",
+    "hex": "#4F9FA6"
+  },
+  {
+    "name": "PANTONE 2235 C",
+    "hex": "#28939D"
+  },
+  {
+    "name": "PANTONE 2236 C",
+    "hex": "#2C9199"
+  },
+  {
+    "name": "PANTONE 2237 C",
+    "hex": "#05868E"
+  },
+  {
+    "name": "PANTONE 2238 C",
+    "hex": "#006975"
+  },
+  {
+    "name": "PANTONE 2239 C",
+    "hex": "#00CFB4"
+  },
+  {
+    "name": "PANTONE 2240 C",
+    "hex": "#00C19F"
+  },
+  {
+    "name": "PANTONE 2241 C",
+    "hex": "#58A291"
+  },
+  {
+    "name": "PANTONE 2242 C",
+    "hex": "#00A376"
+  },
+  {
+    "name": "PANTONE 2243 C",
+    "hex": "#00957A"
+  },
+  {
+    "name": "PANTONE 2244 C",
+    "hex": "#1B806D"
+  },
+  {
+    "name": "PANTONE 2245 C",
+    "hex": "#008655"
+  },
+  {
+    "name": "PANTONE 2246 C",
+    "hex": "#A8D5BA"
+  },
+  {
+    "name": "PANTONE 2247 C",
+    "hex": "#77C19A"
+  },
+  {
+    "name": "PANTONE 2248 C",
+    "hex": "#71B790"
+  },
+  {
+    "name": "PANTONE 2249 C",
+    "hex": "#5CAA7F"
+  },
+  {
+    "name": "PANTONE 2250 C",
+    "hex": "#00B373"
+  },
+  {
+    "name": "PANTONE 2251 C",
+    "hex": "#00AD6F"
+  },
+  {
+    "name": "PANTONE 2252 C",
+    "hex": "#00A74A"
+  },
+  {
+    "name": "PANTONE 2253 C",
+    "hex": "#BDE9C9"
+  },
+  {
+    "name": "PANTONE 2254 C",
+    "hex": "#ADDFB3"
+  },
+  {
+    "name": "PANTONE 2255 C",
+    "hex": "#86D295"
+  },
+  {
+    "name": "PANTONE 2256 C",
+    "hex": "#56C271"
+  },
+  {
+    "name": "PANTONE 2257 C",
+    "hex": "#00AD50"
+  },
+  {
+    "name": "PANTONE 2258 C",
+    "hex": "#008522"
+  },
+  {
+    "name": "PANTONE 2259 C",
+    "hex": "#027223"
+  },
+  {
+    "name": "PANTONE 2260 C",
+    "hex": "#B6CFAE"
+  },
+  {
+    "name": "PANTONE 2261 C",
+    "hex": "#9ABB91"
+  },
+  {
+    "name": "PANTONE 2262 C",
+    "hex": "#8CAC89"
+  },
+  {
+    "name": "PANTONE 2263 C",
+    "hex": "#74956C"
+  },
+  {
+    "name": "PANTONE 2264 C",
+    "hex": "#6B9560"
+  },
+  {
+    "name": "PANTONE 2265 C",
+    "hex": "#5C7E51"
+  },
+  {
+    "name": "PANTONE 2266 C",
+    "hex": "#335525"
+  },
+  {
+    "name": "PANTONE 2267 C",
+    "hex": "#9BE198"
+  },
+  {
+    "name": "PANTONE 2268 C",
+    "hex": "#79D97C"
+  },
+  {
+    "name": "PANTONE 2269 C",
+    "hex": "#7CCC6C"
+  },
+  {
+    "name": "PANTONE 2270 C",
+    "hex": "#2DC84D"
+  },
+  {
+    "name": "PANTONE 2271 C",
+    "hex": "#00BB31"
+  },
+  {
+    "name": "PANTONE 2272 C",
+    "hex": "#009A17"
+  },
+  {
+    "name": "PANTONE 2273 C",
+    "hex": "#257226"
+  },
+  {
+    "name": "PANTONE 2274 C",
+    "hex": "#CFDCB1"
+  },
+  {
+    "name": "PANTONE 2275 C",
+    "hex": "#C3DC93"
+  },
+  {
+    "name": "PANTONE 2276 C",
+    "hex": "#89A84F"
+  },
+  {
+    "name": "PANTONE 2277 C",
+    "hex": "#55951B"
+  },
+  {
+    "name": "PANTONE 2278 C",
+    "hex": "#4E801F"
+  },
+  {
+    "name": "PANTONE 2279 C",
+    "hex": "#5E7E29"
+  },
+  {
+    "name": "PANTONE 2280 C",
+    "hex": "#4A6A1D"
+  },
+  {
+    "name": "PANTONE 2281 C",
+    "hex": "#D9EA9A"
+  },
+  {
+    "name": "PANTONE 2282 C",
+    "hex": "#C7E995"
+  },
+  {
+    "name": "PANTONE 2283 C",
+    "hex": "#A7E163"
+  },
+  {
+    "name": "PANTONE 2284 C",
+    "hex": "#B3D57D"
+  },
+  {
+    "name": "PANTONE 2285 C",
+    "hex": "#93DA49"
+  },
+  {
+    "name": "PANTONE 2286 C",
+    "hex": "#7ACC00"
+  },
+  {
+    "name": "PANTONE 2287 C",
+    "hex": "#5BC500"
+  },
+  {
+    "name": "PANTONE 2288 C",
+    "hex": "#C8E379"
+  },
+  {
+    "name": "PANTONE 2289 C",
+    "hex": "#C5D97A"
+  },
+  {
+    "name": "PANTONE 2290 C",
+    "hex": "#AADB1E"
+  },
+  {
+    "name": "PANTONE 2291 C",
+    "hex": "#A7D500"
+  },
+  {
+    "name": "PANTONE 2292 C",
+    "hex": "#93C90E"
+  },
+  {
+    "name": "PANTONE 2293 C",
+    "hex": "#8BC400"
+  },
+  {
+    "name": "PANTONE 2294 C",
+    "hex": "#78AA00"
+  },
+  {
+    "name": "PANTONE 2295 C",
+    "hex": "#E0EC89"
+  },
+  {
+    "name": "PANTONE 2296 C",
+    "hex": "#D6E865"
+  },
+  {
+    "name": "PANTONE 2297 C",
+    "hex": "#C0DF16"
+  },
+  {
+    "name": "PANTONE 2298 C",
+    "hex": "#B7DB57"
+  },
+  {
+    "name": "PANTONE 2299 C",
+    "hex": "#A4D233"
+  },
+  {
+    "name": "PANTONE 2300 C",
+    "hex": "#A9C23F"
+  },
+  {
+    "name": "PANTONE 2301 C",
+    "hex": "#8FAD15"
+  },
+  {
+    "name": "PANTONE 2302 C",
+    "hex": "#AEB862"
+  },
+  {
+    "name": "PANTONE 2303 C",
+    "hex": "#9EB356"
+  },
+  {
+    "name": "PANTONE 2304 C",
+    "hex": "#A0AB4D"
+  },
+  {
+    "name": "PANTONE 2305 C",
+    "hex": "#9EA700"
+  },
+  {
+    "name": "PANTONE 2306 C",
+    "hex": "#808C24"
+  },
+  {
+    "name": "PANTONE 2307 C",
+    "hex": "#686F12"
+  },
+  {
+    "name": "PANTONE 2308 C",
+    "hex": "#5D551D"
+  },
+  {
+    "name": "PANTONE 2309 C",
+    "hex": "#E7CEB5"
+  },
+  {
+    "name": "PANTONE 2310 C",
+    "hex": "#D9C0A9"
+  },
+  {
+    "name": "PANTONE 2311 C",
+    "hex": "#CDA786"
+  },
+  {
+    "name": "PANTONE 2312 C",
+    "hex": "#B79A81"
+  },
+  {
+    "name": "PANTONE 2313 C",
+    "hex": "#C39367"
+  },
+  {
+    "name": "PANTONE 2314 C",
+    "hex": "#AC7644"
+  },
+  {
+    "name": "PANTONE 2315 C",
+    "hex": "#914910"
+  },
+  {
+    "name": "PANTONE 2316 C",
+    "hex": "#BD9A7A"
+  },
+  {
+    "name": "PANTONE 2317 C",
+    "hex": "#B4875E"
+  },
+  {
+    "name": "PANTONE 2318 C",
+    "hex": "#A47449"
+  },
+  {
+    "name": "PANTONE 2319 C",
+    "hex": "#8C5C30"
+  },
+  {
+    "name": "PANTONE 2320 C",
+    "hex": "#714623"
+  },
+  {
+    "name": "PANTONE 2321 C",
+    "hex": "#6F5137"
+  },
+  {
+    "name": "PANTONE 2322 C",
+    "hex": "#4E3524"
+  },
+  {
+    "name": "PANTONE 2323 C",
+    "hex": "#B8B298"
+  },
+  {
+    "name": "PANTONE 2324 C",
+    "hex": "#B2A384"
+  },
+  {
+    "name": "PANTONE 2325 C",
+    "hex": "#A09074"
+  },
+  {
+    "name": "PANTONE 2326 C",
+    "hex": "#8B7C5E"
+  },
+  {
+    "name": "PANTONE 2327 C",
+    "hex": "#837958"
+  },
+  {
+    "name": "PANTONE 2328 C",
+    "hex": "#786748"
+  },
+  {
+    "name": "PANTONE 2329 C",
+    "hex": "#68593C"
+  },
+  {
+    "name": "PANTONE 2330 C",
+    "hex": "#CFCDC9"
+  },
+  {
+    "name": "PANTONE 2331 C",
+    "hex": "#AEA8A5"
+  },
+  {
+    "name": "PANTONE 2332 C",
+    "hex": "#8C8985"
+  },
+  {
+    "name": "PANTONE 2333 C",
+    "hex": "#716E6A"
+  },
+  {
+    "name": "PANTONE 2334 C",
+    "hex": "#6C6463"
+  },
+  {
+    "name": "PANTONE 2335 C",
+    "hex": "#5E4F47"
+  },
+  {
+    "name": "PANTONE 2336 C",
+    "hex": "#4E4B48"
+  },
+  {
+    "name": "PANTONE 2337 C",
+    "hex": "#F8C1B8"
+  },
+  {
+    "name": "PANTONE 2338 C",
+    "hex": "#DEA39C"
+  },
+  {
+    "name": "PANTONE 2339 C",
+    "hex": "#F09491"
+  },
+  {
+    "name": "PANTONE 2340 C",
+    "hex": "#CF6F77"
+  },
+  {
+    "name": "PANTONE 2341 C",
+    "hex": "#B66C6D"
+  },
+  {
+    "name": "PANTONE 2342 C",
+    "hex": "#B65A65"
+  },
+  {
+    "name": "PANTONE 2343 C",
+    "hex": "#A85566"
+  },
+  {
+    "name": "PANTONE 2344 C",
+    "hex": "#F18070"
+  },
+  {
+    "name": "PANTONE 2345 C",
+    "hex": "#FF6D6A"
+  },
+  {
+    "name": "PANTONE 2346 C",
+    "hex": "#FF5869"
+  },
+  {
+    "name": "PANTONE 2347 C",
+    "hex": "#E10600"
+  },
+  {
+    "name": "PANTONE 2348 C",
+    "hex": "#E5554F"
+  },
+  {
+    "name": "PANTONE 2349 C",
+    "hex": "#CA3604"
+  },
+  {
+    "name": "PANTONE 2350 C",
+    "hex": "#AF231C"
+  },
+  {
+    "name": "PANTONE 2351 C",
+    "hex": "#BD7AB3"
+  },
+  {
+    "name": "PANTONE 2352 C",
+    "hex": "#B565A7"
+  },
+  {
+    "name": "PANTONE 2353 C",
+    "hex": "#BF4DA5"
+  },
+  {
+    "name": "PANTONE 2354 C",
+    "hex": "#924E8C"
+  },
+  {
+    "name": "PANTONE 2355 C",
+    "hex": "#87027B"
+  },
+  {
+    "name": "PANTONE 2356 C",
+    "hex": "#720062"
+  },
+  {
+    "name": "PANTONE 2357 C",
+    "hex": "#621244"
+  },
+  {
+    "name": "PANTONE 2358 C",
+    "hex": "#ADA4AE"
+  },
+  {
+    "name": "PANTONE 2359 C",
+    "hex": "#7F7384"
+  },
+  {
+    "name": "PANTONE 2360 C",
+    "hex": "#7B798E"
+  },
+  {
+    "name": "PANTONE 2361 C",
+    "hex": "#70708D"
+  },
+  {
+    "name": "PANTONE 2362 C",
+    "hex": "#6C6A81"
+  },
+  {
+    "name": "PANTONE 2363 C",
+    "hex": "#605D75"
+  },
+  {
+    "name": "PANTONE 2364 C",
+    "hex": "#66596C"
+  },
+  {
+    "name": "PANTONE 2365 C",
+    "hex": "#EFBAE1"
+  },
+  {
+    "name": "PANTONE 2366 C",
+    "hex": "#6A6DCD"
+  },
+  {
+    "name": "PANTONE 2367 C",
+    "hex": "#4F4CB1"
+  },
+  {
+    "name": "PANTONE 2368 C",
+    "hex": "#4D49BE"
+  },
+  {
+    "name": "PANTONE 2369 C",
+    "hex": "#3B3FB6"
+  },
+  {
+    "name": "PANTONE 2370 C",
+    "hex": "#2F2A95"
+  },
+  {
+    "name": "PANTONE 2371 C",
+    "hex": "#33058D"
+  },
+  {
+    "name": "PANTONE 2372 C",
+    "hex": "#281E78"
+  },
+  {
+    "name": "PANTONE 2373 C",
+    "hex": "#72829F"
+  },
+  {
+    "name": "PANTONE 2374 C",
+    "hex": "#4D5F80"
+  },
+  {
+    "name": "PANTONE 2375 C",
+    "hex": "#E277CD"
+  },
+  {
+    "name": "PANTONE 2376 C",
+    "hex": "#4E5B73"
+  },
+  {
+    "name": "PANTONE 2377 C",
+    "hex": "#315470"
+  },
+  {
+    "name": "PANTONE 2378 C",
+    "hex": "#384967"
+  },
+  {
+    "name": "PANTONE 2379 C",
+    "hex": "#3B4559"
+  },
+  {
+    "name": "PANTONE 2380 C",
+    "hex": "#28334A"
+  },
+  {
+    "name": "PANTONE 2381 C",
+    "hex": "#5E93DB"
+  },
+  {
+    "name": "PANTONE 2382 C",
+    "hex": "#008AD8"
+  },
+  {
+    "name": "PANTONE 2383 C",
+    "hex": "#2774AE"
+  },
+  {
+    "name": "PANTONE 2384 C",
+    "hex": "#0061A0"
+  },
+  {
+    "name": "PANTONE 2385 C",
+    "hex": "#D539B5"
+  },
+  {
+    "name": "PANTONE 2386 C",
+    "hex": "#2D68C4"
+  },
+  {
+    "name": "PANTONE 2387 C",
+    "hex": "#0762C8"
+  },
+  {
+    "name": "PANTONE 2388 C",
+    "hex": "#0050B5"
+  },
+  {
+    "name": "PANTONE 2389 C",
+    "hex": "#4C9FC8"
+  },
+  {
+    "name": "PANTONE 2390 C",
+    "hex": "#077CAB"
+  },
+  {
+    "name": "PANTONE 2391 C",
+    "hex": "#0081A6"
+  },
+  {
+    "name": "PANTONE 2392 C",
+    "hex": "#166886"
+  },
+  {
+    "name": "PANTONE 2393 C",
+    "hex": "#0092CB"
+  },
+  {
+    "name": "PANTONE 2394 C",
+    "hex": "#008BCE"
+  },
+  {
+    "name": "PANTONE 2395 C",
+    "hex": "#C800A1"
+  },
+  {
+    "name": "PANTONE 2396 C",
+    "hex": "#0099B2"
+  },
+  {
+    "name": "PANTONE 2397 C",
+    "hex": "#00B7BD"
+  },
+  {
+    "name": "PANTONE 2398 C",
+    "hex": "#00BAB3"
+  },
+  {
+    "name": "PANTONE 2399 C",
+    "hex": "#00ACA0"
+  },
+  {
+    "name": "PANTONE 2400 C",
+    "hex": "#00B097"
+  },
+  {
+    "name": "PANTONE 2401 C",
+    "hex": "#34A798"
+  },
+  {
+    "name": "PANTONE 2402 C",
+    "hex": "#009D85"
+  },
+  {
+    "name": "PANTONE 2403 C",
+    "hex": "#00897B"
+  },
+  {
+    "name": "PANTONE 2404 C",
+    "hex": "#A5B99C"
+  },
+  {
+    "name": "PANTONE 2405 C",
+    "hex": "#B0008E"
+  },
+  {
+    "name": "PANTONE 2406 C",
+    "hex": "#819E87"
+  },
+  {
+    "name": "PANTONE 2407 C",
+    "hex": "#6B8D73"
+  },
+  {
+    "name": "PANTONE 2408 C",
+    "hex": "#497B55"
+  },
+  {
+    "name": "PANTONE 2409 C",
+    "hex": "#4E6548"
+  },
+  {
+    "name": "PANTONE 2410 C",
+    "hex": "#445A3E"
+  },
+  {
+    "name": "PANTONE 2411 C",
+    "hex": "#1C4220"
+  },
+  {
+    "name": "PANTONE 2412 C",
+    "hex": "#48D597"
+  },
+  {
+    "name": "PANTONE 2413 C",
+    "hex": "#34B78F"
+  },
+  {
+    "name": "PANTONE 2414 C",
+    "hex": "#00BB7E"
+  },
+  {
+    "name": "PANTONE 2415 C",
+    "hex": "#9E007E"
+  },
+  {
+    "name": "PANTONE 2416 C",
+    "hex": "#00B176"
+  },
+  {
+    "name": "PANTONE 2417 C",
+    "hex": "#249E6B"
+  },
+  {
+    "name": "PANTONE 2418 C",
+    "hex": "#00873E"
+  },
+  {
+    "name": "PANTONE 2419 C",
+    "hex": "#007C58"
+  },
+  {
+    "name": "PANTONE 2420 C",
+    "hex": "#00C65E"
+  },
+  {
+    "name": "PANTONE 2421 C",
+    "hex": "#31B700"
+  },
+  {
+    "name": "PANTONE 2422 C",
+    "hex": "#00A82D"
+  },
+  {
+    "name": "PANTONE 2423 C",
+    "hex": "#00AA13"
+  },
+  {
+    "name": "PANTONE 2424 C",
+    "hex": "#279F00"
+  },
+  {
+    "name": "PANTONE 2425 C",
+    "hex": "#830065"
+  },
+  {
+    "name": "PANTONE 2426 C",
+    "hex": "#008C15"
+  },
+  {
+    "name": "PANTONE 2427 C",
+    "hex": "#035F1D"
+  },
+  {
+    "name": "PANTONE 2562 C",
+    "hex": "#D7A9E3"
+  },
+  {
+    "name": "PANTONE 2563 C",
+    "hex": "#CBA3D8"
+  },
+  {
+    "name": "PANTONE 2567 C",
+    "hex": "#C1A0DA"
+  },
+  {
+    "name": "PANTONE 2572 C",
+    "hex": "#C98BDB"
+  },
+  {
+    "name": "PANTONE 2573 C",
+    "hex": "#B884CB"
+  },
+  {
+    "name": "PANTONE 2577 C",
+    "hex": "#A77BCA"
+  },
+  {
+    "name": "PANTONE 2582 C",
+    "hex": "#AC4FC6"
+  },
+  {
+    "name": "PANTONE 2583 C",
+    "hex": "#A05EB5"
+  },
+  {
+    "name": "PANTONE 2587 C",
+    "hex": "#8246AF"
+  },
+  {
+    "name": "PANTONE 2592 C",
+    "hex": "#9B26B6"
+  },
+  {
+    "name": "PANTONE 2593 C",
+    "hex": "#84329B"
+  },
+  {
+    "name": "PANTONE 2597 C",
+    "hex": "#5C068C"
+  },
+  {
+    "name": "PANTONE 2602 C",
+    "hex": "#87189D"
+  },
+  {
+    "name": "PANTONE 2603 C",
+    "hex": "#702082"
+  },
+  {
+    "name": "PANTONE 2607 C",
+    "hex": "#500778"
+  },
+  {
+    "name": "PANTONE 2612 C",
+    "hex": "#772583"
+  },
+  {
+    "name": "PANTONE 2613 C",
+    "hex": "#671E75"
+  },
+  {
+    "name": "PANTONE 2617 C",
+    "hex": "#470A68"
+  },
+  {
+    "name": "PANTONE 2622 C",
+    "hex": "#653165"
+  },
+  {
+    "name": "PANTONE 2623 C",
+    "hex": "#5F2167"
+  },
+  {
+    "name": "PANTONE 2627 C",
+    "hex": "#3C1053"
+  },
+  {
+    "name": "PANTONE 2635 C",
+    "hex": "#C5B4E3"
+  },
+  {
+    "name": "PANTONE 2645 C",
+    "hex": "#AD96DC"
+  },
+  {
+    "name": "PANTONE 2655 C",
+    "hex": "#9678D3"
+  },
+  {
+    "name": "PANTONE 2665 C",
+    "hex": "#7D55C7"
+  },
+  {
+    "name": "PANTONE 2685 C",
+    "hex": "#330072"
+  },
+  {
+    "name": "PANTONE 2695 C",
+    "hex": "#2E1A47"
+  },
+  {
+    "name": "PANTONE 2705 C",
+    "hex": "#A7A4E0"
+  },
+  {
+    "name": "PANTONE 2706 C",
+    "hex": "#CBD3EB"
+  },
+  {
+    "name": "PANTONE 2707 C",
+    "hex": "#C3D7EE"
+  },
+  {
+    "name": "PANTONE 2708 C",
+    "hex": "#B8CCEA"
+  },
+  {
+    "name": "PANTONE 2715 C",
+    "hex": "#8B84D7"
+  },
+  {
+    "name": "PANTONE 2716 C",
+    "hex": "#9FAEE5"
+  },
+  {
+    "name": "PANTONE 2717 C",
+    "hex": "#A7C6ED"
+  },
+  {
+    "name": "PANTONE 2718 C",
+    "hex": "#5C88DA"
+  },
+  {
+    "name": "PANTONE 2725 C",
+    "hex": "#685BC7"
+  },
+  {
+    "name": "PANTONE 2726 C",
+    "hex": "#485CC7"
+  },
+  {
+    "name": "PANTONE 2727 C",
+    "hex": "#307FE2"
+  },
+  {
+    "name": "PANTONE 2728 C",
+    "hex": "#0047BB"
+  },
+  {
+    "name": "PANTONE 2735 C",
+    "hex": "#2E008B"
+  },
+  {
+    "name": "PANTONE 2736 C",
+    "hex": "#1E22AA"
+  },
+  {
+    "name": "PANTONE 2738 C",
+    "hex": "#06038D"
+  },
+  {
+    "name": "PANTONE 2745 C",
+    "hex": "#280071"
+  },
+  {
+    "name": "PANTONE 2746 C",
+    "hex": "#171C8F"
+  },
+  {
+    "name": "PANTONE 2747 C",
+    "hex": "#001A72"
+  },
+  {
+    "name": "PANTONE 2748 C",
+    "hex": "#001871"
+  },
+  {
+    "name": "PANTONE 2755 C",
+    "hex": "#250E62"
+  },
+  {
+    "name": "PANTONE 2756 C",
+    "hex": "#151F6D"
+  },
+  {
+    "name": "PANTONE 2757 C",
+    "hex": "#001E60"
+  },
+  {
+    "name": "PANTONE 2758 C",
+    "hex": "#001E62"
+  },
+  {
+    "name": "PANTONE 2765 C",
+    "hex": "#201547"
+  },
+  {
+    "name": "PANTONE 2766 C",
+    "hex": "#141B4D"
+  },
+  {
+    "name": "PANTONE 2767 C",
+    "hex": "#13294B"
+  },
+  {
+    "name": "PANTONE 2768 C",
+    "hex": "#071D49"
+  },
+  {
+    "name": "PANTONE 2905 C",
+    "hex": "#8DC8E8"
+  },
+  {
+    "name": "PANTONE 2915 C",
+    "hex": "#62B5E5"
+  },
+  {
+    "name": "PANTONE 2925 C",
+    "hex": "#009CDE"
+  },
+  {
+    "name": "PANTONE 2935 C",
+    "hex": "#0057B8"
+  },
+  {
+    "name": "PANTONE 2945 C",
+    "hex": "#004C97"
+  },
+  {
+    "name": "PANTONE 2955 C",
+    "hex": "#003865"
+  },
+  {
+    "name": "PANTONE 2965 C",
+    "hex": "#00263E"
+  },
+  {
+    "name": "PANTONE 2975 C",
+    "hex": "#99D6EA"
+  },
+  {
+    "name": "PANTONE 2985 C",
+    "hex": "#5BC2E7"
+  },
+  {
+    "name": "PANTONE 2995 C",
+    "hex": "#00A9E0"
+  },
+  {
+    "name": "PANTONE 3005 C",
+    "hex": "#0077C8"
+  },
+  {
+    "name": "PANTONE 3015 C",
+    "hex": "#00629B"
+  },
+  {
+    "name": "PANTONE 3025 C",
+    "hex": "#004F71"
+  },
+  {
+    "name": "PANTONE 3035 C",
+    "hex": "#003E51"
+  },
+  {
+    "name": "PANTONE 3105 C",
+    "hex": "#68D2DF"
+  },
+  {
+    "name": "PANTONE 3115 C",
+    "hex": "#00C1D5"
+  },
+  {
+    "name": "PANTONE 3125 C",
+    "hex": "#00AEC7"
+  },
+  {
+    "name": "PANTONE 3135 C",
+    "hex": "#008EAA"
+  },
+  {
+    "name": "PANTONE 3145 C",
+    "hex": "#00778B"
+  },
+  {
+    "name": "PANTONE 3155 C",
+    "hex": "#006272"
+  },
+  {
+    "name": "PANTONE 3165 C",
+    "hex": "#004F59"
+  },
+  {
+    "name": "PANTONE 3242 C",
+    "hex": "#71DBD4"
+  },
+  {
+    "name": "PANTONE 3245 C",
+    "hex": "#7CE0D3"
+  },
+  {
+    "name": "PANTONE 3248 C",
+    "hex": "#6DCDB8"
+  },
+  {
+    "name": "PANTONE 3252 C",
+    "hex": "#2AD2C9"
+  },
+  {
+    "name": "PANTONE 3255 C",
+    "hex": "#2CD5C4"
+  },
+  {
+    "name": "PANTONE 3258 C",
+    "hex": "#49C5B1"
+  },
+  {
+    "name": "PANTONE 3262 C",
+    "hex": "#00BFB3"
+  },
+  {
+    "name": "PANTONE 3265 C",
+    "hex": "#00C7B1"
+  },
+  {
+    "name": "PANTONE 3268 C",
+    "hex": "#00AB8E"
+  },
+  {
+    "name": "PANTONE 3272 C",
+    "hex": "#00A499"
+  },
+  {
+    "name": "PANTONE 3275 C",
+    "hex": "#00B398"
+  },
+  {
+    "name": "PANTONE 3278 C",
+    "hex": "#009B77"
+  },
+  {
+    "name": "PANTONE 3282 C",
+    "hex": "#008578"
+  },
+  {
+    "name": "PANTONE 3285 C",
+    "hex": "#009681"
+  },
+  {
+    "name": "PANTONE 3288 C",
+    "hex": "#008264"
+  },
+  {
+    "name": "PANTONE 3292 C",
+    "hex": "#00594F"
+  },
+  {
+    "name": "PANTONE 3295 C",
+    "hex": "#007864"
+  },
+  {
+    "name": "PANTONE 3298 C",
+    "hex": "#006A52"
+  },
+  {
+    "name": "PANTONE 3302 C",
+    "hex": "#004C45"
+  },
+  {
+    "name": "PANTONE 3305 C",
+    "hex": "#004E42"
+  },
+  {
+    "name": "PANTONE 3308 C",
+    "hex": "#034638"
+  },
+  {
+    "name": "PANTONE 3375 C",
+    "hex": "#7AE1BF"
+  },
+  {
+    "name": "PANTONE 3385 C",
+    "hex": "#47D7AC"
+  },
+  {
+    "name": "PANTONE 3395 C",
+    "hex": "#00C389"
+  },
+  {
+    "name": "PANTONE 3405 C",
+    "hex": "#00AF66"
+  },
+  {
+    "name": "PANTONE 3415 C",
+    "hex": "#007749"
+  },
+  {
+    "name": "PANTONE 3425 C",
+    "hex": "#006341"
+  },
+  {
+    "name": "PANTONE 3435 C",
+    "hex": "#154734"
+  },
+  {
+    "name": "PANTONE 3935 C",
+    "hex": "#F3EA5D"
+  },
+  {
+    "name": "PANTONE 3945 C",
+    "hex": "#F3E500"
+  },
+  {
+    "name": "PANTONE 3955 C",
+    "hex": "#EFDF00"
+  },
+  {
+    "name": "PANTONE 3965 C",
+    "hex": "#EEDC00"
+  },
+  {
+    "name": "PANTONE 3975 C",
+    "hex": "#BBA600"
+  },
+  {
+    "name": "PANTONE 3985 C",
+    "hex": "#9A8700"
+  },
+  {
+    "name": "PANTONE 3995 C",
+    "hex": "#685C20"
+  },
+  {
+    "name": "PANTONE 4485 C",
+    "hex": "#614F25"
+  },
+  {
+    "name": "PANTONE 4495 C",
+    "hex": "#8C7732"
+  },
+  {
+    "name": "PANTONE 4505 C",
+    "hex": "#998542"
+  },
+  {
+    "name": "PANTONE 4515 C",
+    "hex": "#B3A369"
+  },
+  {
+    "name": "PANTONE 4525 C",
+    "hex": "#C5B783"
+  },
+  {
+    "name": "PANTONE 4535 C",
+    "hex": "#CFC493"
+  },
+  {
+    "name": "PANTONE 4545 C",
+    "hex": "#D5CB9F"
+  },
+  {
+    "name": "PANTONE 4625 C",
+    "hex": "#4F2C1D"
+  },
+  {
+    "name": "PANTONE 4635 C",
+    "hex": "#946037"
+  },
+  {
+    "name": "PANTONE 4645 C",
+    "hex": "#AD7C59"
+  },
+  {
+    "name": "PANTONE 4655 C",
+    "hex": "#BF9474"
+  },
+  {
+    "name": "PANTONE 4665 C",
+    "hex": "#CDA788"
+  },
+  {
+    "name": "PANTONE 4675 C",
+    "hex": "#DCBFA6"
+  },
+  {
+    "name": "PANTONE 4685 C",
+    "hex": "#E0C6AD"
+  },
+  {
+    "name": "PANTONE 4695 C",
+    "hex": "#5B3427"
+  },
+  {
+    "name": "PANTONE 4705 C",
+    "hex": "#7C4D3A"
+  },
+  {
+    "name": "PANTONE 4715 C",
+    "hex": "#956C58"
+  },
+  {
+    "name": "PANTONE 4725 C",
+    "hex": "#AE8A79"
+  },
+  {
+    "name": "PANTONE 4735 C",
+    "hex": "#C0A392"
+  },
+  {
+    "name": "PANTONE 4745 C",
+    "hex": "#CDB5A7"
+  },
+  {
+    "name": "PANTONE 4755 C",
+    "hex": "#D7C4B7"
+  },
+  {
+    "name": "PANTONE 4975 C",
+    "hex": "#3F2021"
+  },
+  {
+    "name": "PANTONE 4985 C",
+    "hex": "#874B52"
+  },
+  {
+    "name": "PANTONE 4995 C",
+    "hex": "#9C6169"
+  },
+  {
+    "name": "PANTONE 5005 C",
+    "hex": "#B07C83"
+  },
+  {
+    "name": "PANTONE 5015 C",
+    "hex": "#CCA1A6"
+  },
+  {
+    "name": "PANTONE 5025 C",
+    "hex": "#DBB7BB"
+  },
+  {
+    "name": "PANTONE 5035 C",
+    "hex": "#DFC2C3"
+  },
+  {
+    "name": "PANTONE 5115 C",
+    "hex": "#512A44"
+  },
+  {
+    "name": "PANTONE 5125 C",
+    "hex": "#693C5E"
+  },
+  {
+    "name": "PANTONE 5135 C",
+    "hex": "#7E5475"
+  },
+  {
+    "name": "PANTONE 5145 C",
+    "hex": "#9B7793"
+  },
+  {
+    "name": "PANTONE 5155 C",
+    "hex": "#BFA5B8"
+  },
+  {
+    "name": "PANTONE 5165 C",
+    "hex": "#D3C0CD"
+  },
+  {
+    "name": "PANTONE 5175 C",
+    "hex": "#D8C8D1"
+  },
+  {
+    "name": "PANTONE 5185 C",
+    "hex": "#4A3041"
+  },
+  {
+    "name": "PANTONE 5195 C",
+    "hex": "#66435A"
+  },
+  {
+    "name": "PANTONE 5205 C",
+    "hex": "#86647A"
+  },
+  {
+    "name": "PANTONE 5215 C",
+    "hex": "#AF95A6"
+  },
+  {
+    "name": "PANTONE 5225 C",
+    "hex": "#C6B0BC"
+  },
+  {
+    "name": "PANTONE 5235 C",
+    "hex": "#D0BEC7"
+  },
+  {
+    "name": "PANTONE 5245 C",
+    "hex": "#DBCDD3"
+  },
+  {
+    "name": "PANTONE 5255 C",
+    "hex": "#1E1A34"
+  },
+  {
+    "name": "PANTONE 5265 C",
+    "hex": "#403A60"
+  },
+  {
+    "name": "PANTONE 5275 C",
+    "hex": "#595478"
+  },
+  {
+    "name": "PANTONE 5285 C",
+    "hex": "#8D89A5"
+  },
+  {
+    "name": "PANTONE 5295 C",
+    "hex": "#B3B0C4"
+  },
+  {
+    "name": "PANTONE 5305 C",
+    "hex": "#C6C4D2"
+  },
+  {
+    "name": "PANTONE 5315 C",
+    "hex": "#D8D7DF"
+  },
+  {
+    "name": "PANTONE 5395 C",
+    "hex": "#081F2C"
+  },
+  {
+    "name": "PANTONE 5405 C",
+    "hex": "#4F758B"
+  },
+  {
+    "name": "PANTONE 5415 C",
+    "hex": "#5B7F95"
+  },
+  {
+    "name": "PANTONE 5425 C",
+    "hex": "#7A99AC"
+  },
+  {
+    "name": "PANTONE 5435 C",
+    "hex": "#A6BBC8"
+  },
+  {
+    "name": "PANTONE 5445 C",
+    "hex": "#B7C9D3"
+  },
+  {
+    "name": "PANTONE 5455 C",
+    "hex": "#BFCED6"
+  },
+  {
+    "name": "PANTONE 5463 C",
+    "hex": "#07272D"
+  },
+  {
+    "name": "PANTONE 5467 C",
+    "hex": "#18332F"
+  },
+  {
+    "name": "PANTONE 5473 C",
+    "hex": "#115E67"
+  },
+  {
+    "name": "PANTONE 5477 C",
+    "hex": "#3E5D58"
+  },
+  {
+    "name": "PANTONE 5483 C",
+    "hex": "#4F868E"
+  },
+  {
+    "name": "PANTONE 5487 C",
+    "hex": "#5D7975"
+  },
+  {
+    "name": "PANTONE 5493 C",
+    "hex": "#7FA9AE"
+  },
+  {
+    "name": "PANTONE 5497 C",
+    "hex": "#829995"
+  },
+  {
+    "name": "PANTONE 5503 C",
+    "hex": "#94B7BB"
+  },
+  {
+    "name": "PANTONE 5507 C",
+    "hex": "#9DB0AC"
+  },
+  {
+    "name": "PANTONE 5513 C",
+    "hex": "#ABC7CA"
+  },
+  {
+    "name": "PANTONE 5517 C",
+    "hex": "#B1C0BC"
+  },
+  {
+    "name": "PANTONE 5523 C",
+    "hex": "#B6CFD0"
+  },
+  {
+    "name": "PANTONE 5527 C",
+    "hex": "#BCC9C5"
+  },
+  {
+    "name": "PANTONE 5535 C",
+    "hex": "#183028"
+  },
+  {
+    "name": "PANTONE 5545 C",
+    "hex": "#43695B"
+  },
+  {
+    "name": "PANTONE 5555 C",
+    "hex": "#5C7F71"
+  },
+  {
+    "name": "PANTONE 5565 C",
+    "hex": "#7F9C90"
+  },
+  {
+    "name": "PANTONE 5575 C",
+    "hex": "#92ACA0"
+  },
+  {
+    "name": "PANTONE 5585 C",
+    "hex": "#A7BDB1"
+  },
+  {
+    "name": "PANTONE 5595 C",
+    "hex": "#BFCEC2"
+  },
+  {
+    "name": "PANTONE 5605 C",
+    "hex": "#22372B"
+  },
+  {
+    "name": "PANTONE 5615 C",
+    "hex": "#5E7461"
+  },
+  {
+    "name": "PANTONE 5625 C",
+    "hex": "#708573"
+  },
+  {
+    "name": "PANTONE 5635 C",
+    "hex": "#94A596"
+  },
+  {
+    "name": "PANTONE 5645 C",
+    "hex": "#A3B2A4"
+  },
+  {
+    "name": "PANTONE 5655 C",
+    "hex": "#B0BDB0"
+  },
+  {
+    "name": "PANTONE 5665 C",
+    "hex": "#BAC5B9"
+  },
+  {
+    "name": "PANTONE 5743 C",
+    "hex": "#3E4827"
+  },
+  {
+    "name": "PANTONE 5747 C",
+    "hex": "#3D441E"
+  },
+  {
+    "name": "PANTONE 5753 C",
+    "hex": "#5E6738"
+  },
+  {
+    "name": "PANTONE 5757 C",
+    "hex": "#6D712E"
+  },
+  {
+    "name": "PANTONE 5763 C",
+    "hex": "#737B4C"
+  },
+  {
+    "name": "PANTONE 5767 C",
+    "hex": "#8A8D4A"
+  },
+  {
+    "name": "PANTONE 5773 C",
+    "hex": "#899064"
+  },
+  {
+    "name": "PANTONE 5777 C",
+    "hex": "#A2A569"
+  },
+  {
+    "name": "PANTONE 5783 C",
+    "hex": "#A3AA83"
+  },
+  {
+    "name": "PANTONE 5787 C",
+    "hex": "#BABD8B"
+  },
+  {
+    "name": "PANTONE 5793 C",
+    "hex": "#B3B995"
+  },
+  {
+    "name": "PANTONE 5797 C",
+    "hex": "#C6C89B"
+  },
+  {
+    "name": "PANTONE 5803 C",
+    "hex": "#C3C6A8"
+  },
+  {
+    "name": "PANTONE 5807 C",
+    "hex": "#D0D1AB"
+  },
+  {
+    "name": "PANTONE 5815 C",
+    "hex": "#555025"
+  },
+  {
+    "name": "PANTONE 5825 C",
+    "hex": "#89813D"
+  },
+  {
+    "name": "PANTONE 5835 C",
+    "hex": "#A09958"
+  },
+  {
+    "name": "PANTONE 5845 C",
+    "hex": "#AFA96E"
+  },
+  {
+    "name": "PANTONE 5855 C",
+    "hex": "#C0BB87"
+  },
+  {
+    "name": "PANTONE 5865 C",
+    "hex": "#CBC793"
+  },
+  {
+    "name": "PANTONE 5875 C",
+    "hex": "#D2CE9E"
+  },
+  {
+    "name": "PANTONE 7401 C",
+    "hex": "#F5E1A4"
+  },
+  {
+    "name": "PANTONE 7402 C",
+    "hex": "#ECD898"
+  },
+  {
+    "name": "PANTONE 7403 C",
+    "hex": "#EED484"
+  },
+  {
+    "name": "PANTONE 7404 C",
+    "hex": "#F4DA40"
+  },
+  {
+    "name": "PANTONE 7405 C",
+    "hex": "#F2CD00"
+  },
+  {
+    "name": "PANTONE 7406 C",
+    "hex": "#F1C400"
+  },
+  {
+    "name": "PANTONE 7407 C",
+    "hex": "#CBA052"
+  },
+  {
+    "name": "PANTONE 7408 C",
+    "hex": "#F6BE00"
+  },
+  {
+    "name": "PANTONE 7409 C",
+    "hex": "#F0B323"
+  },
+  {
+    "name": "PANTONE 7410 C",
+    "hex": "#FEAD77"
+  },
+  {
+    "name": "PANTONE 7411 C",
+    "hex": "#E6A65D"
+  },
+  {
+    "name": "PANTONE 7412 C",
+    "hex": "#D38235"
+  },
+  {
+    "name": "PANTONE 7413 C",
+    "hex": "#DC8633"
+  },
+  {
+    "name": "PANTONE 7414 C",
+    "hex": "#C16C18"
+  },
+  {
+    "name": "PANTONE 7415 C",
+    "hex": "#E6BAA8"
+  },
+  {
+    "name": "PANTONE 7416 C",
+    "hex": "#E56A54"
+  },
+  {
+    "name": "PANTONE 7417 C",
+    "hex": "#E04E39"
+  },
+  {
+    "name": "PANTONE 7418 C",
+    "hex": "#CD545B"
+  },
+  {
+    "name": "PANTONE 7419 C",
+    "hex": "#B04A5A"
+  },
+  {
+    "name": "PANTONE 7420 C",
+    "hex": "#9B2242"
+  },
+  {
+    "name": "PANTONE 7421 C",
+    "hex": "#651D32"
+  },
+  {
+    "name": "PANTONE 7422 C",
+    "hex": "#F4CDD4"
+  },
+  {
+    "name": "PANTONE 7423 C",
+    "hex": "#E06287"
+  },
+  {
+    "name": "PANTONE 7424 C",
+    "hex": "#E24585"
+  },
+  {
+    "name": "PANTONE 7425 C",
+    "hex": "#B52555"
+  },
+  {
+    "name": "PANTONE 7426 C",
+    "hex": "#A4123F"
+  },
+  {
+    "name": "PANTONE 7427 C",
+    "hex": "#971B2F"
+  },
+  {
+    "name": "PANTONE 7428 C",
+    "hex": "#6A2C3E"
+  },
+  {
+    "name": "PANTONE 7429 C",
+    "hex": "#E2BCCB"
+  },
+  {
+    "name": "PANTONE 7430 C",
+    "hex": "#DCA9BF"
+  },
+  {
+    "name": "PANTONE 7431 C",
+    "hex": "#C9809E"
+  },
+  {
+    "name": "PANTONE 7432 C",
+    "hex": "#B55C80"
+  },
+  {
+    "name": "PANTONE 7433 C",
+    "hex": "#A73A64"
+  },
+  {
+    "name": "PANTONE 7434 C",
+    "hex": "#9B3259"
+  },
+  {
+    "name": "PANTONE 7435 C",
+    "hex": "#872651"
+  },
+  {
+    "name": "PANTONE 7436 C",
+    "hex": "#EEDAEA"
+  },
+  {
+    "name": "PANTONE 7437 C",
+    "hex": "#CCAED0"
+  },
+  {
+    "name": "PANTONE 7438 C",
+    "hex": "#D59ED7"
+  },
+  {
+    "name": "PANTONE 7439 C",
+    "hex": "#B288B9"
+  },
+  {
+    "name": "PANTONE 7440 C",
+    "hex": "#A277A6"
+  },
+  {
+    "name": "PANTONE 7441 C",
+    "hex": "#9F5CC0"
+  },
+  {
+    "name": "PANTONE 7442 C",
+    "hex": "#963CBD"
+  },
+  {
+    "name": "PANTONE 7443 C",
+    "hex": "#DDDAE8"
+  },
+  {
+    "name": "PANTONE 7444 C",
+    "hex": "#B6B8DC"
+  },
+  {
+    "name": "PANTONE 7445 C",
+    "hex": "#A7A2C3"
+  },
+  {
+    "name": "PANTONE 7446 C",
+    "hex": "#8986CA"
+  },
+  {
+    "name": "PANTONE 7447 C",
+    "hex": "#5D4777"
+  },
+  {
+    "name": "PANTONE 7448 C",
+    "hex": "#4B384C"
+  },
+  {
+    "name": "PANTONE 7449 C",
+    "hex": "#41273B"
+  },
+  {
+    "name": "PANTONE 7450 C",
+    "hex": "#BDC5DB"
+  },
+  {
+    "name": "PANTONE 7451 C",
+    "hex": "#89ABE3"
+  },
+  {
+    "name": "PANTONE 7452 C",
+    "hex": "#8094DD"
+  },
+  {
+    "name": "PANTONE 7453 C",
+    "hex": "#7BA6DE"
+  },
+  {
+    "name": "PANTONE 7454 C",
+    "hex": "#5F8FB4"
+  },
+  {
+    "name": "PANTONE 7455 C",
+    "hex": "#3A5DAE"
+  },
+  {
+    "name": "PANTONE 7456 C",
+    "hex": "#606EB2"
+  },
+  {
+    "name": "PANTONE 7457 C",
+    "hex": "#BBDDE6"
+  },
+  {
+    "name": "PANTONE 7458 C",
+    "hex": "#71B2C9"
+  },
+  {
+    "name": "PANTONE 7459 C",
+    "hex": "#4298B5"
+  },
+  {
+    "name": "PANTONE 7460 C",
+    "hex": "#0086BF"
+  },
+  {
+    "name": "PANTONE 7461 C",
+    "hex": "#007DBA"
+  },
+  {
+    "name": "PANTONE 7462 C",
+    "hex": "#00558C"
+  },
+  {
+    "name": "PANTONE 7463 C",
+    "hex": "#002B49"
+  },
+  {
+    "name": "PANTONE 7464 C",
+    "hex": "#A0D1CA"
+  },
+  {
+    "name": "PANTONE 7465 C",
+    "hex": "#40C1AC"
+  },
+  {
+    "name": "PANTONE 7466 C",
+    "hex": "#00B0B9"
+  },
+  {
+    "name": "PANTONE 7467 C",
+    "hex": "#00A3AD"
+  },
+  {
+    "name": "PANTONE 7468 C",
+    "hex": "#007398"
+  },
+  {
+    "name": "PANTONE 7469 C",
+    "hex": "#005F86"
+  },
+  {
+    "name": "PANTONE 7470 C",
+    "hex": "#005A70"
+  },
+  {
+    "name": "PANTONE 7471 C",
+    "hex": "#7EDDD3"
+  },
+  {
+    "name": "PANTONE 7472 C",
+    "hex": "#5CB8B2"
+  },
+  {
+    "name": "PANTONE 7473 C",
+    "hex": "#279989"
+  },
+  {
+    "name": "PANTONE 7474 C",
+    "hex": "#007681"
+  },
+  {
+    "name": "PANTONE 7475 C",
+    "hex": "#487A7B"
+  },
+  {
+    "name": "PANTONE 7476 C",
+    "hex": "#0D5257"
+  },
+  {
+    "name": "PANTONE 7477 C",
+    "hex": "#244C5A"
+  },
+  {
+    "name": "PANTONE 7478 C",
+    "hex": "#9BE3BF"
+  },
+  {
+    "name": "PANTONE 7479 C",
+    "hex": "#26D07C"
+  },
+  {
+    "name": "PANTONE 7480 C",
+    "hex": "#00BF6F"
+  },
+  {
+    "name": "PANTONE 7481 C",
+    "hex": "#00B74F"
+  },
+  {
+    "name": "PANTONE 7482 C",
+    "hex": "#009F4D"
+  },
+  {
+    "name": "PANTONE 7483 C",
+    "hex": "#275D38"
+  },
+  {
+    "name": "PANTONE 7484 C",
+    "hex": "#00573F"
+  },
+  {
+    "name": "PANTONE 7485 C",
+    "hex": "#D0DEBB"
+  },
+  {
+    "name": "PANTONE 7486 C",
+    "hex": "#BCE194"
+  },
+  {
+    "name": "PANTONE 7487 C",
+    "hex": "#8EDD65"
+  },
+  {
+    "name": "PANTONE 7488 C",
+    "hex": "#78D64B"
+  },
+  {
+    "name": "PANTONE 7489 C",
+    "hex": "#74AA50"
+  },
+  {
+    "name": "PANTONE 7490 C",
+    "hex": "#719949"
+  },
+  {
+    "name": "PANTONE 7491 C",
+    "hex": "#79863C"
+  },
+  {
+    "name": "PANTONE 7492 C",
+    "hex": "#BFCC80"
+  },
+  {
+    "name": "PANTONE 7493 C",
+    "hex": "#BBC592"
+  },
+  {
+    "name": "PANTONE 7494 C",
+    "hex": "#9CAF88"
+  },
+  {
+    "name": "PANTONE 7495 C",
+    "hex": "#8F993E"
+  },
+  {
+    "name": "PANTONE 7496 C",
+    "hex": "#76881D"
+  },
+  {
+    "name": "PANTONE 7497 C",
+    "hex": "#7A7256"
+  },
+  {
+    "name": "PANTONE 7498 C",
+    "hex": "#5B6236"
+  },
+  {
+    "name": "PANTONE 7499 C",
+    "hex": "#F1E6B2"
+  },
+  {
+    "name": "PANTONE 7500 C",
+    "hex": "#DFD1A7"
+  },
+  {
+    "name": "PANTONE 7501 C",
+    "hex": "#D9C89E"
+  },
+  {
+    "name": "PANTONE 7502 C",
+    "hex": "#CEB888"
+  },
+  {
+    "name": "PANTONE 7503 C",
+    "hex": "#A89968"
+  },
+  {
+    "name": "PANTONE 7504 C",
+    "hex": "#94795D"
+  },
+  {
+    "name": "PANTONE 7505 C",
+    "hex": "#816040"
+  },
+  {
+    "name": "PANTONE 7506 C",
+    "hex": "#EFDBB2"
+  },
+  {
+    "name": "PANTONE 7507 C",
+    "hex": "#FCD299"
+  },
+  {
+    "name": "PANTONE 7508 C",
+    "hex": "#E1B87F"
+  },
+  {
+    "name": "PANTONE 7509 C",
+    "hex": "#D6A461"
+  },
+  {
+    "name": "PANTONE 7510 C",
+    "hex": "#C6893F"
+  },
+  {
+    "name": "PANTONE 7511 C",
+    "hex": "#B77729"
+  },
+  {
+    "name": "PANTONE 7512 C",
+    "hex": "#A6631B"
+  },
+  {
+    "name": "PANTONE 7513 C",
+    "hex": "#E1B7A7"
+  },
+  {
+    "name": "PANTONE 7514 C",
+    "hex": "#D5A286"
+  },
+  {
+    "name": "PANTONE 7515 C",
+    "hex": "#C58B68"
+  },
+  {
+    "name": "PANTONE 7516 C",
+    "hex": "#99552B"
+  },
+  {
+    "name": "PANTONE 7517 C",
+    "hex": "#85431E"
+  },
+  {
+    "name": "PANTONE 7518 C",
+    "hex": "#6D4F47"
+  },
+  {
+    "name": "PANTONE 7519 C",
+    "hex": "#5E4B3C"
+  },
+  {
+    "name": "PANTONE 7520 C",
+    "hex": "#EABEB0"
+  },
+  {
+    "name": "PANTONE 7521 C",
+    "hex": "#C09C83"
+  },
+  {
+    "name": "PANTONE 7522 C",
+    "hex": "#B46A55"
+  },
+  {
+    "name": "PANTONE 7523 C",
+    "hex": "#AB5C57"
+  },
+  {
+    "name": "PANTONE 7524 C",
+    "hex": "#A45248"
+  },
+  {
+    "name": "PANTONE 7525 C",
+    "hex": "#9A6A4F"
+  },
+  {
+    "name": "PANTONE 7526 C",
+    "hex": "#8A391B"
+  },
+  {
+    "name": "PANTONE 7527 C",
+    "hex": "#D6D2C4"
+  },
+  {
+    "name": "PANTONE 7528 C",
+    "hex": "#C5B9AC"
+  },
+  {
+    "name": "PANTONE 7529 C",
+    "hex": "#B7A99A"
+  },
+  {
+    "name": "PANTONE 7530 C",
+    "hex": "#A39382"
+  },
+  {
+    "name": "PANTONE 7531 C",
+    "hex": "#7A6855"
+  },
+  {
+    "name": "PANTONE 7532 C",
+    "hex": "#63513D"
+  },
+  {
+    "name": "PANTONE 7533 C",
+    "hex": "#473729"
+  },
+  {
+    "name": "PANTONE 7534 C",
+    "hex": "#D1CCBD"
+  },
+  {
+    "name": "PANTONE 7535 C",
+    "hex": "#B7B09C"
+  },
+  {
+    "name": "PANTONE 7536 C",
+    "hex": "#A69F88"
+  },
+  {
+    "name": "PANTONE 7537 C",
+    "hex": "#A7ACA2"
+  },
+  {
+    "name": "PANTONE 7538 C",
+    "hex": "#949A90"
+  },
+  {
+    "name": "PANTONE 7539 C",
+    "hex": "#8E9089"
+  },
+  {
+    "name": "PANTONE 7540 C",
+    "hex": "#4B4F54"
+  },
+  {
+    "name": "PANTONE 7541 C",
+    "hex": "#D9E1E2"
+  },
+  {
+    "name": "PANTONE 7542 C",
+    "hex": "#A4BCC2"
+  },
+  {
+    "name": "PANTONE 7543 C",
+    "hex": "#98A4AE"
+  },
+  {
+    "name": "PANTONE 7544 C",
+    "hex": "#768692"
+  },
+  {
+    "name": "PANTONE 7545 C",
+    "hex": "#425563"
+  },
+  {
+    "name": "PANTONE 7546 C",
+    "hex": "#253746"
+  },
+  {
+    "name": "PANTONE 7547 C",
+    "hex": "#131E29"
+  },
+  {
+    "name": "PANTONE 7548 C",
+    "hex": "#FFC600"
+  },
+  {
+    "name": "PANTONE 7549 C",
+    "hex": "#FFB500"
+  },
+  {
+    "name": "PANTONE 7550 C",
+    "hex": "#D19000"
+  },
+  {
+    "name": "PANTONE 7551 C",
+    "hex": "#B47E00"
+  },
+  {
+    "name": "PANTONE 7552 C",
+    "hex": "#73531D"
+  },
+  {
+    "name": "PANTONE 7553 C",
+    "hex": "#5A4522"
+  },
+  {
+    "name": "PANTONE 7554 C",
+    "hex": "#4B3D2A"
+  },
+  {
+    "name": "PANTONE 7555 C",
+    "hex": "#D29F13"
+  },
+  {
+    "name": "PANTONE 7556 C",
+    "hex": "#B78B20"
+  },
+  {
+    "name": "PANTONE 7557 C",
+    "hex": "#9F7D23"
+  },
+  {
+    "name": "PANTONE 7558 C",
+    "hex": "#967126"
+  },
+  {
+    "name": "PANTONE 7559 C",
+    "hex": "#8F6A2A"
+  },
+  {
+    "name": "PANTONE 7560 C",
+    "hex": "#7D622E"
+  },
+  {
+    "name": "PANTONE 7561 C",
+    "hex": "#6C5D34"
+  },
+  {
+    "name": "PANTONE 7562 C",
+    "hex": "#BD9B60"
+  },
+  {
+    "name": "PANTONE 7563 C",
+    "hex": "#D69A2D"
+  },
+  {
+    "name": "PANTONE 7564 C",
+    "hex": "#DB8A06"
+  },
+  {
+    "name": "PANTONE 7565 C",
+    "hex": "#CD7925"
+  },
+  {
+    "name": "PANTONE 7566 C",
+    "hex": "#AD6433"
+  },
+  {
+    "name": "PANTONE 7567 C",
+    "hex": "#89532F"
+  },
+  {
+    "name": "PANTONE 7568 C",
+    "hex": "#775135"
+  },
+  {
+    "name": "PANTONE 7569 C",
+    "hex": "#D78825"
+  },
+  {
+    "name": "PANTONE 7570 C",
+    "hex": "#D3832B"
+  },
+  {
+    "name": "PANTONE 7571 C",
+    "hex": "#C67D30"
+  },
+  {
+    "name": "PANTONE 7572 C",
+    "hex": "#B67233"
+  },
+  {
+    "name": "PANTONE 7573 C",
+    "hex": "#A7662B"
+  },
+  {
+    "name": "PANTONE 7574 C",
+    "hex": "#9E6A38"
+  },
+  {
+    "name": "PANTONE 7575 C",
+    "hex": "#835D32"
+  },
+  {
+    "name": "PANTONE 7576 C",
+    "hex": "#DB864E"
+  },
+  {
+    "name": "PANTONE 7577 C",
+    "hex": "#E07E3C"
+  },
+  {
+    "name": "PANTONE 7578 C",
+    "hex": "#DC6B2F"
+  },
+  {
+    "name": "PANTONE 7579 C",
+    "hex": "#DC582A"
+  },
+  {
+    "name": "PANTONE 7580 C",
+    "hex": "#C05131"
+  },
+  {
+    "name": "PANTONE 7581 C",
+    "hex": "#864A33"
+  },
+  {
+    "name": "PANTONE 7582 C",
+    "hex": "#674736"
+  },
+  {
+    "name": "PANTONE 7583 C",
+    "hex": "#C4622D"
+  },
+  {
+    "name": "PANTONE 7584 C",
+    "hex": "#BA5826"
+  },
+  {
+    "name": "PANTONE 7585 C",
+    "hex": "#AF5C37"
+  },
+  {
+    "name": "PANTONE 7586 C",
+    "hex": "#9E5330"
+  },
+  {
+    "name": "PANTONE 7587 C",
+    "hex": "#924C2E"
+  },
+  {
+    "name": "PANTONE 7588 C",
+    "hex": "#7B4D35"
+  },
+  {
+    "name": "PANTONE 7589 C",
+    "hex": "#5C4738"
+  },
+  {
+    "name": "PANTONE 7590 C",
+    "hex": "#D4B59E"
+  },
+  {
+    "name": "PANTONE 7591 C",
+    "hex": "#C07D59"
+  },
+  {
+    "name": "PANTONE 7592 C",
+    "hex": "#B15533"
+  },
+  {
+    "name": "PANTONE 7593 C",
+    "hex": "#9D432C"
+  },
+  {
+    "name": "PANTONE 7594 C",
+    "hex": "#7C3A2D"
+  },
+  {
+    "name": "PANTONE 7595 C",
+    "hex": "#6B3D2E"
+  },
+  {
+    "name": "PANTONE 7596 C",
+    "hex": "#5C3D31"
+  },
+  {
+    "name": "PANTONE 7597 C",
+    "hex": "#D14124"
+  },
+  {
+    "name": "PANTONE 7598 C",
+    "hex": "#BD472A"
+  },
+  {
+    "name": "PANTONE 7599 C",
+    "hex": "#B33D26"
+  },
+  {
+    "name": "PANTONE 7600 C",
+    "hex": "#8D3F2B"
+  },
+  {
+    "name": "PANTONE 7601 C",
+    "hex": "#83412C"
+  },
+  {
+    "name": "PANTONE 7602 C",
+    "hex": "#7B4931"
+  },
+  {
+    "name": "PANTONE 7603 C",
+    "hex": "#674230"
+  },
+  {
+    "name": "PANTONE 7604 C",
+    "hex": "#E4D5D3"
+  },
+  {
+    "name": "PANTONE 7605 C",
+    "hex": "#E1BBB4"
+  },
+  {
+    "name": "PANTONE 7606 C",
+    "hex": "#D6938A"
+  },
+  {
+    "name": "PANTONE 7607 C",
+    "hex": "#C26E60"
+  },
+  {
+    "name": "PANTONE 7608 C",
+    "hex": "#A4493D"
+  },
+  {
+    "name": "PANTONE 7609 C",
+    "hex": "#823B34"
+  },
+  {
+    "name": "PANTONE 7610 C",
+    "hex": "#683431"
+  },
+  {
+    "name": "PANTONE 7611 C",
+    "hex": "#DDBCB0"
+  },
+  {
+    "name": "PANTONE 7612 C",
+    "hex": "#CA9A8E"
+  },
+  {
+    "name": "PANTONE 7613 C",
+    "hex": "#BC8A7E"
+  },
+  {
+    "name": "PANTONE 7614 C",
+    "hex": "#A37F74"
+  },
+  {
+    "name": "PANTONE 7615 C",
+    "hex": "#866761"
+  },
+  {
+    "name": "PANTONE 7616 C",
+    "hex": "#6B4C4C"
+  },
+  {
+    "name": "PANTONE 7617 C",
+    "hex": "#583D3E"
+  },
+  {
+    "name": "PANTONE 7618 C",
+    "hex": "#C66E4E"
+  },
+  {
+    "name": "PANTONE 7619 C",
+    "hex": "#C04C36"
+  },
+  {
+    "name": "PANTONE 7620 C",
+    "hex": "#B7312C"
+  },
+  {
+    "name": "PANTONE 7621 C",
+    "hex": "#AB2328"
+  },
+  {
+    "name": "PANTONE 7622 C",
+    "hex": "#93272C"
+  },
+  {
+    "name": "PANTONE 7623 C",
+    "hex": "#8A2A2B"
+  },
+  {
+    "name": "PANTONE 7624 C",
+    "hex": "#802F2D"
+  },
+  {
+    "name": "PANTONE 7625 C",
+    "hex": "#E1523D"
+  },
+  {
+    "name": "PANTONE 7626 C",
+    "hex": "#C63527"
+  },
+  {
+    "name": "PANTONE 7627 C",
+    "hex": "#A72B2A"
+  },
+  {
+    "name": "PANTONE 7628 C",
+    "hex": "#9E2A2B"
+  },
+  {
+    "name": "PANTONE 7629 C",
+    "hex": "#6D3332"
+  },
+  {
+    "name": "PANTONE 7630 C",
+    "hex": "#633231"
+  },
+  {
+    "name": "PANTONE 7631 C",
+    "hex": "#572D2D"
+  },
+  {
+    "name": "PANTONE 7632 C",
+    "hex": "#D6C9CA"
+  },
+  {
+    "name": "PANTONE 7633 C",
+    "hex": "#C4A4A7"
+  },
+  {
+    "name": "PANTONE 7634 C",
+    "hex": "#C16784"
+  },
+  {
+    "name": "PANTONE 7635 C",
+    "hex": "#C63663"
+  },
+  {
+    "name": "PANTONE 7636 C",
+    "hex": "#BC204B"
+  },
+  {
+    "name": "PANTONE 7637 C",
+    "hex": "#912F46"
+  },
+  {
+    "name": "PANTONE 7638 C",
+    "hex": "#7E2D40"
+  },
+  {
+    "name": "PANTONE 7639 C",
+    "hex": "#936D73"
+  },
+  {
+    "name": "PANTONE 7640 C",
+    "hex": "#934054"
+  },
+  {
+    "name": "PANTONE 7641 C",
+    "hex": "#8E2C48"
+  },
+  {
+    "name": "PANTONE 7642 C",
+    "hex": "#732E4A"
+  },
+  {
+    "name": "PANTONE 7643 C",
+    "hex": "#672E45"
+  },
+  {
+    "name": "PANTONE 7644 C",
+    "hex": "#582D40"
+  },
+  {
+    "name": "PANTONE 7645 C",
+    "hex": "#502B3A"
+  },
+  {
+    "name": "PANTONE 7646 C",
+    "hex": "#A56E87"
+  },
+  {
+    "name": "PANTONE 7647 C",
+    "hex": "#A83D72"
+  },
+  {
+    "name": "PANTONE 7648 C",
+    "hex": "#991E66"
+  },
+  {
+    "name": "PANTONE 7649 C",
+    "hex": "#8A1B61"
+  },
+  {
+    "name": "PANTONE 7650 C",
+    "hex": "#722257"
+  },
+  {
+    "name": "PANTONE 7651 C",
+    "hex": "#6A2A5B"
+  },
+  {
+    "name": "PANTONE 7652 C",
+    "hex": "#5E2751"
+  },
+  {
+    "name": "PANTONE 7653 C",
+    "hex": "#948794"
+  },
+  {
+    "name": "PANTONE 7654 C",
+    "hex": "#A2789C"
+  },
+  {
+    "name": "PANTONE 7655 C",
+    "hex": "#A15A95"
+  },
+  {
+    "name": "PANTONE 7656 C",
+    "hex": "#8E3A80"
+  },
+  {
+    "name": "PANTONE 7657 C",
+    "hex": "#6E2B62"
+  },
+  {
+    "name": "PANTONE 7658 C",
+    "hex": "#6A3460"
+  },
+  {
+    "name": "PANTONE 7659 C",
+    "hex": "#5D3754"
+  },
+  {
+    "name": "PANTONE 7660 C",
+    "hex": "#9991A4"
+  },
+  {
+    "name": "PANTONE 7661 C",
+    "hex": "#8D6E97"
+  },
+  {
+    "name": "PANTONE 7662 C",
+    "hex": "#7A4183"
+  },
+  {
+    "name": "PANTONE 7663 C",
+    "hex": "#6B3077"
+  },
+  {
+    "name": "PANTONE 7664 C",
+    "hex": "#653279"
+  },
+  {
+    "name": "PANTONE 7665 C",
+    "hex": "#5E366E"
+  },
+  {
+    "name": "PANTONE 7666 C",
+    "hex": "#5C4E63"
+  },
+  {
+    "name": "PANTONE 7667 C",
+    "hex": "#6E7CA0"
+  },
+  {
+    "name": "PANTONE 7668 C",
+    "hex": "#686E9F"
+  },
+  {
+    "name": "PANTONE 7669 C",
+    "hex": "#615E9B"
+  },
+  {
+    "name": "PANTONE 7670 C",
+    "hex": "#565294"
+  },
+  {
+    "name": "PANTONE 7671 C",
+    "hex": "#514689"
+  },
+  {
+    "name": "PANTONE 7672 C",
+    "hex": "#4C4184"
+  },
+  {
+    "name": "PANTONE 7673 C",
+    "hex": "#535486"
+  },
+  {
+    "name": "PANTONE 7674 C",
+    "hex": "#878CB4"
+  },
+  {
+    "name": "PANTONE 7675 C",
+    "hex": "#7C7FAB"
+  },
+  {
+    "name": "PANTONE 7676 C",
+    "hex": "#7566A0"
+  },
+  {
+    "name": "PANTONE 7677 C",
+    "hex": "#6F5091"
+  },
+  {
+    "name": "PANTONE 7678 C",
+    "hex": "#68478D"
+  },
+  {
+    "name": "PANTONE 7679 C",
+    "hex": "#563D82"
+  },
+  {
+    "name": "PANTONE 7680 C",
+    "hex": "#523178"
+  },
+  {
+    "name": "PANTONE 7681 C",
+    "hex": "#94A9CB"
+  },
+  {
+    "name": "PANTONE 7682 C",
+    "hex": "#6787B7"
+  },
+  {
+    "name": "PANTONE 7683 C",
+    "hex": "#426DA9"
+  },
+  {
+    "name": "PANTONE 7684 C",
+    "hex": "#385E9D"
+  },
+  {
+    "name": "PANTONE 7685 C",
+    "hex": "#2C5697"
+  },
+  {
+    "name": "PANTONE 7686 C",
+    "hex": "#1D4F91"
+  },
+  {
+    "name": "PANTONE 7687 C",
+    "hex": "#1D428A"
+  },
+  {
+    "name": "PANTONE 7688 C",
+    "hex": "#4698CB"
+  },
+  {
+    "name": "PANTONE 7689 C",
+    "hex": "#298FC2"
+  },
+  {
+    "name": "PANTONE 7690 C",
+    "hex": "#0076A8"
+  },
+  {
+    "name": "PANTONE 7691 C",
+    "hex": "#006298"
+  },
+  {
+    "name": "PANTONE 7692 C",
+    "hex": "#005587"
+  },
+  {
+    "name": "PANTONE 7693 C",
+    "hex": "#004976"
+  },
+  {
+    "name": "PANTONE 7694 C",
+    "hex": "#01426A"
+  },
+  {
+    "name": "PANTONE 7695 C",
+    "hex": "#7BA7BC"
+  },
+  {
+    "name": "PANTONE 7696 C",
+    "hex": "#6399AE"
+  },
+  {
+    "name": "PANTONE 7697 C",
+    "hex": "#4E87A0"
+  },
+  {
+    "name": "PANTONE 7698 C",
+    "hex": "#41748D"
+  },
+  {
+    "name": "PANTONE 7699 C",
+    "hex": "#34657F"
+  },
+  {
+    "name": "PANTONE 7700 C",
+    "hex": "#165C7D"
+  },
+  {
+    "name": "PANTONE 7701 C",
+    "hex": "#005776"
+  },
+  {
+    "name": "PANTONE 7702 C",
+    "hex": "#48A9C5"
+  },
+  {
+    "name": "PANTONE 7703 C",
+    "hex": "#009CBD"
+  },
+  {
+    "name": "PANTONE 7704 C",
+    "hex": "#0085AD"
+  },
+  {
+    "name": "PANTONE 7705 C",
+    "hex": "#007096"
+  },
+  {
+    "name": "PANTONE 7706 C",
+    "hex": "#006A8E"
+  },
+  {
+    "name": "PANTONE 7707 C",
+    "hex": "#00617F"
+  },
+  {
+    "name": "PANTONE 7708 C",
+    "hex": "#005670"
+  },
+  {
+    "name": "PANTONE 7709 C",
+    "hex": "#63B1BC"
+  },
+  {
+    "name": "PANTONE 7710 C",
+    "hex": "#00A7B5"
+  },
+  {
+    "name": "PANTONE 7711 C",
+    "hex": "#0097A9"
+  },
+  {
+    "name": "PANTONE 7712 C",
+    "hex": "#00859B"
+  },
+  {
+    "name": "PANTONE 7713 C",
+    "hex": "#007D8A"
+  },
+  {
+    "name": "PANTONE 7714 C",
+    "hex": "#007680"
+  },
+  {
+    "name": "PANTONE 7715 C",
+    "hex": "#006269"
+  },
+  {
+    "name": "PANTONE 7716 C",
+    "hex": "#00968F"
+  },
+  {
+    "name": "PANTONE 7717 C",
+    "hex": "#00857D"
+  },
+  {
+    "name": "PANTONE 7718 C",
+    "hex": "#007672"
+  },
+  {
+    "name": "PANTONE 7719 C",
+    "hex": "#006D68"
+  },
+  {
+    "name": "PANTONE 7720 C",
+    "hex": "#00635B"
+  },
+  {
+    "name": "PANTONE 7721 C",
+    "hex": "#005E5D"
+  },
+  {
+    "name": "PANTONE 7722 C",
+    "hex": "#005151"
+  },
+  {
+    "name": "PANTONE 7723 C",
+    "hex": "#50A684"
+  },
+  {
+    "name": "PANTONE 7724 C",
+    "hex": "#00966C"
+  },
+  {
+    "name": "PANTONE 7725 C",
+    "hex": "#008755"
+  },
+  {
+    "name": "PANTONE 7726 C",
+    "hex": "#007B4B"
+  },
+  {
+    "name": "PANTONE 7727 C",
+    "hex": "#006F44"
+  },
+  {
+    "name": "PANTONE 7728 C",
+    "hex": "#006845"
+  },
+  {
+    "name": "PANTONE 7729 C",
+    "hex": "#005844"
+  },
+  {
+    "name": "PANTONE 7730 C",
+    "hex": "#4B9560"
+  },
+  {
+    "name": "PANTONE 7731 C",
+    "hex": "#228848"
+  },
+  {
+    "name": "PANTONE 7732 C",
+    "hex": "#007A3E"
+  },
+  {
+    "name": "PANTONE 7733 C",
+    "hex": "#007041"
+  },
+  {
+    "name": "PANTONE 7734 C",
+    "hex": "#286140"
+  },
+  {
+    "name": "PANTONE 7735 C",
+    "hex": "#36573B"
+  },
+  {
+    "name": "PANTONE 7736 C",
+    "hex": "#395542"
+  },
+  {
+    "name": "PANTONE 7737 C",
+    "hex": "#6BA539"
+  },
+  {
+    "name": "PANTONE 7738 C",
+    "hex": "#48A23F"
+  },
+  {
+    "name": "PANTONE 7739 C",
+    "hex": "#319B42"
+  },
+  {
+    "name": "PANTONE 7740 C",
+    "hex": "#3A913F"
+  },
+  {
+    "name": "PANTONE 7741 C",
+    "hex": "#44883E"
+  },
+  {
+    "name": "PANTONE 7742 C",
+    "hex": "#4A773C"
+  },
+  {
+    "name": "PANTONE 7743 C",
+    "hex": "#44693D"
+  },
+  {
+    "name": "PANTONE 7744 C",
+    "hex": "#BABC16"
+  },
+  {
+    "name": "PANTONE 7745 C",
+    "hex": "#ABAD23"
+  },
+  {
+    "name": "PANTONE 7746 C",
+    "hex": "#999B30"
+  },
+  {
+    "name": "PANTONE 7747 C",
+    "hex": "#888D30"
+  },
+  {
+    "name": "PANTONE 7748 C",
+    "hex": "#7C8034"
+  },
+  {
+    "name": "PANTONE 7749 C",
+    "hex": "#727337"
+  },
+  {
+    "name": "PANTONE 7750 C",
+    "hex": "#656635"
+  },
+  {
+    "name": "PANTONE 7751 C",
+    "hex": "#CAB64B"
+  },
+  {
+    "name": "PANTONE 7752 C",
+    "hex": "#CFB023"
+  },
+  {
+    "name": "PANTONE 7753 C",
+    "hex": "#C1A01E"
+  },
+  {
+    "name": "PANTONE 7754 C",
+    "hex": "#A08629"
+  },
+  {
+    "name": "PANTONE 7755 C",
+    "hex": "#897630"
+  },
+  {
+    "name": "PANTONE 7756 C",
+    "hex": "#736635"
+  },
+  {
+    "name": "PANTONE 7757 C",
+    "hex": "#675E33"
+  },
+  {
+    "name": "PANTONE 7758 C",
+    "hex": "#D4C304"
+  },
+  {
+    "name": "PANTONE 7759 C",
+    "hex": "#C4B200"
+  },
+  {
+    "name": "PANTONE 7760 C",
+    "hex": "#91852C"
+  },
+  {
+    "name": "PANTONE 7761 C",
+    "hex": "#747136"
+  },
+  {
+    "name": "PANTONE 7762 C",
+    "hex": "#5D6439"
+  },
+  {
+    "name": "PANTONE 7763 C",
+    "hex": "#585C3B"
+  },
+  {
+    "name": "PANTONE 7764 C",
+    "hex": "#535435"
+  },
+  {
+    "name": "PANTONE 7765 C",
+    "hex": "#BBB323"
+  },
+  {
+    "name": "PANTONE 7766 C",
+    "hex": "#B4A91F"
+  },
+  {
+    "name": "PANTONE 7767 C",
+    "hex": "#AA9D2E"
+  },
+  {
+    "name": "PANTONE 7768 C",
+    "hex": "#8F7E35"
+  },
+  {
+    "name": "PANTONE 7769 C",
+    "hex": "#716135"
+  },
+  {
+    "name": "PANTONE 7770 C",
+    "hex": "#635939"
+  },
+  {
+    "name": "PANTONE 7771 C",
+    "hex": "#4E4934"
+  },
+  {
+    "name": "PANTONE Black 2 C",
+    "hex": "#332F21"
+  },
+  {
+    "name": "PANTONE Black 3 C",
+    "hex": "#212721"
+  },
+  {
+    "name": "PANTONE Black 4 C",
+    "hex": "#31261D"
+  },
+  {
+    "name": "PANTONE Black 5 C",
+    "hex": "#3E2B2E"
+  },
+  {
+    "name": "PANTONE Black 6 C",
+    "hex": "#101820"
+  },
+  {
+    "name": "PANTONE Black 7 C",
+    "hex": "#3D3935"
+  },
+  {
+    "name": "PANTONE Cool Gray 1 C",
+    "hex": "#D9D9D6"
+  },
+  {
+    "name": "PANTONE Cool Gray 2 C",
+    "hex": "#D0D0CE"
+  },
+  {
+    "name": "PANTONE Cool Gray 3 C",
+    "hex": "#C8C9C7"
+  },
+  {
+    "name": "PANTONE Cool Gray 4 C",
+    "hex": "#BBBCBC"
+  },
+  {
+    "name": "PANTONE Cool Gray 5 C",
+    "hex": "#B1B3B3"
+  },
+  {
+    "name": "PANTONE Cool Gray 6 C",
+    "hex": "#A7A8AA"
+  },
+  {
+    "name": "PANTONE Cool Gray 7 C",
+    "hex": "#97999B"
+  },
+  {
+    "name": "PANTONE Cool Gray 8 C",
+    "hex": "#888B8D"
+  },
+  {
+    "name": "PANTONE Cool Gray 9 C",
+    "hex": "#75787B"
+  },
+  {
+    "name": "PANTONE Warm Gray 1 C",
+    "hex": "#D7D2CB"
+  },
+  {
+    "name": "PANTONE Warm Gray 2 C",
+    "hex": "#CBC4BC"
+  },
+  {
+    "name": "PANTONE Warm Gray 3 C",
+    "hex": "#BFB8AF"
+  },
+  {
+    "name": "PANTONE Warm Gray 4 C",
+    "hex": "#B6ADA5"
+  },
+  {
+    "name": "PANTONE Warm Gray 5 C",
+    "hex": "#ACA39A"
+  },
+  {
+    "name": "PANTONE Warm Gray 6 C",
+    "hex": "#A59C94"
+  },
+  {
+    "name": "PANTONE Warm Gray 7 C",
+    "hex": "#968C83"
+  },
+  {
+    "name": "PANTONE Warm Gray 8 C",
+    "hex": "#8C8279"
+  },
+  {
+    "name": "PANTONE Warm Gray 9 C",
+    "hex": "#83786F"
+  },
+  {
+    "name": "PANTONE Cool Gray 10 C",
+    "hex": "#63666A"
+  },
+  {
+    "name": "PANTONE Cool Gray 11 C",
+    "hex": "#53565A"
+  },
+  {
+    "name": "PANTONE Warm Gray 10 C",
+    "hex": "#796E65"
+  },
+  {
+    "name": "PANTONE Warm Gray 11 C",
+    "hex": "#6E6259"
+  }
+]
