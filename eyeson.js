@@ -322,6 +322,29 @@ function createCropFromEyes(leftEye, rightEye, imageWidth, imageHeight) {
   };
 }
 
+let animeEyeLibraryLoaded = false;
+let animeEyeLibraryModule = null;
+
+async function detectAnimeEyesFromLibrary(img) {
+  if (!img) return null;
+  if (!animeEyeLibraryLoaded) {
+    animeEyeLibraryLoaded = true;
+    try {
+      animeEyeLibraryModule = await import('./anime-eye-detector.js');
+    } catch (err) {
+      console.error('❌ Failed to load anime eye detector library:', err);
+      animeEyeLibraryModule = null;
+    }
+  }
+  if (!animeEyeLibraryModule?.detectAnimeEyesLibrary) return null;
+  try {
+    return await animeEyeLibraryModule.detectAnimeEyesLibrary(img);
+  } catch (err) {
+    console.error('❌ Anime eye detector threw an error:', err);
+    return null;
+  }
+}
+
 async function detectAnimeEyesHeuristics(img) {
   if (!img?.width || !img?.height) return null;
 
@@ -586,8 +609,11 @@ async function detectEyesCrop(imagePath) {
   let animeEyesComputed = false;
   const getAnimeEyes = async () => {
     if (!animeEyesComputed) {
-      animeEyesCache = await detectAnimeEyesHeuristics(img);
       animeEyesComputed = true;
+      animeEyesCache = await detectAnimeEyesFromLibrary(img);
+      if (!animeEyesCache) {
+        animeEyesCache = await detectAnimeEyesHeuristics(img);
+      }
     }
     return animeEyesCache;
   };
@@ -715,7 +741,7 @@ async function generateEyesOn(imagePath, name, settings = {}) {
     maskedEyesBuf = await sharp(eyesBuf).ensureAlpha().toBuffer();
   }
 
-  if (detectionSource === 'mesh' || detectionSource === 'anime-heuristic') {
+  if (detectionSource === 'mesh' || detectionSource === 'anime-heuristic' || detectionSource === 'anime-library') {
     maskedEyesBuf = await cartoonizeEyes(maskedEyesBuf);
   }
 
