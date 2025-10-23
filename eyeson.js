@@ -904,19 +904,44 @@ bot.action('create', async (ctx) => {
 });
 
 bot.on('photo', async (ctx) => {
-  const fileId = ctx.message.photo.pop().file_id;
-  const fileLink = await ctx.telegram.getFileLink(fileId);
-  const imgPath = path.join(INPUT_DIR, `${ctx.from.id}.jpg`);
+  const photos = ctx.message.photo || [];
+  if (!photos.length) return;
 
-  const res = await fetch(fileLink.href);
-  const buf = Buffer.from(await res.arrayBuffer());
-  fs.writeFileSync(imgPath, buf);
+  const bestPhoto = photos[photos.length - 1];
+  const fileId = bestPhoto.file_id;
+  const uniquePart = bestPhoto.file_unique_id || `${ctx.message.message_id}`;
+  const imgPath = path.join(INPUT_DIR, `${ctx.from.id}-${Date.now()}-${uniquePart}.jpg`);
 
-  userSettings[ctx.from.id] = { brightness: 1, blur: 0, imgPath };
+  try {
+    const fileLink = await ctx.telegram.getFileLink(fileId);
+    const res = await fetch(fileLink.href);
+    if (!res.ok) {
+      throw new Error(`Failed to download photo: ${res.status} ${res.statusText}`);
+    }
+    const buf = Buffer.from(await res.arrayBuffer());
 
-  const lang = db.data.users[ctx.from.id]?.lang || 'en';
-  const t = LANGUAGES[lang];
-  await ctx.reply(t.askName);
+    const prevPath = userSettings[ctx.from.id]?.imgPath;
+    fs.writeFileSync(imgPath, buf);
+
+    if (prevPath && prevPath !== imgPath) {
+      try {
+        fs.unlinkSync(prevPath);
+      } catch (err) {
+        if (err?.code !== 'ENOENT') {
+          console.warn('Unable to remove previous photo', prevPath, err);
+        }
+      }
+    }
+
+    userSettings[ctx.from.id] = { brightness: 1, blur: 0, imgPath };
+
+    const lang = db.data.users[ctx.from.id]?.lang || 'en';
+    const t = LANGUAGES[lang];
+    await ctx.reply(t.askName);
+  } catch (error) {
+    console.error('Error while handling incoming photo', error);
+    await ctx.reply('❌ Erreur lors de la réception de la photo. Réessaie.');
+  }
 });
 
 bot.on('text', async (ctx) => {
