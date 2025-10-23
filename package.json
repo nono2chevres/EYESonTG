@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.52",
+    "@tensorflow/tfjs-node": "^4.20.0",
     "@tensorflow/tfjs": "^4.20.0",
     "@tensorflow/tfjs-backend-cpu": "^4.20.0",
     "@vladmandic/human": "latest",
