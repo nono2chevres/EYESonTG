@@ -54,6 +54,9 @@ dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const USERS_DB_PATH = path.join(__dirname, 'users.json');
+const INPUT_DIR = path.join(__dirname, 'input');
+const OUTPUT_DIR = path.join(__dirname, 'output');
 
 // Ajoute notre shim local (./stubs) dans la résolution des modules Node.
 const stubNodeModules = path.join(__dirname, 'stubs');
@@ -93,7 +96,7 @@ if (!ModuleCtor.__eyesonPatchedTfjsNode) {
 const humanModule = await import('@vladmandic/human');
 const Human = humanModule.Human || humanModule.default?.Human || humanModule.default;
 
-const db = new Low(new JSONFile('./users.json'), { users: {} });
+const db = new Low(new JSONFile(USERS_DB_PATH), { users: {} });
 await db.read();
 if (!db.data.users) db.data.users = {};
 const saveDB = () => db.write();
@@ -101,8 +104,8 @@ const saveDB = () => db.write();
 // ───────────────────────────────────────────────────────────────────────────────
 // Dossiers requis
 // ───────────────────────────────────────────────────────────────────────────────
-['input', 'output'].forEach((d) => {
-  if (!fs.existsSync(d)) fs.mkdirSync(d);
+[INPUT_DIR, OUTPUT_DIR].forEach((d) => {
+  if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
 });
 
 // ───────────────────────────────────────────────────────────────────────────────
@@ -132,6 +135,424 @@ console.log('✅ Human prêt — backend:', tf.getBackend());
 /** indices mesh approximatifs des contours/coins des yeux (MediaPipe topology) */
 const LEFT_EYE_IDX = [33, 133, 160, 159, 158, 157, 173];
 const RIGHT_EYE_IDX = [362, 263, 387, 386, 385, 384, 398];
+const LEFT_IRIS_IDX = [468, 469, 470, 471];
+const RIGHT_IRIS_IDX = [473, 474, 475, 476];
+
+function clamp(value, min, max) {
+  if (Number.isNaN(value)) return min;
+  return Math.min(Math.max(value, min), max);
+}
+
+function hexToRgb(hex) {
+  if (!hex) return { r: 0, g: 0, b: 0 };
+  const normalized = hex.startsWith('#') ? hex.slice(1) : hex;
+  if (normalized.length !== 6) return { r: 0, g: 0, b: 0 };
+  const r = parseInt(normalized.slice(0, 2), 16);
+  const g = parseInt(normalized.slice(2, 4), 16);
+  const b = parseInt(normalized.slice(4, 6), 16);
+  if ([r, g, b].some((v) => Number.isNaN(v))) {
+    return { r: 0, g: 0, b: 0 };
+  }
+  return { r, g, b };
+}
+
+function averagePoint(points) {
+  if (!points.length) return [0, 0];
+  const [sumX, sumY] = points.reduce(
+    (acc, p) => [acc[0] + p[0], acc[1] + p[1]],
+    [0, 0]
+  );
+  return [sumX / points.length, sumY / points.length];
+}
+
+function computeEyeMetrics(mesh, eyelidIdx, irisIdx) {
+  const eyelidPts = eyelidIdx
+    .map((i) => mesh[i])
+    .filter(Boolean)
+    .map((pt) => [pt[0], pt[1]]);
+  if (!eyelidPts.length) return null;
+
+  const xs = eyelidPts.map((p) => p[0]);
+  const ys = eyelidPts.map((p) => p[1]);
+  const radiusX = (Math.max(...xs) - Math.min(...xs)) / 2;
+  const radiusY = (Math.max(...ys) - Math.min(...ys)) / 2;
+
+  let centerPts = eyelidPts;
+  if (irisIdx && irisIdx.every((i) => mesh[i])) {
+    centerPts = irisIdx.map((i) => [mesh[i][0], mesh[i][1]]);
+  }
+
+  return {
+    center: averagePoint(centerPts),
+    radiusX: Math.max(radiusX, 1),
+    radiusY: Math.max(radiusY, 1),
+  };
+}
+
+function convertEyeToCrop(eye, crop) {
+  const minRadius = Math.max(4, Math.round(Math.min(crop.width, crop.height) * 0.05));
+  const maxRadiusX = Math.max(minRadius, Math.round(crop.width * 0.5));
+  const maxRadiusY = Math.max(minRadius, Math.round(crop.height * 0.5));
+  return {
+    cx: clamp(Math.round(eye.center[0] - crop.left), 0, Math.max(crop.width - 1, 0)),
+    cy: clamp(Math.round(eye.center[1] - crop.top), 0, Math.max(crop.height - 1, 0)),
+    radiusX: clamp(Math.round(eye.radiusX), minRadius, maxRadiusX),
+    radiusY: clamp(Math.round(eye.radiusY), minRadius, maxRadiusY),
+  };
+}
+
+function defaultEyesForCrop(crop) {
+  const width = Math.max(crop.width, 1);
+  const height = Math.max(crop.height, 1);
+  const baseRadius = Math.max(6, Math.round(Math.min(width, height) * 0.12));
+  const eyeY = Math.round(height * 0.38);
+  const radiusY = Math.round(baseRadius * 0.9);
+  return [
+    {
+      cx: Math.round(width * 0.35),
+      cy: eyeY,
+      radiusX: baseRadius,
+      radiusY,
+    },
+    {
+      cx: Math.round(width * 0.65),
+      cy: eyeY,
+      radiusX: baseRadius,
+      radiusY,
+    },
+  ];
+}
+
+async function createEyesMask(width, height, eyes) {
+  const canvas = createCanvas(width, height);
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, width, height);
+
+  if (!eyes?.length) {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, width, height);
+    return canvas.encode('png');
+  }
+
+  const minRadius = Math.max(Math.min(width, height) * 0.12, 12);
+  const maxRadiusX = width * 0.65;
+  const maxRadiusY = height * 0.9;
+
+  ctx.fillStyle = 'white';
+  eyes.forEach((eye) => {
+    const radiusX = clamp(eye.radiusX * 1.8, minRadius, maxRadiusX);
+    const radiusY = clamp(eye.radiusY * 2.4, minRadius * 1.2, maxRadiusY);
+    const shiftY = clamp(eye.radiusY * 0.6, -height * 0.15, height * 0.3);
+    const cx = clamp(eye.cx, 0, width);
+    const cy = clamp(eye.cy + shiftY, 0, height);
+
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, radiusX, radiusY, 0, 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  if (eyes.length >= 2) {
+    const sortedEyes = [...eyes].sort((a, b) => a.cx - b.cx);
+    const centerX = (sortedEyes[0].cx + sortedEyes[1].cx) / 2;
+    const stripWidth = Math.abs(sortedEyes[1].cx - sortedEyes[0].cx) * 0.38;
+    const startY = Math.min(
+      sortedEyes[0].cy + sortedEyes[0].radiusY * 0.6,
+      sortedEyes[1].cy + sortedEyes[1].radiusY * 0.6
+    );
+    const rectLeft = clamp(centerX - stripWidth / 2, 0, width);
+    const rectTop = clamp(startY, 0, height);
+    const rectWidth = Math.max(0, Math.min(stripWidth, width - rectLeft));
+    const rectHeight = Math.max(0, height - rectTop);
+    if (rectWidth > 0 && rectHeight > 0) {
+      ctx.save();
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.fillStyle = 'rgba(0,0,0,1)';
+      ctx.fillRect(rectLeft, rectTop, rectWidth, rectHeight);
+      ctx.restore();
+    }
+  }
+
+  const rawMask = await canvas.encode('png');
+  return sharp(rawMask).blur(2).toBuffer();
+}
+
+function createCropFromEyes(leftEye, rightEye, imageWidth, imageHeight) {
+  if (!leftEye || !rightEye) return null;
+  const minImageSide = Math.max(1, Math.min(imageWidth, imageHeight));
+  const marginX = 2.4;
+  const marginYTop = 2.8;
+  const marginYBottom = 2.2;
+
+  const rawLeft = Math.min(
+    leftEye.center[0] - leftEye.radiusX * marginX,
+    rightEye.center[0] - rightEye.radiusX * marginX,
+  );
+  const rawRight = Math.max(
+    leftEye.center[0] + leftEye.radiusX * marginX,
+    rightEye.center[0] + rightEye.radiusX * marginX,
+  );
+  const rawTop = Math.min(
+    leftEye.center[1] - leftEye.radiusY * marginYTop,
+    rightEye.center[1] - rightEye.radiusY * marginYTop,
+  );
+  const rawBottom = Math.max(
+    leftEye.center[1] + leftEye.radiusY * marginYBottom,
+    rightEye.center[1] + rightEye.radiusY * marginYBottom,
+  );
+
+  const spanX = rawRight - rawLeft;
+  const spanY = rawBottom - rawTop;
+  const baseSide = Math.max(spanX, spanY);
+  const minSide = minImageSide * 0.32;
+  const targetSide = clamp(baseSide * 1.1, minSide, minImageSide * 1.05);
+  const side = Math.max(1, Math.min(Math.round(targetSide), minImageSide));
+
+  const centerX = clamp((rawLeft + rawRight) / 2, side / 2, imageWidth - side / 2);
+  const centerY = clamp((rawTop + rawBottom) / 2, side / 2, imageHeight - side / 2);
+
+  const left = clamp(Math.round(centerX - side / 2), 0, Math.max(imageWidth - side, 0));
+  const top = clamp(Math.round(centerY - side / 2), 0, Math.max(imageHeight - side, 0));
+  const finalSide = Math.min(side, imageWidth - left, imageHeight - top);
+
+  return {
+    left,
+    top,
+    width: Math.max(1, Math.round(finalSide)),
+    height: Math.max(1, Math.round(finalSide)),
+  };
+}
+
+let animeEyeLibraryLoaded = false;
+let animeEyeLibraryModule = null;
+
+async function detectAnimeEyesFromLibrary(img) {
+  if (!img) return null;
+  if (!animeEyeLibraryLoaded) {
+    animeEyeLibraryLoaded = true;
+    try {
+      animeEyeLibraryModule = await import('./anime-eye-detector.js');
+    } catch (err) {
+      console.error('❌ Failed to load anime eye detector library:', err);
+      animeEyeLibraryModule = null;
+    }
+  }
+  if (!animeEyeLibraryModule?.detectAnimeEyesLibrary) return null;
+  try {
+    return await animeEyeLibraryModule.detectAnimeEyesLibrary(img);
+  } catch (err) {
+    console.error('❌ Anime eye detector threw an error:', err);
+    return null;
+  }
+}
+
+async function detectAnimeEyesHeuristics(img) {
+  if (!img?.width || !img?.height) return null;
+
+  const originalWidth = img.width;
+  const originalHeight = img.height;
+  const maxSide = 720;
+  const scale = Math.min(1, maxSide / Math.max(originalWidth, originalHeight));
+  const scaledWidth = Math.max(1, Math.round(originalWidth * scale));
+  const scaledHeight = Math.max(1, Math.round(originalHeight * scale));
+  const scaleInv = scale ? 1 / scale : 1;
+
+  const canvas = createCanvas(scaledWidth, scaledHeight);
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0, scaledWidth, scaledHeight);
+  const { data } = ctx.getImageData(0, 0, scaledWidth, scaledHeight);
+
+  const topLimit = Math.max(1, Math.round(scaledHeight * 0.68));
+  const xScores = new Float32Array(scaledWidth);
+  const scoreMap = new Float32Array(scaledWidth * topLimit);
+
+  for (let y = 0; y < topLimit; y += 1) {
+    for (let x = 0; x < scaledWidth; x += 1) {
+      const idx = (y * scaledWidth + x) * 4;
+      const r = data[idx];
+      const g = data[idx + 1];
+      const b = data[idx + 2];
+      const a = data[idx + 3];
+      if (a < 48) continue;
+      const maxChannel = Math.max(r, g, b);
+      const minChannel = Math.min(r, g, b);
+      const brightness = (r + g + b) / 3;
+      if (maxChannel < 60 || brightness < 50) continue;
+      const saturation = maxChannel === 0 ? 0 : (maxChannel - minChannel) / maxChannel;
+      const whiteness = 1 - saturation;
+      const colorBoost = saturation > 0.45 ? saturation * 0.25 : 0;
+      const weight = Math.max(0, whiteness * (brightness / 255) + colorBoost - 0.12);
+      if (weight <= 0) continue;
+      const mapIndex = y * scaledWidth + x;
+      scoreMap[mapIndex] = weight;
+      xScores[x] += weight;
+    }
+  }
+
+  if (!xScores.some((v) => v > 0)) return null;
+
+  const deriveEye = (start, end) => {
+    let bestIndex = -1;
+    let bestScore = 0;
+    for (let x = start; x < end; x += 1) {
+      const score = xScores[x];
+      if (score > bestScore) {
+        bestScore = score;
+        bestIndex = x;
+      }
+    }
+    if (bestIndex === -1 || bestScore < 2) return null;
+
+    const windowX = Math.max(6, Math.round(scaledWidth * 0.08));
+    const minX = Math.max(start, bestIndex - windowX);
+    const maxX = Math.min(end - 1, bestIndex + windowX);
+    const windowY = Math.max(8, Math.round(scaledHeight * 0.18));
+
+    let sumW = 0;
+    let sumX = 0;
+    let sumY = 0;
+    let sumDX2 = 0;
+    let sumDY2 = 0;
+
+    for (let y = 0; y < topLimit; y += 1) {
+      for (let x = minX; x <= maxX; x += 1) {
+        const mapIndex = y * scaledWidth + x;
+        const w = scoreMap[mapIndex];
+        if (w <= 0) continue;
+        sumW += w;
+        sumX += w * x;
+        sumY += w * y;
+      }
+    }
+
+    if (sumW <= 0) return null;
+    const cx = sumX / sumW;
+    const cy = sumY / sumW;
+
+    const startY = Math.max(0, Math.round(cy - windowY));
+    const endY = Math.min(topLimit - 1, Math.round(cy + windowY));
+    for (let y = startY; y <= endY; y += 1) {
+      for (let x = minX; x <= maxX; x += 1) {
+        const mapIndex = y * scaledWidth + x;
+        const w = scoreMap[mapIndex];
+        if (w <= 0) continue;
+        const dx = x - cx;
+        const dy = y - cy;
+        sumDX2 += w * dx * dx;
+        sumDY2 += w * dy * dy;
+      }
+    }
+
+    const radiusX = Math.sqrt(Math.max(sumDX2 / sumW, 1)) * 1.65;
+    const radiusY = Math.sqrt(Math.max(sumDY2 / sumW, 1)) * 2.1;
+
+    return {
+      center: [cx * scaleInv, cy * scaleInv],
+      radiusX: Math.max(radiusX * scaleInv, Math.max(originalWidth, originalHeight) * 0.025),
+      radiusY: Math.max(radiusY * scaleInv, Math.max(originalWidth, originalHeight) * 0.02),
+      weight: sumW,
+    };
+  };
+
+  const mid = Math.floor(scaledWidth / 2);
+  const leftEye = deriveEye(0, Math.max(mid, 1));
+  const rightEye = deriveEye(Math.max(mid, 1), scaledWidth);
+
+  if (!leftEye || !rightEye) return null;
+  if (Math.abs(leftEye.center[0] - rightEye.center[0]) < originalWidth * 0.08) return null;
+
+  const crop = createCropFromEyes(leftEye, rightEye, originalWidth, originalHeight);
+  if (!crop) return null;
+
+  const absoluteEyes = [leftEye, rightEye];
+  const eyes = absoluteEyes
+    .map((eye) => convertEyeToCrop(eye, crop))
+    .sort((a, b) => a.cx - b.cx);
+
+  return { crop, eyes, absoluteEyes, source: 'anime-heuristic' };
+}
+
+function quantizeChannel(value, levels = 5) {
+  if (levels <= 1) return value;
+  const step = 255 / (levels - 1);
+  return clamp(Math.round(value / step) * step, 0, 255);
+}
+
+async function cartoonizeEyes(buffer) {
+  const img = await loadImage(buffer);
+  const { width, height } = img;
+  const canvas = createCanvas(width, height);
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, width, height);
+  ctx.drawImage(img, 0, 0, width, height);
+  const imageData = ctx.getImageData(0, 0, width, height);
+  const { data } = imageData;
+
+  const gray = new Float32Array(width * height);
+
+  for (let i = 0; i < data.length; i += 4) {
+    const alpha = data[i + 3];
+    if (alpha < 16) {
+      data[i] = 0;
+      data[i + 1] = 0;
+      data[i + 2] = 0;
+      gray[i / 4] = 0;
+      continue;
+    }
+    const r = data[i];
+    const g = data[i + 1];
+    const b = data[i + 2];
+    const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
+    gray[i / 4] = luminance;
+
+    const qR = quantizeChannel(r, 5);
+    const qG = quantizeChannel(g, 5);
+    const qB = quantizeChannel(b, 5);
+
+    data[i] = clamp(Math.round(qR * 1.05), 0, 255);
+    data[i + 1] = clamp(Math.round(qG * 1.05), 0, 255);
+    data[i + 2] = clamp(Math.round(qB * 1.05), 0, 255);
+  }
+
+  const sobelX = [-1, 0, 1, -2, 0, 2, -1, 0, 1];
+  const sobelY = [-1, -2, -1, 0, 0, 0, 1, 2, 1];
+  const edges = new Float32Array(width * height);
+
+  for (let y = 1; y < height - 1; y += 1) {
+    for (let x = 1; x < width - 1; x += 1) {
+      let gx = 0;
+      let gy = 0;
+      for (let ky = -1; ky <= 1; ky += 1) {
+        for (let kx = -1; kx <= 1; kx += 1) {
+          const sampleX = x + kx;
+          const sampleY = y + ky;
+          const idx = sampleY * width + sampleX;
+          const kernelIdx = (ky + 1) * 3 + (kx + 1);
+          const value = gray[idx];
+          gx += value * sobelX[kernelIdx];
+          gy += value * sobelY[kernelIdx];
+        }
+      }
+      const magnitude = Math.sqrt(gx * gx + gy * gy);
+      edges[y * width + x] = magnitude;
+    }
+  }
+
+  const edgeThreshold = 110;
+  for (let y = 0; y < height; y += 1) {
+    for (let x = 0; x < width; x += 1) {
+      const idx = (y * width + x) * 4;
+      const alpha = data[idx + 3];
+      if (alpha < 16) continue;
+      const edgeStrength = edges[y * width + x];
+      if (edgeStrength > edgeThreshold) {
+        data[idx] = data[idx + 1] = data[idx + 2] = 25;
+      }
+    }
+  }
+
+  ctx.putImageData(imageData, 0, 0);
+  return canvas.encode('png');
+}
 
 /** calcule une bounding box (x,y,w,h) à partir d'une liste de points [x,y] */
 function bboxFromPoints(pts, margin = 20) {
@@ -171,52 +592,115 @@ async function detectEyesCrop(imagePath) {
   const buf = fs.readFileSync(imagePath);
   const img = await loadImage(buf);
   const { width, height } = img;
+  const minImageSide = Math.min(width, height);
+
+  const baseFallback = () => {
+    const w = Math.max(1, Math.floor(minImageSide * 0.7));
+    const left = Math.round(clamp((width - w) / 2, 0, Math.max(width - w, 0)));
+    const top = Math.round(clamp(height * 0.15, 0, Math.max(height - w, 0)));
+    const crop = { left, top, width: w, height: w };
+    return { crop, eyes: defaultEyesForCrop(crop), source: 'fallback-default' };
+  };
 
   const result = await human.detect(img);
   const face = result?.face?.[0];
+
+  let animeEyesCache = null;
+  let animeEyesComputed = false;
+  const getAnimeEyes = async () => {
+    if (!animeEyesComputed) {
+      animeEyesComputed = true;
+      animeEyesCache = await detectAnimeEyesFromLibrary(img);
+      if (!animeEyesCache) {
+        animeEyesCache = await detectAnimeEyesHeuristics(img);
+      }
+    }
+    return animeEyesCache;
+  };
+
+  const fallbackFromFaceBox = () => {
+    if (!face?.box) return null;
+    const { x, y, width: bw, height: bh } = face.box;
+    const baseSide = Math.max(1, Math.floor(Math.min(bw, bh) * 0.9));
+    const targetSide = Math.max(baseSide * 1.4, minImageSide * 0.35);
+    const finalSide = Math.max(1, Math.round(Math.min(targetSide, minImageSide)));
+    const centerX = clamp(x + bw / 2, finalSide / 2, width - finalSide / 2);
+    const centerYBase = y + bh * 0.35;
+    const centerY = clamp(centerYBase, finalSide / 2, height - finalSide / 2);
+    const crop = {
+      left: Math.round(centerX - finalSide / 2),
+      top: Math.round(centerY - finalSide / 2),
+      width: finalSide,
+      height: finalSide,
+    };
+    return { crop, eyes: defaultEyesForCrop(crop), source: 'fallback-facebox' };
+  };
+
   if (!face) {
-    // fallback très simple: zone centrale haute
-    const w = Math.floor(Math.min(width, height) * 0.7);
-    const x = Math.floor((width - w) / 2);
-    const y = Math.floor(height * 0.15);
-    return { left: x, top: y, width: w, height: w };
+    const animeEyes = await getAnimeEyes();
+    if (animeEyes) return animeEyes;
+    return baseFallback();
   }
 
   if (face.mesh?.length) {
-    const mesh = face.mesh; // tableau de points [x,y,z] en pixels
-    const leftPts = LEFT_EYE_IDX.map(i => [mesh[i][0], mesh[i][1]]);
-    const rightPts = RIGHT_EYE_IDX.map(i => [mesh[i][0], mesh[i][1]]);
+    const mesh = face.mesh;
+    const leftPts = LEFT_EYE_IDX.map((i) => mesh[i]).filter(Boolean).map((pt) => [pt[0], pt[1]]);
+    const rightPts = RIGHT_EYE_IDX.map((i) => mesh[i]).filter(Boolean).map((pt) => [pt[0], pt[1]]);
 
-    const leftBox = bboxFromPoints(leftPts, 18);
-    const rightBox = bboxFromPoints(rightPts, 18);
-    let eyes = mergeBoxes(leftBox, rightBox, 30);
+    if (leftPts.length && rightPts.length) {
+      const leftBox = bboxFromPoints(leftPts, 18);
+      const rightBox = bboxFromPoints(rightPts, 18);
+      const merged = mergeBoxes(leftBox, rightBox, 30);
 
-    // forcer carré centré
-    const side = Math.max(eyes.width, eyes.height);
-    const cx = eyes.left + eyes.width / 2;
-    const cy = eyes.top + eyes.height / 2;
-    const left = Math.max(0, Math.floor(cx - side / 2));
-    const top = Math.max(0, Math.floor(cy - side / 2));
-    const safeSide = Math.min(side, width - left, height - top);
+      const verticalSpan = Math.max(leftBox.height, rightBox.height);
+      const baseSide = Math.max(merged.width, merged.height);
+      const targetSide = Math.max(
+        baseSide,
+        baseSide + verticalSpan * 2.5,
+        minImageSide * 0.35
+      );
+      const finalSide = Math.max(1, Math.round(Math.min(targetSide, minImageSide)));
 
-    return { left, top, width: safeSide, height: safeSide };
+      const centerX = clamp(merged.left + merged.width / 2, finalSide / 2, width - finalSide / 2);
+      const centerYOffset = Math.min(verticalSpan * 0.6, finalSide * 0.3);
+      const centerYBase = merged.top + merged.height / 2 + centerYOffset;
+      const centerY = clamp(centerYBase, finalSide / 2, height - finalSide / 2);
+
+      const crop = {
+        left: Math.round(centerX - finalSide / 2),
+        top: Math.round(centerY - finalSide / 2),
+        width: finalSide,
+        height: finalSide,
+      };
+
+      const leftEyeInfo = computeEyeMetrics(mesh, LEFT_EYE_IDX, LEFT_IRIS_IDX);
+      const rightEyeInfo = computeEyeMetrics(mesh, RIGHT_EYE_IDX, RIGHT_IRIS_IDX);
+      let eyes = [leftEyeInfo, rightEyeInfo]
+        .filter(Boolean)
+        .map((eye) => convertEyeToCrop(eye, crop));
+      if (eyes.length !== 2) {
+        const animeEyes = await getAnimeEyes();
+        if (animeEyes?.absoluteEyes?.length === 2) {
+          eyes = animeEyes.absoluteEyes
+            .map((eye) => convertEyeToCrop(eye, crop))
+            .sort((a, b) => a.cx - b.cx);
+        } else {
+          eyes = defaultEyesForCrop(crop);
+        }
+      } else {
+        eyes = eyes.sort((a, b) => a.cx - b.cx);
+      }
+      return { crop, eyes, source: 'mesh' };
+    }
   }
 
-  // fallback via box visage si pas de mesh
-  if (face.box) {
-    const { x, y, width: bw, height: bh } = face.box;
-    const w = Math.floor(bw * 0.9);
-    const h = w;
-    const left = Math.floor(x + (bw - w) / 2);
-    const top = Math.floor(y + bh * 0.2);
-    return { left: Math.max(0, left), top: Math.max(0, top), width: w, height: h };
-  }
+  const animeEyes = await getAnimeEyes();
+  if (animeEyes) return animeEyes;
 
-  // fallback global
-  const w = Math.floor(Math.min(width, height) * 0.7);
-  const x = Math.floor((width - w) / 2);
-  const y = Math.floor(height * 0.15);
-  return { left: x, top: y, width: w, height: w };
+  const fallbackBox = fallbackFromFaceBox();
+  if (fallbackBox) return fallbackBox;
+
+  return baseFallback();
 }
 
 // ───────────────────────────────────────────────────────────────────────────────
@@ -224,7 +708,8 @@ async function detectEyesCrop(imagePath) {
 // ───────────────────────────────────────────────────────────────────────────────
 async function generateEyesOn(imagePath, name, settings = {}) {
   // 1) Détection & crop
-  const crop = await detectEyesCrop(imagePath);
+  const detection = await detectEyesCrop(imagePath);
+  const { crop, eyes, source: detectionSource } = detection;
 
   // 2) Couleur Pantone
   let pantone;
@@ -243,7 +728,41 @@ async function generateEyesOn(imagePath, name, settings = {}) {
   if (settings.blur) pipeline = pipeline.blur(settings.blur);
   if (settings.brightness) pipeline = pipeline.modulate({ brightness: settings.brightness });
 
-  const eyesBuf = await pipeline.resize(1200, 1200).toBuffer();
+  let eyesBuf = await pipeline.toBuffer();
+
+  let maskedEyesBuf;
+  if (eyes?.length) {
+    const maskBuffer = await createEyesMask(crop.width, crop.height, eyes);
+    maskedEyesBuf = await sharp(eyesBuf)
+      .ensureAlpha()
+      .composite([{ input: maskBuffer, blend: 'dest-in' }])
+      .toBuffer();
+  } else {
+    maskedEyesBuf = await sharp(eyesBuf).ensureAlpha().toBuffer();
+  }
+
+  if (detectionSource === 'mesh' || detectionSource === 'anime-heuristic' || detectionSource === 'anime-library') {
+    maskedEyesBuf = await cartoonizeEyes(maskedEyesBuf);
+  }
+
+  const { r: pantoneR, g: pantoneG, b: pantoneB } = hexToRgb(pantone.hex);
+
+  const baseBackground = await sharp({
+    create: {
+      width: crop.width,
+      height: crop.height,
+      channels: 4,
+      background: { r: pantoneR, g: pantoneG, b: pantoneB, alpha: 1 },
+    },
+  })
+    .png()
+    .toBuffer();
+
+  eyesBuf = await sharp(baseBackground)
+    .composite([{ input: maskedEyesBuf, blend: 'over' }])
+    .toBuffer();
+
+  eyesBuf = await sharp(eyesBuf).resize(1200, 1200).toBuffer();
 
   // 4) Composition finale
   const canvas = createCanvas(1200, 1400);
@@ -270,7 +789,7 @@ async function generateEyesOn(imagePath, name, settings = {}) {
   ctx.font = '50px sans-serif';
   ctx.fillText(name, 70, 1360);
 
-  const outPath = path.join('output', `EYESON_${Date.now()}.png`);
+  const outPath = path.join(OUTPUT_DIR, `EYESON_${Date.now()}.png`);
   fs.writeFileSync(outPath, await canvas.encode('png'));
   return { outPath, pantone };
 }
@@ -411,19 +930,44 @@ bot.action('create', async (ctx) => {
 });
 
 bot.on('photo', async (ctx) => {
-  const fileId = ctx.message.photo.pop().file_id;
-  const fileLink = await ctx.telegram.getFileLink(fileId);
-  const imgPath = `input/${ctx.from.id}.jpg`;
+  const photos = ctx.message.photo || [];
+  if (!photos.length) return;
 
-  const res = await fetch(fileLink.href);
-  const buf = Buffer.from(await res.arrayBuffer());
-  fs.writeFileSync(imgPath, buf);
+  const bestPhoto = photos[photos.length - 1];
+  const fileId = bestPhoto.file_id;
+  const uniquePart = bestPhoto.file_unique_id || `${ctx.message.message_id}`;
+  const imgPath = path.join(INPUT_DIR, `${ctx.from.id}-${Date.now()}-${uniquePart}.jpg`);
 
-  userSettings[ctx.from.id] = { brightness: 1, blur: 0, imgPath };
+  try {
+    const fileLink = await ctx.telegram.getFileLink(fileId);
+    const res = await fetch(fileLink.href);
+    if (!res.ok) {
+      throw new Error(`Failed to download photo: ${res.status} ${res.statusText}`);
+    }
+    const buf = Buffer.from(await res.arrayBuffer());
 
-  const lang = db.data.users[ctx.from.id]?.lang || 'en';
-  const t = LANGUAGES[lang];
-  await ctx.reply(t.askName);
+    const prevPath = userSettings[ctx.from.id]?.imgPath;
+    fs.writeFileSync(imgPath, buf);
+
+    if (prevPath && prevPath !== imgPath) {
+      try {
+        fs.unlinkSync(prevPath);
+      } catch (err) {
+        if (err?.code !== 'ENOENT') {
+          console.warn('Unable to remove previous photo', prevPath, err);
+        }
+      }
+    }
+
+    userSettings[ctx.from.id] = { brightness: 1, blur: 0, imgPath };
+
+    const lang = db.data.users[ctx.from.id]?.lang || 'en';
+    const t = LANGUAGES[lang];
+    await ctx.reply(t.askName);
+  } catch (error) {
+    console.error('Error while handling incoming photo', error);
+    await ctx.reply('❌ Erreur lors de la réception de la photo. Réessaie.');
+  }
 });
 
 bot.on('text', async (ctx) => {
